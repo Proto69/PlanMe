@@ -5,6 +5,7 @@ namespace PlanMe
     //Model for user
     public class User
     {
+        //The username will be like id
         private string username;
         private string password;
         private List<Event> events;
