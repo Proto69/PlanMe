@@ -8,19 +8,22 @@ namespace PlanMe.Data
 {
     public class UserData
     {
-        public bool CreateUser(User user)
+        public bool Create(User user)
         {
             throw new NotImplementedException();
         }
-        public bool UpdateUser(User user)
+
+        public bool Update(User user)
         {
             throw new NotImplementedException();
         }
-        public bool DeleteUser(string username)
+
+        public bool Delete(string username)
         {
             throw new NotImplementedException();
         }
-        public User GetUser(string username)
+
+        public User Check(string username)
         {
             throw new NotImplementedException();
         }

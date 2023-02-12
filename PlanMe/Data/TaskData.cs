@@ -9,15 +9,28 @@ namespace PlanMe.Data
 {
     public class TaskData
     {
-        public bool UploadTask(UserTask task, string username)
+        public bool Upload(UserTask task, string username)
         {
             throw new NotImplementedException();
         }
-        public bool UpdateTask(UserTask task, string username)
+
+        //How to search it?
+        public UserTask Get(string username)
         {
             throw new NotImplementedException();
         }
-        public bool DeleteTask(UserTask task, string username)
+
+        public List<UserTask> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Update(UserTask task, string username)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Delete(UserTask task, string username)
         {
             throw new NotImplementedException();
         }

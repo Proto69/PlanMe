@@ -9,15 +9,28 @@ namespace PlanMe.Data
 {
     public class EventData
     {
-        public bool UploadEvent(Event action, string username)
+        public bool Upload(Event action, string username)
         {
             throw new NotImplementedException();
         }
-        public bool UpdateEvent(Event action, string username)
+
+        //How to search it?
+        public Event Get(string username)
         {
             throw new NotImplementedException();
         }
-        public bool DeleteEvent(Event action, string username)
+
+        public List<Event> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Update(Event action, string username)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Delete(Event action, string username)
         {
             throw new NotImplementedException();
         }
