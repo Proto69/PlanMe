@@ -7,30 +7,24 @@ using System.Threading.Tasks;
 
 namespace PlanMe.Data
 {
-    public class EventData
+    public static class EventData
     {
-        public bool Upload(Event action, string username)
+        public static bool Upload(Event action, string username)
         {
             throw new NotImplementedException();
         }
 
-        //How to search it?
-        public Event Get(string username)
+        public static List<Event> GetAll(string username)
         {
             throw new NotImplementedException();
         }
 
-        public List<Event> GetAll()
+        public static bool Update(Event action, string username)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(Event action, string username)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Delete(Event action, string username)
+        public static bool Delete(Event action, string username)
         {
             throw new NotImplementedException();
         }

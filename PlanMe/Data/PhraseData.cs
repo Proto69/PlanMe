@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PlanMe.Data
 {
-    public class PhraseData
+    public static class PhraseData
     {
-        public string GetPhrase()
+        public static string GetPhrase()
         {
             throw new NotImplementedException();
         }

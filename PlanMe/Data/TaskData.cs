@@ -7,30 +7,24 @@ using System.Threading.Tasks;
 
 namespace PlanMe.Data
 {
-    public class TaskData
+    public static class TaskData
     {
-        public bool Upload(UserTask task, string username)
+        public static bool Upload(UserTask task, string username)
         {
             throw new NotImplementedException();
         }
 
-        //How to search it?
-        public UserTask Get(string username)
+        public static List<UserTask> GetAll(string username)
         {
             throw new NotImplementedException();
         }
 
-        public List<UserTask> GetAll()
+        public static bool Update(UserTask task, string username)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(UserTask task, string username)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Delete(UserTask task, string username)
+        public static bool Delete(UserTask task, string username)
         {
             throw new NotImplementedException();
         }

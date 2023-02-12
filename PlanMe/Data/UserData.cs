@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace PlanMe.Data
 {
-    public class UserData
+    public static class UserData
     {
-        public bool Create(User user)
+        public static bool Create(User user)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(User user)
+        public static bool Update(User user)
         {
             throw new NotImplementedException();
         }
 
-        public bool Delete(string username)
+        public static bool Delete(string username)
         {
             throw new NotImplementedException();
         }
 
-        public User Check(string username)
+        public static User Check(string username)
         {
             throw new NotImplementedException();
         }
