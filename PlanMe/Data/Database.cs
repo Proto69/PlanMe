@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace PlanMe.Data
 {
-    public class Database
+    public static class Database
     {
-        private string connectionString = Secrets.connectionString;
+        private static string connectionString = Secrets.connectionString;
 
-        public MySqlConnection GetConnection()
+        public static MySqlConnection GetConnection()
         {
             return new MySqlConnection(connectionString);
         }
