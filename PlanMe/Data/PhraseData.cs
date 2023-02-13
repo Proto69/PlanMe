@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,30 @@ namespace PlanMe.Data
     {
         public static string GetPhrase()
         {
-            throw new NotImplementedException();
+            string phrase = "";
+
+            Random random = new Random();
+            int randomId = random.Next(0, 390);
+
+            MySqlConnection conn = Database.GetConnection();
+
+            conn.Open();
+            using (conn)
+            {
+                string query = "SELECT phrase FROM daily_phrase WHERE id = @id";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@id", randomId);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                
+                while (reader.Read())
+                {
+                    phrase = reader["phrase"].ToString();
+                }
+            }
+            return phrase;
         }
     }
 }
