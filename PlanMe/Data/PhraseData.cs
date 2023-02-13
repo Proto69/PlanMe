@@ -13,7 +13,7 @@ namespace PlanMe.Data
         {
             string phrase = "";
 
-            //Gets a random id for the phrase
+            //Gets a random id for choosing the phrase
             Random random = new Random();
             int randomId = random.Next(DateTime.Now.Day, DateTime.Now.Day + 360);
 
@@ -36,7 +36,7 @@ namespace PlanMe.Data
 
                 reader.Read();
                 
-                //Gets the result
+                // 
                 phrase = reader["phrase"].ToString();
             }
             return phrase;
