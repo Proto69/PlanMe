@@ -31,12 +31,11 @@ namespace PlanMe.Data
 
                 cmd.Parameters.AddWithValue("@id", randomId);
 
-                //Starts the reader and reads
+                //Starts the reader and reads the result
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 reader.Read();
                 
-                // 
                 phrase = reader["phrase"].ToString();
             }
             return phrase;
