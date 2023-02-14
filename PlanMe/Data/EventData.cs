@@ -61,12 +61,29 @@ namespace PlanMe.Data
             return list;
         }
 
-        public static bool Update(Event action, string username)
+        public static bool Update(Event oldEvent, Event newEvent)
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = Database.GetConnection();
+            conn.Open();
+            using (conn)
+            {
+                string query = "UPDATE events SET name = @newName, date = @newDate, time = @newTime, additional_info = @newInfo " +
+                    "WHERE name = @name AND date = @date AND time = @time";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@newName", newEvent.Name);
+                cmd.Parameters.AddWithValue("@newDate", newEvent.Date);
+                cmd.Parameters.AddWithValue("@newTime", newEvent.Time);
+                cmd.Parameters.AddWithValue("@newInfo", newEvent.Info);
+                cmd.Parameters.AddWithValue("@name", oldEvent.Name);
+                cmd.Parameters.AddWithValue("@date", oldEvent.Date);
+                cmd.Parameters.AddWithValue("@time", oldEvent.Time);
+
+                return RunNonQuery(cmd);
+            }
         }
 
-        public static bool Delete(Event action, string username)
+        public static bool Delete(Event action)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
