@@ -1,4 +1,5 @@
-﻿using PlanMe.Models;
+﻿using MySql.Data.MySqlClient;
+using PlanMe.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,53 @@ namespace PlanMe.Data
     {
         public static bool Upload(Event action, string username)
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = Database.GetConnection();
+            conn.Open();
+            using (conn)
+            {
+                int id = GetUserId(username, conn);
+
+                string query = "INSERT INTO events (name, date, time, additional_info, user_id) " +
+                    "VALUES (@name, @date, @time, @info, @user_id)";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@name", action.Name);
+                cmd.Parameters.AddWithValue("@date", action.Date);
+                cmd.Parameters.AddWithValue("@time", action.Time);
+                cmd.Parameters.AddWithValue("@info", action.Info);
+                cmd.Parameters.AddWithValue("@user_id", id);
+
+                return RunNonQuery(cmd);
+            }
         }
 
         public static List<Event> GetAll(string username)
         {
-            throw new NotImplementedException();
+            List<Event> list = new List<Event>();
+            MySqlConnection conn = Database.GetConnection();
+
+            conn.Open();
+            using (conn)
+            {
+                int id = GetUserId(username, conn);
+
+                string query = "SELECT * FROM events WHERE user_id = @id";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@id", id);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string name = reader["name"].ToString();
+                    DateOnly date = DateOnly.ParseExact(reader["date"].ToString(), "yyyy-MM-dd");
+                    TimeOnly time = TimeOnly.ParseExact(reader["time"].ToString(), "hh:mm:ss");
+                    string info = reader["additional_info"].ToString();
+                    Event newEvent = new Event(name, date, time, info);
+                    list.Add(newEvent);
+                }
+            }
+            return list;
         }
 
         public static bool Update(Event action, string username)
@@ -26,7 +68,39 @@ namespace PlanMe.Data
 
         public static bool Delete(Event action, string username)
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = Database.GetConnection();
+            conn.Open();
+            using (conn)
+            {
+                string query = "DELETE FROM events WHERE name = @name AND date = @date AND time = @time";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@name", action.Name);   
+                cmd.Parameters.AddWithValue("@date", action.Date);   
+                cmd.Parameters.AddWithValue("@time", action.Time);   
+
+                return RunNonQuery(cmd);
+            }
+        }
+
+        private static int GetUserId(string username, MySqlConnection conn)
+        {
+            string query = "SELECT id FROM users WHERE username = @username";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+
+            cmd.Parameters.AddWithValue("@username", username);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            reader.Read();
+            return (int) reader[0];
+        }
+
+        private static bool RunNonQuery(MySqlCommand cmd)
+        {
+            int rows = cmd.ExecuteNonQuery();
+            if (rows == 1)
+                return true;
+            return false;
         }
     }
 }
