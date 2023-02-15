@@ -1,3 +1,6 @@
+using Microsoft.VisualStudio.TestPlatform.TestHost;
+using PlanMe.Data;
+
 namespace PlanMe_Tests
 {
     [TestFixture]
@@ -6,12 +9,17 @@ namespace PlanMe_Tests
         [SetUp]
         public void Setup()
         {
+
         }
 
         [Test]
-        public void Test1()
+        public void CheckIfItPhraseIsEmptyOrNull ()
         {
-            Assert.Pass();
+            string phrase = PhraseData.GetPhrase();
+
+            // Assert that the returned phrase is not empty
+
+            Assert.IsFalse(string.IsNullOrEmpty(phrase), "Phrase should not be empty");
         }
     }
 }
