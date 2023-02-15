@@ -1,5 +1,7 @@
 using PlanMe.Data;
 using PlanMe.Models;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace PlanMe
 {
@@ -56,7 +58,14 @@ namespace PlanMe
             get { return username; }
             set
             {
-                username = value;
+                if (3 <= value.Length && value.Length <= 50) 
+                {
+                    username = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Username is too short!");
+                }
             }
         }
         public string Password
@@ -64,7 +73,14 @@ namespace PlanMe
             get { return password; }
             set
             {
-                password = value;
+                if (Regex.IsMatch(value, "[A-Z0-9]"))
+                {
+                    username = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Password does not contain upper case letter or number!");
+                }
             }
         }
 
