@@ -108,8 +108,15 @@ namespace PlanMe.Data
             cmd.Parameters.AddWithValue("@username", username);
             MySqlDataReader reader = cmd.ExecuteReader();
 
-            reader.Read();
-            return (int) reader[0];
+            int id = 0;
+
+            while (reader.Read())
+            {
+                id = (int)reader["id"];
+            }
+
+            reader.Close();
+            return id;
         }
 
         private static bool RunNonQuery(MySqlCommand cmd)
