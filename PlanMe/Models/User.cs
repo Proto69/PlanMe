@@ -8,7 +8,7 @@ namespace PlanMe
     //Model for user
     public class User
     {
-        //The username will be like id
+        //The username will be used as id
         private string username;
         private string password;
         private List<Event> events;
@@ -58,6 +58,7 @@ namespace PlanMe
             get { return username; }
             set
             {
+                //Checks the lenght of the username if it is valid (if it is longer than 3 and shorter than 50 letters)
                 if (3 <= value.Length && value.Length <= 50) 
                 {
                     username = value;
@@ -73,6 +74,7 @@ namespace PlanMe
             get { return password; }
             set
             {
+                //Checks the password if it is valid (if it contains upper case letter or number)
                 if (Regex.IsMatch(value, "[A-Z0-9]"))
                 {
                     username = value;

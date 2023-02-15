@@ -10,6 +10,7 @@ namespace PlanMe.Data
 {
     public static class EventData
     {
+        //Uploads into the database
         public static bool Upload(Event action, string username)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -32,6 +33,7 @@ namespace PlanMe.Data
             }
         }
 
+        //Gets all events
         public static List<Event> GetAll(string username)
         {
             List<Event> list = new List<Event>();
@@ -61,6 +63,7 @@ namespace PlanMe.Data
             return list;
         }
 
+        //Updates with new parameters
         public static bool Update(Event oldEvent, Event newEvent)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -83,6 +86,7 @@ namespace PlanMe.Data
             }
         }
 
+        //Delete by name, date and time
         public static bool Delete(Event action)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -100,6 +104,7 @@ namespace PlanMe.Data
             }
         }
 
+        //Returns user's id
         private static int GetUserId(string username, MySqlConnection conn)
         {
             string query = "SELECT id FROM users WHERE username = @username";
@@ -119,6 +124,7 @@ namespace PlanMe.Data
             return id;
         }
 
+        //
         private static bool RunNonQuery(MySqlCommand cmd)
         {
             int rows = cmd.ExecuteNonQuery();

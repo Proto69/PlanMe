@@ -19,6 +19,7 @@ namespace PlanMe.Models
 
         public void Complete()
         {
+            //Checks if users's task is done
             if (isDone)
                 throw new InvalidOperationException("This task is already done!");
             isDone = true;

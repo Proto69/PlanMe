@@ -13,6 +13,8 @@ namespace PlanMe_Tests
         }
 
         [Test]
+
+        //Data => PhraseData => GetPhrase()
         public void CheckIfItPhraseIsEmptyOrNull ()
         {
             string phrase = PhraseData.GetPhrase();

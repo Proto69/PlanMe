@@ -9,6 +9,7 @@ namespace PlanMe.Data
 {
     public static class UserData
     {
+        //Creates user
         public static bool Create(User user)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -25,6 +26,7 @@ namespace PlanMe.Data
             }
         }
 
+        //Updates user's password
         public static bool Update(User user)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -41,6 +43,7 @@ namespace PlanMe.Data
             }
         }
 
+        //Delete user by his username
         public static bool Delete(string username)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -56,6 +59,7 @@ namespace PlanMe.Data
             }
         }
 
+        //
         public static User Check(string username, string password)
         {
             MySqlConnection conn = Database.GetConnection();
