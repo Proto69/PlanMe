@@ -59,7 +59,7 @@ namespace PlanMe.Data
             }
         }
 
-        //
+        //Checks is the username and password are valid and returns the User
         public static User Check(string username, string password)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -85,6 +85,7 @@ namespace PlanMe.Data
             }
         }
 
+        //Runs the command and returns if the operation was successful
         private static bool RunNonQuery(MySqlCommand cmd)
         {
             int rows = cmd.ExecuteNonQuery();

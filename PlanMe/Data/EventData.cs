@@ -124,7 +124,7 @@ namespace PlanMe.Data
             return id;
         }
 
-        //
+        //Runs the command and returns if the operation was successful
         private static bool RunNonQuery(MySqlCommand cmd)
         {
             int rows = cmd.ExecuteNonQuery();
