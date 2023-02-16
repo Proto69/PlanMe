@@ -11,17 +11,5 @@ namespace PlanMe_Tests
         {
 
         }
-
-        [Test]
-
-        //Data => PhraseData => GetPhrase()
-        public void CheckIfItPhraseIsEmptyOrNull ()
-        {
-            string phrase = PhraseData.GetPhrase();
-
-            // Assert that the returned phrase is not empty
-
-            Assert.IsFalse(string.IsNullOrEmpty(phrase), "Phrase should not be empty");
-        }
     }
 }

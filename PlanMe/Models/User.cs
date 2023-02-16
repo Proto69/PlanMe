@@ -65,7 +65,7 @@ namespace PlanMe
                 }
                 else
                 {
-                    throw new ArgumentException("Username is too short!");
+                    throw new ArgumentException("Username is not the right length!");
                 }
             }
         }

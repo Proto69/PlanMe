@@ -24,7 +24,7 @@ namespace PlanMe.Data
             using (conn)
             {
                 //Prepares the query with placeholders
-                string query = "SELECT phrase FROM daily_phrase WHERE id = @id";
+                string query = "SELECT phrase FROM phrase WHERE id = @id";
 
                 //Creates the command and adds the values
                 MySqlCommand cmd = new MySqlCommand(query, conn);
