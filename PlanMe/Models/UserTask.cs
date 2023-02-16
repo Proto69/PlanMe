@@ -8,12 +8,12 @@ namespace PlanMe.Models
 {
     public class UserTask
     {
-        private string name;
+        private string text;
         private bool isDone;
 
         public UserTask(string name)
         {
-            this.Name = name;
+            this.Text = name;
             IsDone = false;
         }
 
@@ -25,12 +25,12 @@ namespace PlanMe.Models
             isDone = true;
         }
 
-        public string Name
+        public string Text
         {
-            get { return name; }
+            get { return text; }
             set
             {
-                name = value;
+                text = value;
             }
         }
         public bool IsDone

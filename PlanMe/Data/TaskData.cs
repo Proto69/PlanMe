@@ -21,7 +21,7 @@ namespace PlanMe.Data
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@id", userId);
-                cmd.Parameters.AddWithValue("@text", task.Name);
+                cmd.Parameters.AddWithValue("@text", task.Text);
 
                 return RunNonQuery(cmd);
             }
@@ -34,12 +34,27 @@ namespace PlanMe.Data
 
         public static bool Update(UserTask task, string username)
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = Database.GetConnection();
+            conn.Open();
+            using (conn)
+            {
+                string query = "UPDATE tasks SET "
+            }
         }
 
-        public static bool Delete(UserTask task, string username)
+        public static bool Delete(UserTask task)
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = Database.GetConnection();
+            conn.Open();
+            using(conn)
+            {
+                string query = "DELETE FROM tasks WHERE text = @text";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@text", task.Text);
+
+                return RunNonQuery(cmd);
+            }
         }
 
         //Returns user's id

@@ -24,22 +24,26 @@ namespace PlanMe
 
         public bool AddEvent(Event action)
         {
-            throw new NotImplementedException();
+            events.Add(action);
+            return EventData.Upload(action, Username);
         }
 
         public bool RemoveEvent(Event action)
         {
-            throw new NotImplementedException();
+            events.Remove(action);
+            return EventData.Delete(action);
         }
 
         public bool AddTask(UserTask task)
         {
-            throw new NotImplementedException();
+            tasks.Add(task);
+            return TaskData.Upload(task, Username);
         }
 
         public bool RemoveTask(UserTask task)
         {
-            throw new NotImplementedException();
+            tasks.Remove(task);
+            return TaskData.Delete(task);
         }
 
         //How to search these two

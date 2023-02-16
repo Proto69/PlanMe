@@ -19,11 +19,11 @@ namespace PlanMe.Data
             {
                 int id = GetUserId(username, conn);
 
-                string query = "INSERT INTO events (name, date, time, additional_info, user_id) " +
-                    "VALUES (@name, @date, @time, @info, @user_id)";
+                string query = "INSERT INTO events (text, date, time, additional_info, user_id) " +
+                    "VALUES (@text, @date, @time, @info, @user_id)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@name", action.Name);
+                cmd.Parameters.AddWithValue("@text", action.Name);
                 cmd.Parameters.AddWithValue("@date", action.Date);
                 cmd.Parameters.AddWithValue("@time", action.Time);
                 cmd.Parameters.AddWithValue("@info", action.Info);
@@ -36,7 +36,7 @@ namespace PlanMe.Data
         //Gets all events
         public static List<Event> GetAll(string username)
         {
-            List<Event> list = new List<Event>();
+            List<Event> userEvents = new List<Event>();
             MySqlConnection conn = Database.GetConnection();
 
             conn.Open();
@@ -52,15 +52,15 @@ namespace PlanMe.Data
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    string name = reader["name"].ToString();
+                    string name = reader["text"].ToString();
                     DateOnly date = DateOnly.ParseExact(reader["date"].ToString(), "yyyy-MM-dd");
                     TimeOnly time = TimeOnly.ParseExact(reader["time"].ToString(), "hh:mm:ss");
                     string info = reader["additional_info"].ToString();
                     Event newEvent = new Event(name, date, time, info);
-                    list.Add(newEvent);
+                    userEvents.Add(newEvent);
                 }
             }
-            return list;
+            return userEvents;
         }
 
         //Updates with new parameters
@@ -70,15 +70,15 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                string query = "UPDATE events SET name = @newName, date = @newDate, time = @newTime, additional_info = @newInfo " +
-                    "WHERE name = @name AND date = @date AND time = @time";
+                string query = "UPDATE events SET text = @newName, date = @newDate, time = @newTime, additional_info = @newInfo " +
+                    "WHERE text = @text AND date = @date AND time = @time";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@newName", newEvent.Name);
                 cmd.Parameters.AddWithValue("@newDate", newEvent.Date);
                 cmd.Parameters.AddWithValue("@newTime", newEvent.Time);
                 cmd.Parameters.AddWithValue("@newInfo", newEvent.Info);
-                cmd.Parameters.AddWithValue("@name", oldEvent.Name);
+                cmd.Parameters.AddWithValue("@text", oldEvent.Name);
                 cmd.Parameters.AddWithValue("@date", oldEvent.Date);
                 cmd.Parameters.AddWithValue("@time", oldEvent.Time);
 
@@ -86,17 +86,17 @@ namespace PlanMe.Data
             }
         }
 
-        //Delete by name, date and time
+        //Delete by text, date and time
         public static bool Delete(Event action)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
             using (conn)
             {
-                string query = "DELETE FROM events WHERE name = @name AND date = @date AND time = @time";
+                string query = "DELETE FROM events WHERE text = @text AND date = @date AND time = @time";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@name", action.Name);   
+                cmd.Parameters.AddWithValue("@text", action.Name);   
                 cmd.Parameters.AddWithValue("@date", action.Date);   
                 cmd.Parameters.AddWithValue("@time", action.Time);   
 
