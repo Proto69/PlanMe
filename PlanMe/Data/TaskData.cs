@@ -29,7 +29,28 @@ namespace PlanMe.Data
 
         public static List<UserTask> GetAll(string username)
         {
-            throw new NotImplementedException();
+            List<UserTask> userTasks = new List<UserTask>();
+            MySqlConnection conn = Database.GetConnection();
+
+            conn.Open();
+            using (conn) 
+            {
+                int id = GetUserId(username, conn);
+
+                string query = "SELECT * FROM tasks WHERE user_id = @id";
+                MySqlCommand cmd = new MySqlCommand(query,conn);
+
+                cmd.Parameters.AddWithValue("@id", id);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string text = reader["text"].ToString();
+                    UserTask newTask = new UserTask(text);
+                    userTasks.Add(newTask);
+                }
+            }
+            return userTasks;
         }
 
         public static bool Update(UserTask task, string username)
@@ -38,7 +59,12 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                string query = "UPDATE tasks SET "
+                string query = "UPDATE tasks SET text = @text, is_done = @is_done";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@text", task.Text);
+                cmd.Parameters.AddWithValue("@is_done", task.IsDone);
+
+                return RunNonQuery(cmd);
             }
         }
 
