@@ -46,13 +46,14 @@ namespace PlanMe
             return TaskData.Delete(task);
         }
 
-        //How to search these two
-        public Event GetEvent()
+        //Gets the event by date
+        public Event GetEvent(DateOnly date)
         {
             throw new NotImplementedException();
         }
 
-        public UserTask GetTask()
+        //Gets the event by name
+        public Event GetEvent(string name)
         {
             throw new NotImplementedException();
         }
@@ -63,14 +64,9 @@ namespace PlanMe
             set
             {
                 //Checks the lenght of the username if it is valid (if it is longer than 3 and shorter than 50 letters)
-                if (3 <= value.Length && value.Length <= 50) 
-                {
-                    username = value;
-                }
-                else
-                {
+                if (3 > value.Length || value.Length > 50)
                     throw new ArgumentException("Username is not the right length!");
-                }
+                username = value;
             }
         }
         public string Password
