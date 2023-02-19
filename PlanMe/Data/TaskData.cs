@@ -10,6 +10,7 @@ namespace PlanMe.Data
 {
     public static class TaskData
     {
+        //Adds task to the database for the current user
         public static bool Upload(UserTask task, string username)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -27,6 +28,7 @@ namespace PlanMe.Data
             }
         }
 
+        //Returns all tasks for the current user
         public static List<UserTask> GetAll(string username)
         {
             List<UserTask> userTasks = new List<UserTask>();
@@ -53,6 +55,7 @@ namespace PlanMe.Data
             return userTasks;
         }
 
+        //Updates the task for the current user
         public static bool Update(UserTask task, string username)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -68,6 +71,7 @@ namespace PlanMe.Data
             }
         }
 
+        //Deletes task for the current user
         public static bool Delete(UserTask task)
         {
             MySqlConnection conn = Database.GetConnection();

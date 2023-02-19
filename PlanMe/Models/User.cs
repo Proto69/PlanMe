@@ -21,25 +21,29 @@ namespace PlanMe
             events = EventData.GetAll(username);
             tasks = TaskData.GetAll(username);
         }
-
+         
+        //Adds event to the database for current user
         public bool AddEvent(Event action)
         {
             events.Add(action);
             return EventData.Upload(action, Username);
         }
 
+        //Removes event from the database for the current user
         public bool RemoveEvent(Event action)
         {
             events.Remove(action);
             return EventData.Delete(action);
         }
 
+        //Adds task to the database for current user
         public bool AddTask(UserTask task)
         {
             tasks.Add(task);
             return TaskData.Upload(task, Username);
         }
 
+        //Removes task from the database for the current user
         public bool RemoveTask(UserTask task)
         {
             tasks.Remove(task);

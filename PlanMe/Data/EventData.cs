@@ -10,7 +10,7 @@ namespace PlanMe.Data
 {
     public static class EventData
     {
-        //Uploads into the database
+        //Uploads text, date, time and info into the database
         public static bool Upload(Event action, string username)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -33,7 +33,7 @@ namespace PlanMe.Data
             }
         }
 
-        //Gets all events
+        //Gets all events for current user
         public static List<Event> GetAll(string username)
         {
             List<Event> userEvents = new List<Event>();
@@ -63,7 +63,7 @@ namespace PlanMe.Data
             return userEvents;
         }
 
-        //Updates with new parameters
+        //Updates text, date, time and info for the event with new parameters
         public static bool Update(Event oldEvent, Event newEvent)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -86,7 +86,7 @@ namespace PlanMe.Data
             }
         }
 
-        //Delete by text, date and time
+        //Delete event by text, date and time for current user
         public static bool Delete(Event action)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -104,7 +104,7 @@ namespace PlanMe.Data
             }
         }
 
-        //Returns user's id
+        //Returns user's id for the event
         private static int GetUserId(string username, MySqlConnection conn)
         {
             string query = "SELECT id FROM users WHERE username = @username";

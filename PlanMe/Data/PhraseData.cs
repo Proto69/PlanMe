@@ -9,6 +9,7 @@ namespace PlanMe.Data
 {
     public static class PhraseData
     {
+        //Returns phrase from PlanMe_DB/phrase
         public static string GetPhrase()
         {
             string phrase = "";
