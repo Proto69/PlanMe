@@ -16,7 +16,7 @@ namespace PlanMe_Tests.DataTests
         {
             string phrase = PhraseData.GetPhrase();
 
-            // Assert that the returned phrase is not empty
+            // Assert that the enturned phrase is not empty
 
             Assert.IsFalse(string.IsNullOrEmpty(phrase), "Phrase should not be empty");
         }
