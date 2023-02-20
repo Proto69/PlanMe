@@ -19,11 +19,11 @@ namespace PlanMe.Data
             {
                 int id = GetUserId(username, conn);
 
-                string query = "INSERT INTO events (text, date, time, additional_info, user_id) " +
-                    "VALUES (@text, @date, @time, @info, @user_id)";
+                string query = "INSERT INTO events (name, date, time, additional_info, user_id) " +
+                    "VALUES (@name, @date, @time, @info, @user_id)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@text", action.Name);
+                cmd.Parameters.AddWithValue("@name", action.Name);
                 cmd.Parameters.AddWithValue("@date", action.Date);
                 cmd.Parameters.AddWithValue("@time", action.Time);
                 cmd.Parameters.AddWithValue("@info", action.Info);
@@ -55,8 +55,7 @@ namespace PlanMe.Data
                     string name = reader["name"].ToString();
                     DateTime date = DateTime.Parse(reader["date"].ToString());
                     TimeOnly time = TimeOnly.ParseExact(reader["time"].ToString(), "hh:mm:ss");
-                    string info = reader["additinal_info"].ToString();
-                    date.AddTicks(time.Ticks);
+                    string info = reader["additional_info"].ToString();
                     Event newEvent = new Event(name, date, time, info);
                     userEvents.Add(newEvent);
                 }
@@ -71,8 +70,8 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                string query = "UPDATE events SET text = @newName, date = @newDate, time = @newTime, additional_info = @newInfo " +
-                    "WHERE text = @text AND date = @date AND time = @time";
+                string query = "UPDATE events SET name = @newName, date = @newDate, time = @newTime, additional_info = @newInfo " +
+                    "WHERE name = @text AND date = @date AND time = @time";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@newName", newEvent.Name);
@@ -94,10 +93,10 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                string query = "DELETE FROM events WHERE text = @text AND date = @date AND time = @time";
+                string query = "DELETE FROM events WHERE name = @name AND date = @date AND time = @time";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@text", action.Name);   
+                cmd.Parameters.AddWithValue("@name", action.Name);   
                 cmd.Parameters.AddWithValue("@date", action.Date);   
                 cmd.Parameters.AddWithValue("@time", action.Time);   
 
