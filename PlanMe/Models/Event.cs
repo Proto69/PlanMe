@@ -27,6 +27,8 @@ namespace PlanMe.Models
             get { return name; }
             set
             {
+                if (value.Length > 150)
+                    throw new ArgumentException("The name is too long!");
                 this.name = value;
             }
         }
@@ -51,7 +53,10 @@ namespace PlanMe.Models
             get { return info; }
             set
             {
-                this.info = value;
+                if (value == null)
+                    this.info = "No additional info!";
+                else
+                    this.info = value;
             }
         }
     }
