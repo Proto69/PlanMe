@@ -52,10 +52,11 @@ namespace PlanMe.Data
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    string name = reader["text"].ToString();
-                    DateOnly date = DateOnly.ParseExact(reader["date"].ToString(), "yyyy-MM-dd");
+                    string name = reader["name"].ToString();
+                    DateTime date = DateTime.Parse(reader["date"].ToString());
                     TimeOnly time = TimeOnly.ParseExact(reader["time"].ToString(), "hh:mm:ss");
-                    string info = reader["additional_info"].ToString();
+                    string info = reader["additinal_info"].ToString();
+                    date.AddTicks(time.Ticks);
                     Event newEvent = new Event(name, date, time, info);
                     userEvents.Add(newEvent);
                 }

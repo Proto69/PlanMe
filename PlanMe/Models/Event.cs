@@ -10,11 +10,11 @@ namespace PlanMe.Models
     public class Event
     {
         private string name;
-        private DateOnly date;
+        private DateTime date;
         private TimeOnly time;
         private string info;
 
-        public Event(string name, DateOnly date, TimeOnly time, string info)
+        public Event(string name, DateTime date, TimeOnly time, string info)
         {
             this.Name = name;
             this.Date = date;
@@ -30,7 +30,7 @@ namespace PlanMe.Models
                 this.name = value;
             }
         }
-        public DateOnly Date
+        public DateTime Date
         {
             get { return date; }
             set
