@@ -27,7 +27,7 @@ namespace PlanMe.Data
         }
 
         //Updates user's password
-        public static bool Update(User user)
+        public static bool UpdatePassword(User user)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
