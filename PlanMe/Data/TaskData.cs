@@ -18,7 +18,7 @@ namespace PlanMe.Data
             using (conn)
             {
                 int userId = GetUserId(username, conn);
-                string query = "INSERT INTO lists (user_id, text) VALUES (@id, @text)";
+                string query = "INSERT INTO tasks (user_id, text) VALUES (@id, @text)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@id", userId);
@@ -88,7 +88,7 @@ namespace PlanMe.Data
         }
 
         //Returns user's id
-        private static int GetUserId(string username, MySqlConnection conn)
+        public static int GetUserId(string username, MySqlConnection conn)
         {
             string query = "SELECT id FROM users WHERE username = @username";
             MySqlCommand cmd = new MySqlCommand(query, conn);

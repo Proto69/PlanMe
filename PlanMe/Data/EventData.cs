@@ -105,7 +105,7 @@ namespace PlanMe.Data
         }
 
         //Returns user's id for the event
-        private static int GetUserId(string username, MySqlConnection conn)
+        public static int GetUserId(string username, MySqlConnection conn)
         {
             string query = "SELECT id FROM users WHERE username = @username";
             MySqlCommand cmd = new MySqlCommand(query, conn);
