@@ -9,6 +9,7 @@ namespace PlanMe.Data
 {
     public static class UserData
     {
+        //Creates user
         public static bool Create(User user)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -25,7 +26,8 @@ namespace PlanMe.Data
             }
         }
 
-        public static bool Update(User user)
+        //Updates user's password
+        public static bool UpdatePassword(User user)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
@@ -41,6 +43,7 @@ namespace PlanMe.Data
             }
         }
 
+        //Delete user by his username
         public static bool Delete(string username)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -56,6 +59,7 @@ namespace PlanMe.Data
             }
         }
 
+        //Checks is the username and password are valid and returns the User
         public static User Check(string username, string password)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -81,6 +85,7 @@ namespace PlanMe.Data
             }
         }
 
+        //Runs the command and returns if the operation was successful
         private static bool RunNonQuery(MySqlCommand cmd)
         {
             int rows = cmd.ExecuteNonQuery();

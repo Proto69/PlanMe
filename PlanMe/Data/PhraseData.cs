@@ -9,6 +9,7 @@ namespace PlanMe.Data
 {
     public static class PhraseData
     {
+        //Returns phrase from PlanMe_DB/phrase
         public static string GetPhrase()
         {
             string phrase = "";
@@ -24,7 +25,7 @@ namespace PlanMe.Data
             using (conn)
             {
                 //Prepares the query with placeholders
-                string query = "SELECT phrase FROM daily_phrase WHERE id = @id";
+                string query = "SELECT phrase FROM phrase WHERE id = @id";
 
                 //Creates the command and adds the values
                 MySqlCommand cmd = new MySqlCommand(query, conn);
