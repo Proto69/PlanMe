@@ -77,7 +77,6 @@ namespace PlanMe_Tests.DataTests
 
             EventData.Update(events[0], @event);
 
-            events = new List<Event>();
             events = EventData.GetAll("Enter name");
 
             Assert.AreEqual(@event.Info, events[0].Info, "The event is not updated!");
