@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PlanMe.User_Controls
 {
-    public partial class _3 : UserControl
+    public partial class signUp : UserControl
     {
-        public _3()
+        public signUp()
         {
             InitializeComponent();
         }
