@@ -66,5 +66,22 @@ namespace PlanMe_Tests.DataTests
             Assert.AreEqual(check, true, "The event is not deleted!");
         }
 
+        [Test]
+        public void CheckIsUpdatesEvent()
+        {
+            List<Event> events = new List<Event>();
+            events = EventData.GetAll("Enter name");
+            Random random = new Random();
+            string eventInfo = "Test updating " + random.Next().ToString();
+            Event @event = new Event("Update test", DateTime.Parse("2023-02-21"), "16:51:43", eventInfo);
+
+            EventData.Update(events[0], @event);
+
+            events = new List<Event>();
+            events = EventData.GetAll("Enter name");
+
+            Assert.AreEqual(@event.Info, events[0].Info, "The event is not updated!");
+        }
+
     }
 }
