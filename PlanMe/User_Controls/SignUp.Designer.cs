@@ -42,25 +42,28 @@
             // 
             this.nameTextBox.Location = new System.Drawing.Point(301, 235);
             this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.PlaceholderText = "Enter username";
             this.nameTextBox.Size = new System.Drawing.Size(300, 27);
             this.nameTextBox.TabIndex = 0;
-            this.nameTextBox.Text = "Enter name";
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.passwordTextBox.Location = new System.Drawing.Point(302, 287);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
+            this.passwordTextBox.PlaceholderText = "Enter password";
             this.passwordTextBox.Size = new System.Drawing.Size(300, 27);
             this.passwordTextBox.TabIndex = 1;
-            this.passwordTextBox.Text = "Enter password";
             // 
             // repeatPasswordTextBox
             // 
             this.repeatPasswordTextBox.Location = new System.Drawing.Point(301, 342);
             this.repeatPasswordTextBox.Name = "repeatPasswordTextBox";
+            this.repeatPasswordTextBox.PasswordChar = '*';
+            this.repeatPasswordTextBox.PlaceholderText = "Repeat password";
             this.repeatPasswordTextBox.Size = new System.Drawing.Size(300, 27);
             this.repeatPasswordTextBox.TabIndex = 2;
-            this.repeatPasswordTextBox.Text = "Repeat password";
             // 
             // signUpButton
             // 
