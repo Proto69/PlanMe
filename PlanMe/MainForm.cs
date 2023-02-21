@@ -9,13 +9,9 @@ namespace PlanMe
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //Example for displaying user controls
             SignUp sign = new();
             panel1.Controls.Add(sign);
         }
