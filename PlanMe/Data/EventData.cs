@@ -54,9 +54,9 @@ namespace PlanMe.Data
                 {
                     string name = reader["name"].ToString();
                     DateTime date = DateTime.Parse(reader["date"].ToString());
-                    TimeOnly time = TimeOnly.ParseExact(reader["time"].ToString(), "hh:mm:ss");
+                    TimeOnly time = TimeOnly.Parse(reader["time"].ToString());
                     string info = reader["additional_info"].ToString();
-                    Event newEvent = new Event(name, date, time, info);
+                    Event newEvent = new Event(name, date, time.ToString("HH:mm:ss"), info);
                     userEvents.Add(newEvent);
                 }
             }

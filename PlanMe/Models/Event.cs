@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace PlanMe.Models
 {
-    public class Event
+    public class Event : IComparable<Event>
     {
         private string name;
         private DateTime date;
         private TimeOnly time;
         private string info;
 
-        public Event(string name, DateTime date, TimeOnly time, string info)
+        public Event(string name, DateTime date, string time, string info)
         {
             this.Name = name;
             this.Date = date;
@@ -40,12 +40,12 @@ namespace PlanMe.Models
                 this.date = value;
             }
         }
-        public TimeOnly Time
+        public string Time
         {
-            get { return time; }
+            get { return time.ToString("HH:mm:ss"); }
             set
             {
-                this.time = value;
+                this.time = TimeOnly.ParseExact(value, "HH:mm:ss");
             }
         }
         public string Info
@@ -58,6 +58,16 @@ namespace PlanMe.Models
                 else
                     this.info = value;
             }
+        }
+
+        public int CompareTo(Event? other)
+        {
+            bool name = this.Name == other.Name;
+            bool date = this.Date == other.Date;
+            bool time = this.Time == other.Time;
+
+            if (name && time && date) return 0;
+            return 1;
         }
     }
 }
