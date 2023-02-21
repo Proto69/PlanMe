@@ -1,4 +1,6 @@
+using PlanMe.Models;
 using PlanMe.User_Controls;
+using PlanMe.Views;
 
 namespace PlanMe
 {
@@ -11,9 +13,23 @@ namespace PlanMe
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //Example for displaying user controls
-            SignUp sign = new();
-            panel1.Controls.Add(sign);
+            MainUserAndForm.form = this;
+        }
+
+        public void ShowMainScreen()
+        {
+            panel1.Controls.Clear();
+            MainScreen mainScreen = new MainScreen();
+            mainScreen.Dock = DockStyle.Fill;
+            panel1.Controls.Add(mainScreen);
+        }
+
+        public void ShowSignUp()
+        {
+            panel1.Controls.Clear();
+            SignUp signUp = new();
+            signUp.Dock = DockStyle.Fill;
+            panel1.Controls.Add(signUp);
         }
     }
 }
