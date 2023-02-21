@@ -90,6 +90,9 @@ namespace PlanMe
             }
         }
 
-
+        public override string? ToString()
+        {
+            return $"{username} => {password}";
+        }
     }
 }
