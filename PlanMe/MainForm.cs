@@ -12,7 +12,6 @@ namespace PlanMe
         private void button1_Click(object sender, EventArgs e)
         {
             
-            panel1.Controls.Add(SignUp);
         }
     }
 }

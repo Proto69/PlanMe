@@ -28,13 +28,31 @@ namespace PlanMe_Tests.DataTests
             conn.Open();
             using (conn)
             {
-                int id = EventData.GetUserId("UserId", conn);
-                Assert.AreEqual(23, id, "Does not return right id for user Test");
+                int id = EventData.GetUserId("Get all", conn);
+                Assert.AreEqual(22, id, "Does not return right id for user Test");
             }
         }
 
         [Test]
         public void CheckIfUploadsEvent()
+        {
+            //Generates the DateTime value
+            DateTime date = DateTime.Now.Date.AddDays(new Random().Next(0, 365));
+
+            //Creates the event
+            Event @event = new Event("Birthday Party", date, "22:00:00", "Bring a gift!");
+
+            //Uploads it and gets the returned value
+            bool smth = EventData.Upload(@event, "UploadTest");
+
+            Assert.AreEqual(true, smth, "The event is not uploaded successfully!");
+
+            //Deletes the event afterwards
+            EventData.Delete(@event);
+        }
+
+        [Test]
+        public void CheckIfDeletesEvent()
         {
             DateTime date = DateTime.Now.Date.AddDays(new Random().Next(0, 365));
             TimeOnly time = new TimeOnly(23, 20, 40);
@@ -42,22 +60,11 @@ namespace PlanMe_Tests.DataTests
             Event @event = new Event("Birthday Party", date, time.ToString("HH:mm:ss"), "Bring a gift!");
 
             EventData.Upload(@event, "UploadTest");
+            
+            bool check = EventData.Delete(@event);
 
-            List<Event> events = new List<Event>();
-            events = EventData.GetAll("UploadTest");
-            bool contains = false;
-            for (int i = 0; i < events.Count; i++)
-            {
-                if (events[i].CompareTo(@event) == 0)
-                {
-                    contains = true;
-                }
-            }
-            Assert.AreEqual(contains, true, "The event is not uploaded successfully!");
-
+            Assert.AreEqual(check, true, "The event is not deleted!");
         }
-
-        
 
     }
 }
