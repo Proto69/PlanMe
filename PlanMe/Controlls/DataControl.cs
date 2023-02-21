@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlanMe.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,9 @@ namespace PlanMe.Controlls
         //Creates user by getting name and pass from the view
         public static bool CreateUser(string name, string pass)
         {
-            return default;
+            //We will set a global variable to this user instance
+            User user = new User(name, pass);
+            return UserData.Create(user);
         }
 
         //Updates user's password
