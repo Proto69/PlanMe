@@ -35,7 +35,7 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void CheckIfUploadsTask()
         {
-            UserTask task = new UserTask("smth");
+            UserTask task = new UserTask("MainScreen");
             TaskData.Upload(task, "UploadTest");
             List<UserTask> userTasks = new List<UserTask>();
             userTasks = TaskData.GetAll("UploadTest");
@@ -49,9 +49,9 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void CheckIfDeletesTask()
         {
-            UserTask task1 = new UserTask("smth");
+            UserTask task1 = new UserTask("MainScreen");
             TaskData.Upload(task1, "UploadTest");
-            UserTask task = new UserTask("smth");
+            UserTask task = new UserTask("MainScreen");
             TaskData.Delete(task);
             List<UserTask> tasksAfterDeleting = new List<UserTask>();
             tasksAfterDeleting = TaskData.GetAll("UploadTest");
@@ -63,14 +63,14 @@ namespace PlanMe_Tests.DataTests
         public void CheckIfUpdatesTask()
         {
             Random random = new Random();
-            string taskText = "smth" + random.Next().ToString();
+            string taskText = "MainScreen" + random.Next().ToString();
             UserTask task = new UserTask(taskText);
             List<UserTask> tasks = new List<UserTask>();
             TaskData.Update(task, "UpdateTest");
             tasks = TaskData.GetAll("UpdateTest");
             for (int i = 0; i < tasks.Count; i++)
             {
-                Assert.AreNotEqual("smth", tasks[i].Text, "Update is unsuccessful!");
+                Assert.AreNotEqual("MainScreen", tasks[i].Text, "Update is unsuccessful!");
 
             }
 

@@ -1,6 +1,6 @@
 ﻿namespace PlanMe
 {
-    partial class smth
+    partial class MainScreen
     {
         /// <summary> 
         /// Required designer variable.

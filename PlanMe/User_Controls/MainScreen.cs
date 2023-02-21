@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PlanMe
 {
-    public partial class smth : UserControl
+    public partial class MainScreen : UserControl
     {
-        public smth()
+        public MainScreen()
         {
             InitializeComponent();
         }
