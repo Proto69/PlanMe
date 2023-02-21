@@ -11,13 +11,9 @@ namespace PlanMe.Views
     {
         public static void ReadInfo(string name, string pass, string repPass)
         {
-            
             if(pass != repPass)
-            {
                 throw new ArgumentException("Passwords does not match!");
-            }
-            if (pass == null)
-                throw new Exception();
+            
             DataControl.CreateUser(name, pass);
         }
     }

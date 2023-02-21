@@ -13,5 +13,11 @@ namespace PlanMe
         {
             
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            SignUp sign = new();
+            panel1.Controls.Add(sign);
+        }
     }
 }
