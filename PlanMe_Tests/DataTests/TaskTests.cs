@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using PlanMe.Data;
+using PlanMe.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +41,6 @@ namespace PlanMe_Tests.DataTests
             userTasks = TaskData.GetAll("UploadTest");
             for (int i = 0; i < userTasks.Count; i++)
             {
-
                 Assert.AreEqual(task.Text, userTasks[i].Text, "Did not upload the task!");
             }
         }

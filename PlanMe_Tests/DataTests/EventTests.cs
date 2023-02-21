@@ -18,7 +18,7 @@ namespace PlanMe_Tests.DataTests
         {
             List<Event> listEvents = new List<Event>();
             listEvents = EventData.GetAll("Get all");
-            Assert.AreEqual(2, listEvents.Count, "It does not return all events for user with username Test!");
+            Assert.AreEqual(1, listEvents.Count, "It does not return all events for user with username Get all!");
         }
 
         [Test]
@@ -28,8 +28,8 @@ namespace PlanMe_Tests.DataTests
             conn.Open();
             using (conn)
             {
-                int id = EventData.GetUserId("Test", conn);
-                Assert.AreEqual(22, id, "Does not return right id for user Test");
+                int id = EventData.GetUserId("UserId", conn);
+                Assert.AreEqual(23, id, "Does not return right id for user Test");
             }
         }
 
@@ -38,13 +38,13 @@ namespace PlanMe_Tests.DataTests
         {
             Event @event = new Event("Birthday Party", DateTime.Now.Date.AddDays(new Random().Next(0, 365)),
                 new TimeOnly(23, 10, 40), "Bring a gift!");
-            EventData.Upload(@event, "Test");
+            EventData.Upload(@event, "UploadTest");
             List<Event> events = new List<Event>();
-            events = EventData.GetAll("Test");
+            events = EventData.GetAll("UploadTest");
 
             for (int i = 0; i < events.Count; i++)
             {
-                Assert.AreEqual(@event, events[i], "The event is not uploaded successful!");
+                Assert.AreEqual(@event, events[i], "The event is not uploaded successfully!");
             }
         }
 
