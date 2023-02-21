@@ -5,10 +5,10 @@ namespace PlanMe
 {
     public class DataController
     {
-        //Creates user by getting a model from the view
-        public bool CreateUser(User user)
+        //Creates user by getting name and pass from the view
+        public bool CreateUser(string name, string pass)
         {
-            throw new NotImplementedException();
+            return default;
         }
 
         //Updates user's password

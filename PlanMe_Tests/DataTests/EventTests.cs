@@ -36,17 +36,28 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void CheckIfUploadsEvent()
         {
-            Event @event = new Event("Birthday Party", DateTime.Now.Date.AddDays(new Random().Next(0, 365)),
-                new TimeOnly(23, 10, 40), "Bring a gift!");
+            DateTime date = DateTime.Now.Date.AddDays(new Random().Next(0, 365));
+            TimeOnly time = new TimeOnly(23, 20, 40);
+
+            Event @event = new Event("Birthday Party", date, time.ToString("HH:mm:ss"), "Bring a gift!");
+
             EventData.Upload(@event, "UploadTest");
+
             List<Event> events = new List<Event>();
             events = EventData.GetAll("UploadTest");
-
+            bool contains = false;
             for (int i = 0; i < events.Count; i++)
             {
-                Assert.AreEqual(@event, events[i], "The event is not uploaded successfully!");
+                if (events[i].CompareTo(@event) == 0)
+                {
+                    contains = true;
+                }
             }
+            Assert.AreEqual(contains, true, "The event is not uploaded successfully!");
+
         }
+
+        
 
     }
 }

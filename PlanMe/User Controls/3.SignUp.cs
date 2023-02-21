@@ -1,4 +1,5 @@
 ﻿using System;
+using PlanMe.Views;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,7 @@ namespace PlanMe.User_Controls
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            SignUpView.ReadInfo(nameTextBox.Text, passwordTextBox.Text, repeatPasswordTextBox.Text);
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -38,6 +39,11 @@ namespace PlanMe.User_Controls
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
