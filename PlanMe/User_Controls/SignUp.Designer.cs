@@ -97,7 +97,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PlanMe.Properties.Resources.PlanMe1;
-            this.pictureBox1.Location = new System.Drawing.Point(335, 72);
+            this.pictureBox1.Location = new System.Drawing.Point(330, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(222, 85);
             this.pictureBox1.TabIndex = 9;
@@ -107,13 +107,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.logInLinkLabel);
             this.Controls.Add(this.signUpButton);
             this.Controls.Add(this.repeatPasswordTextBox);
             this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.nameTextBox);
             this.Name = "SignUp";
             this.Size = new System.Drawing.Size(900, 500);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
