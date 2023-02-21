@@ -1,5 +1,5 @@
 ﻿using System;
-using PlanMe.Controllers;
+using PlanMe.Controlls;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +16,7 @@ namespace PlanMe.Views
             {
                 throw new ArgumentException("Passwords does not match!");
             }
-            DataController.CreateUser(name, pass);
+            DataControl.CreateUser(name, pass);
         }
     }
 }
