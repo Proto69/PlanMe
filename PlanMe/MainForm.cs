@@ -14,6 +14,7 @@ namespace PlanMe
         private void MainForm_Load(object sender, EventArgs e)
         {
             MainUserAndForm.form = this;
+            ShowSignUp();
         }
 
         public void ShowMainScreen()
