@@ -16,6 +16,8 @@ namespace PlanMe.Views
             {
                 throw new ArgumentException("Passwords does not match!");
             }
+            if (pass == null)
+                throw new Exception();
             DataControl.CreateUser(name, pass);
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace PlanMe.User_Controls
 {
-    partial class signUp
+    partial class SignUp
     {
         /// <summary> 
         /// Required designer variable.
@@ -114,7 +114,7 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // signUp
+            // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,7 +126,7 @@
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.nameTextBox);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "signUp";
+            this.Name = "SignUp";
             this.Size = new System.Drawing.Size(1350, 750);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

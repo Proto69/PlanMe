@@ -81,7 +81,7 @@ namespace PlanMe
                 //Checks the password if it is valid (if it contains upper case letter or number)
                 if (Regex.IsMatch(value, "[A-Z0-9]"))
                 {
-                    username = value;
+                    password = value;
                 }
                 else
                 {
