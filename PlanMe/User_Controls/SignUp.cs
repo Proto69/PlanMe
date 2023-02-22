@@ -25,7 +25,7 @@ namespace PlanMe.User_Controls
             {
                 SignUpView.ReadInfo(nameTextBox.Text, passwordTextBox.Text, repeatPasswordTextBox.Text);
                 
-                MainUserAndForm.form.ShowMainScreen();
+                MainModels.form.ShowMainScreen();
             }
             catch (Exception k)
             {

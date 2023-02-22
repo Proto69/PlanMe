@@ -13,7 +13,7 @@ namespace PlanMe
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            MainUserAndForm.form = this;
+            MainModels.form = this;
             ShowSignUp();
         }
 

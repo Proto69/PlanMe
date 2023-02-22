@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace PlanMe.Models
 {
-    public static class MainUserAndForm
+    public static class MainModels
     {
         public static User user;
         public static MainForm form;
+        public static UserTask task;
     }
 }

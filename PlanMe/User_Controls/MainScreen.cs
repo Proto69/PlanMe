@@ -22,12 +22,12 @@ namespace PlanMe
 
         private void listsButton_Click(object sender, EventArgs e)
         {
-            MainUserAndForm.form.ShowExistingList();
+            MainModels.form.ShowExistingList();
         }
 
         private void plansButton_Click(object sender, EventArgs e)
         {
-            MainUserAndForm.form.ShowAddATask();
+            MainModels.form.ShowAddATask();
         }
     }
 }

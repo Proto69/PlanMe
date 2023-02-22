@@ -15,7 +15,7 @@ namespace PlanMe.Controlls
         {
             //We will set a global variable to this user instance
             User user = new User(name, pass);
-            MainUserAndForm.user = user;
+            MainModels.user = user;
             UserData.Create(user);
         }
 
