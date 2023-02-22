@@ -17,13 +17,13 @@ namespace PlanMe.User_Controls
         public ExistingList()
         {
             InitializeComponent();
-            List<UserTask> tasks = TaskData.GetAll(MainModels.user.Username);
+            /*List<UserTask> tasks = TaskData.GetAll(MainModels.user.Username);
             foreach (var task in tasks)
             {
                 CheckBox box = new CheckBox() { Text = task.Text, Checked = task.IsDone };
                 checkedListBox1.Items.Add(box);
                 checkedListBox1.DisplayMember = "Text";
-            }
+            }*/
         }
 
         private void addButton_Click(object sender, EventArgs e)
