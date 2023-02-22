@@ -69,5 +69,10 @@ namespace PlanMe.Models
             if (name && time && date) return 0;
             return 1;
         }
+
+        public override string? ToString()
+        {
+            return $"{Name} on {Date} at {Time}";
+        }
     }
 }
