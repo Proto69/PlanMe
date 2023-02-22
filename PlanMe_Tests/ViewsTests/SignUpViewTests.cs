@@ -16,7 +16,7 @@ namespace PlanMe_Tests.ViewsTests
         {
             SignUpView.ReadInfo("Reads", "Read12", "Read12");
             User user = UserData.Check("Reads", "Read12");
-            UserData.Delete("Read");
+            UserData.Delete("Reads");
             Assert.IsNotNull(user, "Does not reads!");
         }
     }

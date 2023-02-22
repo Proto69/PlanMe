@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PlanMe.Data;
+using PlanMe.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,21 +17,17 @@ namespace PlanMe
         public MainScreen()
         {
             InitializeComponent();
+            phraseBox.Text = PhraseData.GetPhrase();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void listsButton_Click(object sender, EventArgs e)
         {
-
+            MainUserAndForm.form.ShowExistingList();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void plansButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            MainUserAndForm.form.ShowAddATask();
         }
     }
 }

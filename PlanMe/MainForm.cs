@@ -32,5 +32,21 @@ namespace PlanMe
             signUp.Dock = DockStyle.Fill;
             panel1.Controls.Add(signUp);
         }
+
+        public void ShowExistingList()
+        {
+            panel1.Controls.Clear();
+            ExistingList lists = new();
+            lists.Dock = DockStyle.Fill;
+            panel1.Controls.Add(lists);
+        }
+
+        public void ShowAddATask()
+        {
+            panel1.Controls.Clear();
+            AddATask tasks = new();
+            tasks.Dock = DockStyle.Fill;
+            panel1.Controls.Add(tasks);
+        }
     }
 }

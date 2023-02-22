@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.plansButton = new System.Windows.Forms.Button();
+            this.listsButton = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.infoButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.TextBox = new System.Windows.Forms.TextBox();
+            this.phraseBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -47,31 +47,32 @@
             this.pictureBox1.Size = new System.Drawing.Size(230, 83);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
+            // plansButton
             // 
-            this.button1.BackColor = System.Drawing.Color.ForestGreen;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(391, 232);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 60);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "plans";
-            this.button1.UseVisualStyleBackColor = false;
+            this.plansButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.plansButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.plansButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.plansButton.Location = new System.Drawing.Point(391, 232);
+            this.plansButton.Name = "plansButton";
+            this.plansButton.Size = new System.Drawing.Size(110, 60);
+            this.plansButton.TabIndex = 11;
+            this.plansButton.Text = "plans";
+            this.plansButton.UseVisualStyleBackColor = false;
+            this.plansButton.Click += new System.EventHandler(this.plansButton_Click);
             // 
-            // button2
+            // listsButton
             // 
-            this.button2.BackColor = System.Drawing.Color.ForestGreen;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(155, 356);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 60);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "lists";
-            this.button2.UseVisualStyleBackColor = false;
+            this.listsButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.listsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.listsButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.listsButton.Location = new System.Drawing.Point(155, 356);
+            this.listsButton.Name = "listsButton";
+            this.listsButton.Size = new System.Drawing.Size(110, 60);
+            this.listsButton.TabIndex = 12;
+            this.listsButton.Text = "lists";
+            this.listsButton.UseVisualStyleBackColor = false;
+            this.listsButton.Click += new System.EventHandler(this.listsButton_Click);
             // 
             // pictureBox2
             // 
@@ -83,17 +84,17 @@
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
-            // button3
+            // infoButton
             // 
-            this.button3.BackColor = System.Drawing.Color.ForestGreen;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Location = new System.Drawing.Point(625, 419);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 60);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "for the app";
-            this.button3.UseVisualStyleBackColor = false;
+            this.infoButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.infoButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.infoButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.infoButton.Location = new System.Drawing.Point(625, 419);
+            this.infoButton.Name = "infoButton";
+            this.infoButton.Size = new System.Drawing.Size(110, 60);
+            this.infoButton.TabIndex = 14;
+            this.infoButton.Text = "for the app";
+            this.infoButton.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -107,25 +108,26 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Phrase of the day:";
             // 
-            // TextBox
+            // phraseBox
             // 
-            this.TextBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TextBox.Location = new System.Drawing.Point(51, 61);
-            this.TextBox.Multiline = true;
-            this.TextBox.Name = "TextBox";
-            this.TextBox.Size = new System.Drawing.Size(430, 43);
-            this.TextBox.TabIndex = 16;
-            this.TextBox.Text = "daily phrase";
+            this.phraseBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.phraseBox.Location = new System.Drawing.Point(51, 61);
+            this.phraseBox.Multiline = true;
+            this.phraseBox.Name = "phraseBox";
+            this.phraseBox.ReadOnly = true;
+            this.phraseBox.Size = new System.Drawing.Size(430, 43);
+            this.phraseBox.TabIndex = 16;
+            this.phraseBox.Text = "daily phrase";
             // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.TextBox);
+            this.Controls.Add(this.phraseBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.infoButton);
+            this.Controls.Add(this.listsButton);
+            this.Controls.Add(this.plansButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "MainScreen";
@@ -140,11 +142,11 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Button button1;
-        private Button button2;
+        private Button plansButton;
+        private Button listsButton;
         private PictureBox pictureBox2;
-        private Button button3;
+        private Button infoButton;
         private Label label1;
-        private TextBox TextBox;
+        private TextBox phraseBox;
     }
 }
