@@ -1,4 +1,5 @@
 ﻿using PlanMe.Data;
+using PlanMe.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace PlanMe.Controlls
         {
             //We will set a global variable to this user instance
             User user = new User(name, pass);
+            MainUserAndForm.user = user;
             UserData.Create(user);
         }
 
