@@ -34,7 +34,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.infoButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.phraseBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -108,22 +108,22 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Phrase of the day:";
             // 
-            // phraseBox
+            // label2
             // 
-            this.phraseBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.phraseBox.Location = new System.Drawing.Point(51, 61);
-            this.phraseBox.Multiline = true;
-            this.phraseBox.Name = "phraseBox";
-            this.phraseBox.ReadOnly = true;
-            this.phraseBox.Size = new System.Drawing.Size(430, 43);
-            this.phraseBox.TabIndex = 16;
-            this.phraseBox.Text = "daily phrase";
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(38, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(452, 74);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.UseCompatibleTextRendering = true;
             // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.phraseBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.infoButton);
             this.Controls.Add(this.listsButton);
@@ -147,6 +147,6 @@
         private PictureBox pictureBox2;
         private Button infoButton;
         private Label label1;
-        private TextBox phraseBox;
+        private Label label2;
     }
 }

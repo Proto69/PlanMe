@@ -17,7 +17,7 @@ namespace PlanMe
         public MainScreen()
         {
             InitializeComponent();
-            phraseBox.Text = PhraseData.GetPhrase();
+            label2.Text = PhraseData.GetPhrase();
         }
 
         private void listsButton_Click(object sender, EventArgs e)
