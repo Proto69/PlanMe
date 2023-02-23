@@ -116,15 +116,14 @@
             // 
             // label2
             // 
-            this.phraseBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.phraseBox.Location = new System.Drawing.Point(76, 92);
-            this.phraseBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.phraseBox.Multiline = true;
-            this.phraseBox.Name = "phraseBox";
-            this.phraseBox.ReadOnly = true;
-            this.phraseBox.Size = new System.Drawing.Size(643, 62);
-            this.phraseBox.TabIndex = 16;
-            this.phraseBox.Text = "daily phrase";
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(38, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(452, 74);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.UseCompatibleTextRendering = true;
             // 
             // MainScreen
             // 
