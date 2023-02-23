@@ -22,12 +22,13 @@ namespace PlanMe
 
         private void listsButton_Click(object sender, EventArgs e)
         {
+            //Трябва да показва друго ама още го няма
             MainModels.form.ShowExistingList();
         }
 
         private void plansButton_Click(object sender, EventArgs e)
         {
-            MainModels.form.ShowAddATask();
+            
         }
     }
 }
