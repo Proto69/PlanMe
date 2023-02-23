@@ -34,7 +34,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.infoButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.phraseBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -114,7 +114,7 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Phrase of the day:";
             // 
-            // phraseBox
+            // label2
             // 
             this.phraseBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.phraseBox.Location = new System.Drawing.Point(76, 92);
@@ -130,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.phraseBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.infoButton);
             this.Controls.Add(this.listsButton);
@@ -155,6 +155,6 @@
         private PictureBox pictureBox2;
         private Button infoButton;
         private Label label1;
-        private TextBox phraseBox;
+        private Label label2;
     }
 }
