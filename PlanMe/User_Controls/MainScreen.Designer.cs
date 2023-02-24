@@ -43,7 +43,7 @@
             // 
             this.pictureBox1.Image = global::PlanMe.Properties.Resources.PlanMe1;
             this.pictureBox1.Location = new System.Drawing.Point(897, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(345, 124);
             this.pictureBox1.TabIndex = 10;
@@ -55,7 +55,7 @@
             this.plansButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.plansButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.plansButton.Location = new System.Drawing.Point(586, 348);
-            this.plansButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plansButton.Margin = new System.Windows.Forms.Padding(4);
             this.plansButton.Name = "plansButton";
             this.plansButton.Size = new System.Drawing.Size(165, 90);
             this.plansButton.TabIndex = 11;
@@ -69,7 +69,7 @@
             this.listsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listsButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.listsButton.Location = new System.Drawing.Point(232, 534);
-            this.listsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listsButton.Margin = new System.Windows.Forms.Padding(4);
             this.listsButton.Name = "listsButton";
             this.listsButton.Size = new System.Drawing.Size(165, 90);
             this.listsButton.TabIndex = 12;
@@ -81,7 +81,7 @@
             // 
             this.pictureBox2.Image = global::PlanMe.Properties.Resources.calendar;
             this.pictureBox2.Location = new System.Drawing.Point(-44, -30);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1426, 819);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -94,7 +94,7 @@
             this.infoButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.infoButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.infoButton.Location = new System.Drawing.Point(938, 628);
-            this.infoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.infoButton.Margin = new System.Windows.Forms.Padding(4);
             this.infoButton.Name = "infoButton";
             this.infoButton.Size = new System.Drawing.Size(165, 90);
             this.infoButton.TabIndex = 14;
@@ -117,7 +117,7 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(38, 49);
+            this.label2.Location = new System.Drawing.Point(57, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(452, 74);
             this.label2.TabIndex = 17;
@@ -136,7 +136,7 @@
             this.Controls.Add(this.plansButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainScreen";
             this.Size = new System.Drawing.Size(1350, 750);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
