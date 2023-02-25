@@ -82,9 +82,13 @@ namespace PlanMe
                     throw new ArgumentException("The password is too short!");
                 //Checks the password if it is valid (if it contains upper case letter or number)
                 if (Regex.IsMatch(value, "[A-Z0-9]"))
+                {
                     password = value;
-                throw new ArgumentException("Password does not contain upper case letter or number!");
-
+                }
+                else
+                {
+                    throw new ArgumentException("Password does not contain upper case letter or number!");
+                }
             }
         }
 
