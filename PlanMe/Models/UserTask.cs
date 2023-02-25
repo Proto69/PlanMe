@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace PlanMe.Models
 {
@@ -11,10 +12,15 @@ namespace PlanMe.Models
         private string text;
         private bool isDone;
 
-        public UserTask(string name)
+        public UserTask(string text) : this(text, true)
         {
-            this.Text = name;
-            IsDone = false;
+
+        }
+
+        public UserTask(string text, bool isDone)
+        {
+            this.Text = text;
+            this.IsDone = isDone;
         }
 
         public void Complete()
