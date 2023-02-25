@@ -30,5 +30,17 @@ namespace PlanMe.Controlls
         {
             throw new NotImplementedException();
         }
+
+        public static void CreateTask(string text)
+        {
+            UserTask task = new UserTask(text);
+            TaskData.Upload(task, MainModels.user.Username);
+        }
+
+        public static bool UpdateTask(string text, bool isDone)
+        {
+            UserTask task = new UserTask(text, isDone);
+            return TaskData.Update(task);
+        }
     }
 }
