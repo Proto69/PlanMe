@@ -21,7 +21,7 @@ namespace PlanMe
             events = EventData.GetAll(username);
             tasks = TaskData.GetAll(username);
         }
-         
+
         //Adds event to the database for current user
         public bool AddEvent(Event action)
         {
@@ -78,15 +78,13 @@ namespace PlanMe
             get { return password; }
             set
             {
+                if (value.Length < 8)
+                    throw new ArgumentException("The password is too short!");
                 //Checks the password if it is valid (if it contains upper case letter or number)
                 if (Regex.IsMatch(value, "[A-Z0-9]"))
-                {
                     password = value;
-                }
-                else
-                {
-                    throw new ArgumentException("Password does not contain upper case letter or number!");
-                }
+                throw new ArgumentException("Password does not contain upper case letter or number!");
+
             }
         }
 
