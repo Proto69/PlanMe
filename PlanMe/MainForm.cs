@@ -1,3 +1,4 @@
+using Google.Protobuf.Collections;
 using PlanMe.Models;
 using PlanMe.User_Controls;
 using PlanMe.Views;
@@ -37,6 +38,7 @@ namespace PlanMe
         {
             panel1.Controls.Clear();
             ExistingList lists = new();
+            MainModels.lists = lists;
             lists.Dock = DockStyle.Fill;
             panel1.Controls.Add(lists);
         }
@@ -44,7 +46,7 @@ namespace PlanMe
         public void ShowAddATask()
         {
             panel1.Controls.Clear();
-            AddATask tasks = new();
+            AddATaskForm tasks = new();
             tasks.Dock = DockStyle.Fill;
             panel1.Controls.Add(tasks);
         }
