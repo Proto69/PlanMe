@@ -14,8 +14,8 @@ namespace PlanMe_Tests.ViewsTests
         [Test]
         public void CheckIfReadsAndCreatesUser()
         {
-            SignUpView.ReadInfo("Reads", "Read12", "Read12");
-            User user = UserData.Check("Reads", "Read12");
+            SignUpView.ReadInfo("Reads", "Read1234", "Read1234");
+            User user = UserData.Check("Reads", "Read1234");
             UserData.Delete("Reads");
             Assert.IsNotNull(user, "Does not reads!");
         }

@@ -25,7 +25,7 @@ namespace PlanMe_Tests.DataTests
         {
             
             Random random = new Random();
-            string password = "Test" + random.Next(0,100);
+            string password = "Test1234" + random.Next(0,100);
             User user = new User("Test user", password);
             UserData.UpdatePassword(user);
             User checkedUser = UserData.Check("Test user", password);
@@ -35,7 +35,7 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void CheckIfDeletesUser()
         {
-            User user = new User("Tests user", "Test234");
+            User user = new User("Tests user", "Test1234");
             UserData.Create(user);
             UserData.Delete("Tests user");
             try

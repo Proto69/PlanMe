@@ -48,7 +48,7 @@ namespace PlanMe.Controlls
         public static bool UpdateTask(string text, bool isDone)
         {
             UserTask task = new UserTask(text, isDone);
-            return TaskData.Update(task);
+            return TaskData.Update(task, MainModels.user.Username);
         }
     }
 }

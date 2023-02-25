@@ -79,6 +79,7 @@
             this.saveButton.TabIndex = 11;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // deleteButton
             // 
@@ -91,6 +92,7 @@
             this.deleteButton.TabIndex = 12;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // checkedListBox1
             // 

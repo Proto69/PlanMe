@@ -25,14 +25,6 @@ namespace PlanMe.User_Controls
         {
             CheckBox box = (CheckBox)sender;
             DataControl.UpdateTask(box.Text, box.Checked);
-            if (box.Checked)
-            {
-                box.Enabled = false;
-            }
-            else
-            {
-                box.Enabled = true;
-            }
         }
 
         public void DisplayAllTasks()
@@ -55,6 +47,19 @@ namespace PlanMe.User_Controls
         {
             AddATaskForm form = new AddATaskForm();
             form.ShowDialog();
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            PageControl.ShowMainScreen();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            //Идеята ми е да се отваря нов прозорец в който да
+            //се покажат всички задачи като check box и да се маркират 
+            //и после да натиснеш Delete и да се изтрият маркираните, като
+            //има и бутон Delete All който да изтрива всичко
         }
     }
 }

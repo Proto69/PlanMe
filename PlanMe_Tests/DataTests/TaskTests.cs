@@ -17,7 +17,7 @@ namespace PlanMe_Tests.DataTests
         {
             List<UserTask> listEvents = new List<UserTask>();
             listEvents = TaskData.GetAll("Get all");
-            Assert.AreEqual(2, listEvents.Count, "It does not return all events for user with username Test!");
+            Assert.AreEqual(2, listEvents.Count, "It does not return all events for user with username Get all!");
         }
 
         [Test]
@@ -35,26 +35,19 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void CheckIfUploadsTask()
         {
-            UserTask task = new UserTask("MainScreen");
+            UserTask task = new UserTask("Testtt");
             TaskData.Upload(task, "UploadTest");
-            List<UserTask> userTasks = new List<UserTask>();
-            userTasks = TaskData.GetAll("UploadTest");
-            for (int i = 0; i < userTasks.Count; i++)
-            {
-                Assert.AreEqual(task.Text, userTasks[i].Text, "Did not upload the task!");
-            }
+            List<UserTask> userTasks = TaskData.GetAll("UploadTest");
+            Assert.AreEqual(1, userTasks.Count, "The task was not uploaded!");
         }
 
 
         [Test]
         public void CheckIfDeletesTask()
         {
-            UserTask task1 = new UserTask("MainScreen");
-            TaskData.Upload(task1, "UploadTest");
-            UserTask task = new UserTask("MainScreen");
+            UserTask task = new UserTask("Testtt");
             TaskData.Delete(task);
-            List<UserTask> tasksAfterDeleting = new List<UserTask>();
-            tasksAfterDeleting = TaskData.GetAll("UploadTest");
+            List<UserTask> tasksAfterDeleting = TaskData.GetAll("UploadTest");
 
             Assert.AreEqual(0, tasksAfterDeleting.Count, "Task is not deleted!");
         }
@@ -62,18 +55,13 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void CheckIfUpdatesTask()
         {
-            Random random = new Random();
-            string taskText = "MainScreen" + random.Next().ToString();
-            UserTask task = new UserTask(taskText);
-            List<UserTask> tasks = new List<UserTask>();
-            TaskData.Update(task, "UpdateTest");
-            tasks = TaskData.GetAll("UpdateTest");
-            for (int i = 0; i < tasks.Count; i++)
-            {
-                Assert.AreNotEqual("MainScreen", tasks[i].Text, "Update is unsuccessful!");
-
-            }
-
+            UserTask task = new UserTask("Update");
+            TaskData.Upload(task, "UploadTest");
+            task.IsDone = true;
+            TaskData.Update(task, "UploadTest");
+            List<UserTask> userTasks = TaskData.GetAll("UploadTest");
+            Assert.AreEqual(task.IsDone, userTasks[0].IsDone, "The task was not uploaded!");
+            TaskData.Delete(task);
         }
     }
 }

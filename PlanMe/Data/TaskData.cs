@@ -56,16 +56,18 @@ namespace PlanMe.Data
         }
 
         //Updates the task for the current user
-        public static bool Update(UserTask task)
+        public static bool Update(UserTask task, string username)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
             using (conn)
             {
-                string query = "UPDATE tasks SET text = @text, is_done = @is_done";
+                int id = GetUserId(username, conn);
+                string query = "UPDATE tasks SET is_done = @is_done WHERE text = @text AND user_id = user_id";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@text", task.Text);
                 cmd.Parameters.AddWithValue("@is_done", task.IsDone);
+                cmd.Parameters.AddWithValue("@user_id", id);
 
                 return RunNonQuery(cmd);
             }

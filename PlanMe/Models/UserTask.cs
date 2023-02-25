@@ -47,5 +47,10 @@ namespace PlanMe.Models
                 isDone = value;
             }
         }
+
+        public override string ToString()
+        {
+            return $"{text} {isDone}";
+        }
     }
 }
