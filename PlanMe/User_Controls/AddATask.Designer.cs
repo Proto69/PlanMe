@@ -68,9 +68,10 @@
             // 
             // text
             // 
-            this.text.BackColor = System.Drawing.Color.Gainsboro;
+            this.text.BackColor = System.Drawing.Color.White;
             this.text.Location = new System.Drawing.Point(80, 150);
             this.text.Name = "text";
+            this.text.PlaceholderText = "Write your task here...";
             this.text.Size = new System.Drawing.Size(317, 27);
             this.text.TabIndex = 3;
             // 
