@@ -109,7 +109,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(348, 52);
             this.textBox1.TabIndex = 14;
-            this.textBox1.Text = " Name of the list";
+            this.textBox1.Text = " All tasks";
             // 
             // ExistingList
             // 

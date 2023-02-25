@@ -1,4 +1,5 @@
-﻿using PlanMe.Data;
+﻿using PlanMe.Controlls;
+using PlanMe.Data;
 using PlanMe.Models;
 using System;
 using System.Collections.Generic;
@@ -17,18 +18,43 @@ namespace PlanMe.User_Controls
         public ExistingList()
         {
             InitializeComponent();
-            /*List<UserTask> tasks = TaskData.GetAll(MainModels.user.Username);
+            DisplayAllTasks();
+        }
+
+        private void ClickCheckBox(object sender, EventArgs e)
+        {
+            CheckBox box = (CheckBox)sender;
+            DataControl.UpdateTask(box.Text, box.Checked);
+            if (box.Checked)
+            {
+                box.Enabled = false;
+            }
+            else
+            {
+                box.Enabled = true;
+            }
+        }
+
+        public void DisplayAllTasks()
+        {
+            checkedListBox1.Items.Clear();
+            List<UserTask> tasks = TaskData.GetAll(MainModels.user.Username);
             foreach (var task in tasks)
             {
                 CheckBox box = new CheckBox() { Text = task.Text, Checked = task.IsDone };
+                if (box.Checked)
+                    box.Enabled = false;
+                box.CheckedChanged += ClickCheckBox;
+
                 checkedListBox1.Items.Add(box);
                 checkedListBox1.DisplayMember = "Text";
-            }*/
+            }
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            MainModels.form.ShowAddATask();
+            AddATaskForm form = new AddATaskForm();
+            form.ShowDialog();
         }
     }
 }
