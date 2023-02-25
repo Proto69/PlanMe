@@ -56,7 +56,7 @@ namespace PlanMe.Data
         }
 
         //Updates the task for the current user
-        public static bool Update(UserTask task, string username)
+        public static bool Update(UserTask task)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
