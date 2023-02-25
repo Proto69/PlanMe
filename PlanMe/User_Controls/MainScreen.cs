@@ -1,4 +1,5 @@
-﻿using PlanMe.Data;
+﻿using PlanMe.Controlls;
+using PlanMe.Data;
 using PlanMe.Models;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace PlanMe
         private void listsButton_Click(object sender, EventArgs e)
         {
             //Трябва да показва друго ама още го няма
-            MainModels.form.ShowExistingList();
+            PageControl.ShowExistingList();
         }
 
         private void plansButton_Click(object sender, EventArgs e)

@@ -21,8 +21,15 @@ namespace PlanMe.User_Controls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddATaskView.CreateTask(text.Text);
-            MainModels.lists.DisplayAllTasks();
+            try
+            {
+                AddATaskView.CreateTask(text.Text);
+                MainModels.lists.DisplayAllTasks();
+            }
+            catch (Exception ex)
+            {
+                ErrorView.ShowError(ex.Message);
+            }
         }
     }
 }
