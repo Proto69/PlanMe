@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlanMe.User_Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,6 @@ namespace PlanMe.Models
     {
         public static User user;
         public static MainForm form;
-        public static UserTask task;
+        public static ExistingList lists;
     }
 }
