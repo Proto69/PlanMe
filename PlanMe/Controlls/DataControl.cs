@@ -19,6 +19,14 @@ namespace PlanMe.Controlls
             UserData.Create(user);
         }
 
+        //Use for LogIn page, checks if the values are correct
+        //and sets the global variable to this user instance
+        public static void CheckUser(string username, string password)
+        {
+            User user = UserData.Check(username, password);
+            MainModels.user = user;
+        }
+
         //Updates user's password
         public static void UpdateUserPassword(User user)
         {
