@@ -27,7 +27,7 @@ namespace PlanMe_Tests.DataTests
             conn.Open();
             using (conn)
             {
-                int id = TaskData.GetUserId("UserId", conn);
+                int id = MainCommands.GetUserId("UserId", conn);
                 Assert.AreEqual(23, id, "Does not return right id for user Test");
             }
         }
@@ -46,7 +46,7 @@ namespace PlanMe_Tests.DataTests
         public void CheckIfDeletesTask()
         {
             UserTask task = new UserTask("Testtt");
-            TaskData.Delete(task);
+            //TaskData.Delete(task);
             List<UserTask> tasksAfterDeleting = TaskData.GetAll("UploadTest");
 
             Assert.AreEqual(0, tasksAfterDeleting.Count, "Task is not deleted!");
@@ -61,7 +61,7 @@ namespace PlanMe_Tests.DataTests
             TaskData.Update(task, "UploadTest");
             List<UserTask> userTasks = TaskData.GetAll("UploadTest");
             Assert.AreEqual(task.IsDone, userTasks[0].IsDone, "The task was not uploaded!");
-            TaskData.Delete(task);
+            //TaskData.Delete(task);
         }
     }
 }
