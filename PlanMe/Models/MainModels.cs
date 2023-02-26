@@ -12,5 +12,6 @@ namespace PlanMe.Models
         public static User user;
         public static MainForm form;
         public static ExistingList lists;
+        public static List<UserTask> tasks;
     }
 }

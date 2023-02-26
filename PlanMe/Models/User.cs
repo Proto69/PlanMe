@@ -12,14 +12,14 @@ namespace PlanMe
         private string username;
         private string password;
         private List<Event> events;
-        private List<UserTask> tasks;
+        private List<ListOfTasks> allTasks;
 
         public User(string username, string password)
         {
             this.Username = username;
             this.Password = password;
             events = EventData.GetAll(username);
-            tasks = TaskData.GetAll(username);
+            allTasks = ListOfTasksData.GetAll(username);
         }
 
         //Adds event to the database for current user
@@ -37,17 +37,17 @@ namespace PlanMe
         }
 
         //Adds task to the database for current user
-        public bool AddTask(UserTask task)
+        public bool AddListOfTasks(ListOfTasks task)
         {
-            tasks.Add(task);
-            return TaskData.Upload(task, Username);
+            allTasks.Add(task);
+            return ListOfTasksData.Add(task);
         }
 
         //Removes task from the database for the current user
-        public bool RemoveTask(UserTask task)
+        public bool RemoveListOfTasks(ListOfTasks task)
         {
-            tasks.Remove(task);
-            return TaskData.Delete(task);
+            allTasks.Remove(task);
+            return ListOfTasksData.Remove(task);
         }
 
         //Gets the event by date
