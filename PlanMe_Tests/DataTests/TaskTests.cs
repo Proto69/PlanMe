@@ -45,10 +45,8 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void CheckIfDeletesTask()
         {
-            UserTask task = new UserTask("Testtt");
-            TaskData.Delete(task);
+            TaskData.Delete("Testtt");
             List<UserTask> tasksAfterDeleting = TaskData.GetAll("UploadTest");
-
             Assert.AreEqual(0, tasksAfterDeleting.Count, "Task is not deleted!");
         }
 
@@ -61,7 +59,14 @@ namespace PlanMe_Tests.DataTests
             TaskData.Update(task, "UploadTest");
             List<UserTask> userTasks = TaskData.GetAll("UploadTest");
             Assert.AreEqual(task.IsDone, userTasks[0].IsDone, "The task was not uploaded!");
-            TaskData.Delete(task);
+            TaskData.Delete("Update");
+        }
+
+        [Test] 
+        public void CheckIfChecksRight()
+        {
+            bool checker = TaskData.Check("Get all");
+            Assert.IsTrue(checker, "Task is not checked right!");
         }
     }
 }

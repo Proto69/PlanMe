@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PlanMe.Data
 {
@@ -74,7 +75,7 @@ namespace PlanMe.Data
         }
 
         //Deletes task for the current user
-        public static bool Delete(UserTask task)
+        public static bool Delete(string text)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
@@ -83,7 +84,7 @@ namespace PlanMe.Data
                 string query = "DELETE FROM tasks WHERE text = @text";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@text", task.Text);
+                cmd.Parameters.AddWithValue("@text", text);
 
                 return RunNonQuery(cmd);
             }
@@ -115,6 +116,31 @@ namespace PlanMe.Data
             int rows = cmd.ExecuteNonQuery();
             if (rows == 1)
                 return true;
+            return false;
+        }
+
+        public static bool Check(string text)
+        {
+            MySqlConnection conn = Database.GetConnection();
+
+            conn.Open();
+            using (conn)
+            {
+                string query = "SELECT text FROM tasks WHERE text = @text";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@text", text);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    string task_text = reader["text"].ToString();
+                    if (text == task_text)
+                        return true;
+                }
+            }
             return false;
         }
     }

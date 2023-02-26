@@ -59,7 +59,7 @@ namespace PlanMe.Data
             }
         }
 
-        //Checks is the username and password are valid and returns the User
+        //Checks if the username and password are valid and returns the User
         public static User Check(string username, string password)
         {
             MySqlConnection conn = Database.GetConnection();

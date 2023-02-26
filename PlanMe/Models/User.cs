@@ -47,7 +47,7 @@ namespace PlanMe
         public bool RemoveTask(UserTask task)
         {
             tasks.Remove(task);
-            return TaskData.Delete(task);
+            return TaskData.Delete(task.Text);
         }
 
         //Gets the event by date

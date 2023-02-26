@@ -43,7 +43,7 @@ namespace PlanMe.Data
             return phrase;
         }
 
-
+        //Returns phrase's id to know which phrase to pick up
         public static int GetID()
         {
             //Creates connection and opens it
