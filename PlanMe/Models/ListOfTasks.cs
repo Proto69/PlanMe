@@ -15,14 +15,14 @@ namespace PlanMe.Models
         public ListOfTasks(string name)
         {
             this.Name = name;
-            this.Tasks = TaskData.GetAll(name);
+            this.Tasks = TaskData.GetAll(name, MainModels.user.Username);
         }
 
         public void DeleteAllTasks()
         {
             foreach (var task in tasks)
             {
-                TaskData.Delete(task, this.name);
+                TaskData.Delete(task, this.name, MainModels.user.Username);
             }
             tasks = new();
         }

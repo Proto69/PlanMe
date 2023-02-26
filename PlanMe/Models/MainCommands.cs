@@ -37,12 +37,13 @@ namespace PlanMe.Models
             return false;
         }
 
-        public static int GetListId(string name, MySqlConnection conn)
+        public static int GetListId(string name, string username, MySqlConnection conn)
         {
-            string query = "SELECT id FROM list_of_tasks WHERE name = @name";
+            string query = "SELECT id FROM list_of_tasks WHERE name = @name AND user_id = @id";
             MySqlCommand cmd = new MySqlCommand(query, conn);
 
             cmd.Parameters.AddWithValue("@name", name);
+            cmd.Parameters.AddWithValue("@id", GetUserId(username, conn));
             MySqlDataReader reader = cmd.ExecuteReader();
 
             int id = 0;

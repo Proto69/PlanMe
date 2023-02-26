@@ -16,7 +16,7 @@ namespace PlanMe_Tests.DataTests
         public void ChecksIfGetsAllTasks()
         {
             List<UserTask> listEvents = new List<UserTask>();
-            listEvents = TaskData.GetAll("Get all");
+            listEvents = TaskData.GetAll("Pesho", "Get all");
             Assert.AreEqual(2, listEvents.Count, "It does not return all events for user with username Get all!");
         }
 
@@ -36,8 +36,8 @@ namespace PlanMe_Tests.DataTests
         public void CheckIfUploadsTask()
         {
             UserTask task = new UserTask("Testtt");
-            TaskData.Upload(task, "UploadTest");
-            List<UserTask> userTasks = TaskData.GetAll("UploadTest");
+            TaskData.Upload(task, "Pesho", "UploadTest");
+            List<UserTask> userTasks = TaskData.GetAll("Pesho", "UploadTest");
             Assert.AreEqual(1, userTasks.Count, "The task was not uploaded!");
         }
 
@@ -46,8 +46,8 @@ namespace PlanMe_Tests.DataTests
         public void CheckIfDeletesTask()
         {
             UserTask task = new UserTask("Testtt");
-            //TaskData.Delete(task);
-            List<UserTask> tasksAfterDeleting = TaskData.GetAll("UploadTest");
+            TaskData.Delete(task, "Pesho", "UploadTest");
+            List<UserTask> tasksAfterDeleting = TaskData.GetAll("Pesho", "UploadTest");
 
             Assert.AreEqual(0, tasksAfterDeleting.Count, "Task is not deleted!");
         }
@@ -56,12 +56,12 @@ namespace PlanMe_Tests.DataTests
         public void CheckIfUpdatesTask()
         {
             UserTask task = new UserTask("Update");
-            TaskData.Upload(task, "UploadTest");
+            TaskData.Upload(task, "Pesho", "UploadTest");
             task.IsDone = true;
-            TaskData.Update(task, "UploadTest");
-            List<UserTask> userTasks = TaskData.GetAll("UploadTest");
+            TaskData.Update(task, "Pesho", "UploadTest");
+            List<UserTask> userTasks = TaskData.GetAll("Pesho", "UploadTest");
             Assert.AreEqual(task.IsDone, userTasks[0].IsDone, "The task was not uploaded!");
-            //TaskData.Delete(task);
+            TaskData.Delete(task, "Pesho", "UploadTest");
         }
     }
 }
