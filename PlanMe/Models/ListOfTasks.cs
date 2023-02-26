@@ -15,7 +15,7 @@ namespace PlanMe.Models
         public ListOfTasks(string name, string username)
         {
             this.Name = name;
-            this.Tasks = new();
+            this.Tasks = TaskData.GetAll(name, username);
         }
 
         public void DeleteAllTasks()

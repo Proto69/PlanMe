@@ -19,7 +19,7 @@ namespace PlanMe
             this.Username = username;
             this.Password = password;
             events = EventData.GetAll(username);
-            allTasks = ListOfTasksData.GetAll(username);
+            AllTasks = ListOfTasksData.GetAll(username);
         }
 
         //Adds event to the database for current user
@@ -39,15 +39,22 @@ namespace PlanMe
         //Adds task to the database for current user
         public bool AddListOfTasks(ListOfTasks task)
         {
-            allTasks.Add(task);
+            AllTasks.Add(task);
             return ListOfTasksData.Upload(task);
         }
 
         //Removes task from the database for the current user
         public bool RemoveListOfTasks(ListOfTasks task)
         {
-            allTasks.Remove(task);
+            AllTasks.Remove(task);
             return ListOfTasksData.Remove(task);
+        }
+
+        public ListOfTasks GetListOfTasks(string name)
+        {
+            ListOfTasks list = new(name, this.Username);
+            list.Tasks = TaskData.GetAll(name, this.Username);
+            return list;
         }
 
         //Gets the event by date
@@ -91,6 +98,8 @@ namespace PlanMe
                 }
             }
         }
+
+        public List<ListOfTasks> AllTasks { get => allTasks; set => allTasks = value; }
 
         public override string? ToString()
         {

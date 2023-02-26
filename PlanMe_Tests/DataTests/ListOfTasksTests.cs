@@ -36,5 +36,14 @@ namespace PlanMe_Tests.DataTests
             int count = all.Count;
             Assert.AreEqual(0, count, "The list has not been deleted!");
         }
+
+        [Test]
+        public void GetsTasksFromListOfTasks()
+        {
+            List<ListOfTasks> list = MainModels.user.AllTasks;
+            var newList = list.Where(x => x.Name == "Pesho").ToList()[0];
+            int count = newList.Tasks.Count;
+            Assert.AreEqual(1, count, "The tasks are not gotten!");
+        }
     }
 }
