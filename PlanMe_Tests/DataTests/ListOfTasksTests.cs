@@ -25,7 +25,16 @@ namespace PlanMe_Tests.DataTests
             var all = ListOfTasksData.GetAll("UploadTest").Where(x => x.Name == "Test").ToList();
             int count = all.Count;
             Assert.AreEqual(1, count, "The list has not been uploaded!");
+        }
 
+        [Test]
+        public void DeleteAListOfTasks()
+        {
+            ListOfTasks list = new ListOfTasks("Test", "UploadTest");
+            ListOfTasksData.Remove(list);
+            var all = ListOfTasksData.GetAll("UploadTest").Where(x => x.Name == "Test").ToList();
+            int count = all.Count;
+            Assert.AreEqual(0, count, "The list has not been deleted!");
         }
     }
 }
