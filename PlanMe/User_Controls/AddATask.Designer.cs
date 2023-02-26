@@ -42,7 +42,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Add a task";
+            this.label1.Text = "Upload a task";
             // 
             // addButton
             // 
@@ -53,7 +53,7 @@
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(150, 50);
             this.addButton.TabIndex = 1;
-            this.addButton.Text = "Add";
+            this.addButton.Text = "Upload";
             this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.button1_Click);
             // 

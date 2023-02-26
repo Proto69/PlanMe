@@ -39,7 +39,7 @@ namespace PlanMe.Data
             {
                 int id = MainCommands.GetListId(name, username, conn);
 
-                string query = "SELECT * FROM tasks WHERE list_id = @id";
+                string query = "SELECT text FROM tasks WHERE list_id = @id";
                 MySqlCommand cmd = new MySqlCommand(query,conn);
 
                 cmd.Parameters.AddWithValue("@id", id);

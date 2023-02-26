@@ -9,9 +9,9 @@ namespace PlanMe.Models
 {
     public static class MainModels
     {
-        public static User user;
-        public static MainForm form;
-        public static ExistingList lists;
-        public static ListOfTasks tasks;
+        public static User user = null;
+        public static MainForm form = null;
+        public static ExistingList lists = null;
+        public static ListOfTasks tasks = null;
     }
 }

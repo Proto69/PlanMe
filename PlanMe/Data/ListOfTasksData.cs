@@ -10,7 +10,7 @@ namespace PlanMe.Data
 {
     public static class ListOfTasksData
     {
-        public static bool Add(ListOfTasks listOfTasks)
+        public static bool Upload(ListOfTasks listOfTasks)
         {
             string username = MainModels.user.Username;
             bool check = false;
@@ -36,6 +36,9 @@ namespace PlanMe.Data
                 {
                     list.Add($"({listId}, \"{task.Text}\")");
                 }
+
+                if (list.Count == 0)
+                    return check;
 
                 string left = string.Join(",", list);
                 query += left;
@@ -83,7 +86,7 @@ namespace PlanMe.Data
                 while (reader.Read())
                 {
                     string name = reader["name"].ToString();
-                    ListOfTasks tasks = new(name);
+                    ListOfTasks tasks = new(name, username);
                     result.Add(tasks);
                 }
             }

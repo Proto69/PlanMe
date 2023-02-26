@@ -40,7 +40,7 @@ namespace PlanMe
         public bool AddListOfTasks(ListOfTasks task)
         {
             allTasks.Add(task);
-            return ListOfTasksData.Add(task);
+            return ListOfTasksData.Upload(task);
         }
 
         //Removes task from the database for the current user

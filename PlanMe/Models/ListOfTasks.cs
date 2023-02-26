@@ -12,10 +12,10 @@ namespace PlanMe.Models
         private List<UserTask> tasks;
         private string name;
 
-        public ListOfTasks(string name)
+        public ListOfTasks(string name, string username)
         {
             this.Name = name;
-            this.Tasks = TaskData.GetAll(name, MainModels.user.Username);
+            this.Tasks = new();
         }
 
         public void DeleteAllTasks()
