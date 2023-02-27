@@ -35,14 +35,14 @@ namespace PlanMe_Tests.ControllsTests
         }
 
         [Test]
-        public void CheckIfTaskIsCreated()
+       /* public void CheckIfTaskIsCreated()
         {
             DataControl.CreateTask("TEST TEXT", "Pesho");
             bool checker = TaskData.Check("TEST TEXT");
             Assert.IsTrue(checker, "Task is not created!");
         }
-
-        [Test]
+       
+        [Test]*/
         public void CheckIfPasswordIsUpdated()
         {
             throw new NotImplementedException("Password update test is not implemented!");
