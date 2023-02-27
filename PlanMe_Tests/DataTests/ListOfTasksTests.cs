@@ -25,7 +25,6 @@ namespace PlanMe_Tests.DataTests
             var all = ListOfTasksData.GetAll("UploadTest").Where(x => x.Name == "Test").ToList();
             int count = all.Count;
             Assert.AreEqual(1, count, "The list has not been uploaded!");
-            ListOfTasksData.Remove(list);
         }
 
         //Something is wrong maybe
@@ -33,7 +32,6 @@ namespace PlanMe_Tests.DataTests
         public void DeleteAListOfTasks()
         {
             ListOfTasks list = new ListOfTasks("Test", "UploadTest");
-            ListOfTasksData.Upload(list);
             ListOfTasksData.Remove(list);
             var all = ListOfTasksData.GetAll("UploadTest").Where(x => x.Name == "Test").ToList();
             int count = all.Count;
@@ -43,9 +41,8 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void GetsTasksFromListOfTasks()
         {
-            List<ListOfTasks> list = MainModels.user.AllTasks;
-            var newList = list.Where(x => x.Name == "Pesho").ToList()[0];
-            int count = newList.Tasks.Count;
+            ListOfTasks list = MainModels.user.GetListOfTasks("Pesho");
+            int count = list.Tasks.Count;
             Assert.AreEqual(1, count, "The tasks are not gotten!");
         }
     }
