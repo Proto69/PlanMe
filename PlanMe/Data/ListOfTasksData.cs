@@ -58,10 +58,11 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                string query = "DELETE FROM list_of_tasks WHERE name = @name";
+                string query = "DELETE FROM list_of_tasks WHERE name = @name AND user_id = @user_id";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@name", listOfTasks.Name);
+                cmd.Parameters.AddWithValue("@user_id", MainCommands.GetUserId(MainModels.user.Username, conn));
 
                 return MainCommands.RunNonQuery(cmd);
             }

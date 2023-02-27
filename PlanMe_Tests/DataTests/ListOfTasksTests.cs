@@ -20,22 +20,28 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void CreateNewListOfTasks()
         {
-            ListOfTasks list = new("Test", "UploadTest");
+            ListOfTasks list = new("Test1", "UploadTest");
             ListOfTasksData.Upload(list);
-            var all = ListOfTasksData.GetAll("UploadTest").Where(x => x.Name == "Test").ToList();
+            var all = ListOfTasksData.GetAll("UploadTest").Where(x => x.Name == "Test1").ToList();
             int count = all.Count;
             Assert.AreEqual(1, count, "The list has not been uploaded!");
+            ListOfTasksData.Remove(list);
+
         }
 
         //Something is wrong maybe
         [Test]
         public void DeleteAListOfTasks()
         {
-            ListOfTasks list = new ListOfTasks("Test", "UploadTest");
-            ListOfTasksData.Remove(list);
-            var all = ListOfTasksData.GetAll("UploadTest").Where(x => x.Name == "Test").ToList();
+            ListOfTasks list = new ListOfTasks("Test2", "UploadTest");
+            ListOfTasksData.Upload(list);
+            ListOfTasks newList = new ListOfTasks("Test3", "UploadTest");
+            ListOfTasksData.Upload(newList);
+            ListOfTasksData.Remove(newList);
+            var all = ListOfTasksData.GetAll("UploadTest").Where(x => x.Name == "Test2").ToList();
             int count = all.Count;
-            Assert.AreEqual(0, count, "The list has not been deleted!");
+            Assert.AreEqual(1, count, "The list has not been deleted!");
+            ListOfTasksData.Remove(list);
         }
 
         [Test]
