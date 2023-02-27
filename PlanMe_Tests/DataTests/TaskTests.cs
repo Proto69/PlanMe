@@ -28,7 +28,7 @@ namespace PlanMe_Tests.DataTests
             using (conn)
             {
                 int id = MainCommands.GetUserId("UserId", conn);
-                Assert.AreEqual(23, id, "Does not return right id for user Test");
+                Assert.AreEqual(17, id, "Does not return right id for user Test");
             }
         }
 

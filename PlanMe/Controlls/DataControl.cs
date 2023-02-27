@@ -34,7 +34,7 @@ namespace PlanMe.Controlls
         }
 
         //Deletes a user specified, from the view
-        public static void DeleteUser(User user)
+        public static bool DeleteUser(User user)
         {
             throw new NotImplementedException();
         }

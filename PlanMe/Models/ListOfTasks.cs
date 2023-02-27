@@ -11,10 +11,12 @@ namespace PlanMe.Models
     {
         private List<UserTask> tasks;
         private string name;
+        private string username;
 
         public ListOfTasks(string name, string username)
         {
             this.Name = name;
+            this.Username = username;  // Not checked
             this.Tasks = TaskData.GetAll(name, username);
         }
 
@@ -29,5 +31,6 @@ namespace PlanMe.Models
 
         public List<UserTask> Tasks { get => tasks; set => tasks = value; }
         public string Name { get => name; set => name = value; }
+        public string Username { get => username; set => username = value; }
     }
 }

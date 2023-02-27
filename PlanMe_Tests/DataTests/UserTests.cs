@@ -23,12 +23,11 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void CheckIfUpdatesUser()
         {
-            
             Random random = new Random();
-            string password = "Test1234" + random.Next(0,100);
-            User user = new User("Test user", password);
+            string password = "UPDATETEST" + random.Next(0,100);
+            User user = new User("UPDATE TEST", password);
             UserData.UpdatePassword(user);
-            User checkedUser = UserData.Check("Test user", password);
+            User checkedUser = UserData.Check("UPDATE TEST", password);
             Assert.AreEqual(user.ToString(), checkedUser.ToString(), "Does not return right user!");
         }
 

@@ -12,7 +12,8 @@ namespace PlanMe.Data
     {
         public static bool Upload(ListOfTasks listOfTasks)
         {
-            string username = MainModels.user.Username;
+            //string username = MainModels.user.Username;
+            string username = listOfTasks.Username;
             bool check = false;
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
@@ -62,7 +63,8 @@ namespace PlanMe.Data
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@name", listOfTasks.Name);
-                cmd.Parameters.AddWithValue("@user_id", MainCommands.GetUserId(MainModels.user.Username, conn));
+                //cmd.Parameters.AddWithValue("@user_id", MainCommands.GetUserId(MainModels.user.Username, conn));
+                cmd.Parameters.AddWithValue("@user_id", MainCommands.GetUserId(listOfTasks.Username, conn));
 
                 return MainCommands.RunNonQuery(cmd);
             }

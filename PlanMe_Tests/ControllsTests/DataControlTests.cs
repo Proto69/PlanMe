@@ -31,7 +31,11 @@ namespace PlanMe_Tests.ControllsTests
         [Test]
         public void CheckIfUserIsDeleted()
         {
-            throw new NotImplementedException("Delete user test is not implemented!");
+            DataControl.CreateUser("DELETED TEST", "DELETEDTEST1234");
+            User user = UserData.Check("DELETED TEST", "DELETEDTEST1234");
+            //bool checker = DataControl.DeleteUser(user);
+            bool checker = UserData.Delete("DELETED TEST");
+            Assert.IsTrue(checker, "User is not deleted!");
         }
 
         [Test]

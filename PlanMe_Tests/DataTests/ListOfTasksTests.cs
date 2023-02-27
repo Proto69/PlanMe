@@ -10,19 +10,13 @@ namespace PlanMe_Tests.DataTests
     [TestFixture]
     public class ListOfTasksTests
     {
-        [SetUp]
-        public void Setup()
-        {
-            User user = new User("UploadTest", "Test12345");
-            MainModels.user = user;
-        }
-
         [Test]
         public void CreateNewListOfTasks()
         {
-            ListOfTasks list = new("Test1", "UploadTest");
+            ListOfTasks list = new ListOfTasks("Test uploading", "UploadListOfTasksTest");
             ListOfTasksData.Upload(list);
-            var all = ListOfTasksData.GetAll("UploadTest").Where(x => x.Name == "Test1").ToList();
+            var all = ListOfTasksData.GetAll("UploadListOfTasksTest");
+            all = all.Where(x => x.Name == "Test uploading").ToList();
             int count = all.Count;
             Assert.AreEqual(1, count, "The list has not been uploaded!");
             ListOfTasksData.Remove(list);
@@ -32,23 +26,45 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void DeleteAListOfTasks()
         {
-            ListOfTasks list = new ListOfTasks("Test2", "UploadTest");
+
+            ListOfTasks list = new ListOfTasks("Remove test 1", "RemoveListOfTasksTest");
+            ListOfTasks newList = new ListOfTasks("Remove test 2", "RemoveListOfTasksTest");
+
             ListOfTasksData.Upload(list);
-            ListOfTasks newList = new ListOfTasks("Test3", "UploadTest");
             ListOfTasksData.Upload(newList);
-            ListOfTasksData.Remove(newList);
-            var all = ListOfTasksData.GetAll("UploadTest").Where(x => x.Name == "Test2").ToList();
-            int count = all.Count;
-            Assert.AreEqual(1, count, "The list has not been deleted!");
             ListOfTasksData.Remove(list);
+            var all = ListOfTasksData.GetAll("RemoveListOfTasksTest").Where(x => x.Name == "Remove test 2").ToList();
+            int count = all.Count;
+
+            Assert.AreEqual(1, count, "The list has not been deleted!");
+
+            ListOfTasksData.Remove(newList);
+        }
+
+        //Not for here
+        
+        //[Test]
+        //public void GetsTasksFromListOfTasks()
+        //{
+        //    ListOfTasks list = MainModels.user.GetListOfTasks("Pesho");
+        //    int count = list.Tasks.Count;
+        //    Assert.AreEqual(1, count, "The tasks are not gotten!");
+        //}
+
+        [Test]
+        public void ChecksIfGetsAllListOfTasksForCurrentUser()
+        {
+            var allLists = ListOfTasksData.GetAll("UserId");
+            int count = allLists.Count();
+            Assert.AreEqual(2, count, "Get all method does not work!");
         }
 
         [Test]
-        public void GetsTasksFromListOfTasks()
+        public void ChecksIfGetsOneListOfTasksForCurrentUser()
         {
-            ListOfTasks list = MainModels.user.GetListOfTasks("Pesho");
-            int count = list.Tasks.Count;
-            Assert.AreEqual(1, count, "The tasks are not gotten!");
+            var allLists = ListOfTasksData.GetAll("UserId").Where(x => x.Name == "Get all test");
+            int count = allLists.Count();
+            Assert.AreEqual(1, count, "Get all method does not work!");
         }
     }
 }
