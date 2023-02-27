@@ -12,6 +12,13 @@ namespace PlanMe_Tests.ControllsTests
     [TestFixture]
     public class DataControlTests
     {
+        [SetUp]
+        public void Setup()
+        {
+            User user = new User("UploadTest", "Test12345");
+            MainModels.user = user;
+        }
+
         [Test]
         public void CheckIfUserIsCreated()
         {
@@ -30,7 +37,7 @@ namespace PlanMe_Tests.ControllsTests
         [Test]
         public void CheckIfTaskIsCreated()
         {
-            DataControl.CreateTask("TEST TEXT");
+            DataControl.CreateTask("TEST TEXT", "Pesho");
             bool checker = TaskData.Check("TEST TEXT");
             Assert.IsTrue(checker, "Task is not created!");
         }
