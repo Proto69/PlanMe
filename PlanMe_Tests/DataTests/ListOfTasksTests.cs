@@ -29,7 +29,6 @@ namespace PlanMe_Tests.DataTests
 
         }
 
-        //Something is wrong maybe
         [Test]
         public void DeleteAListOfTasks()
         {
