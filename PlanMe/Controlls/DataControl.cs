@@ -39,16 +39,16 @@ namespace PlanMe.Controlls
             throw new NotImplementedException();
         }
 
-        public static void CreateTask(string text)
+        public static void CreateTask(string text, string nameOfList)
         {
             UserTask task = new UserTask(text);
-            TaskData.Upload(task, MainModels.user.Username);
+            TaskData.Upload(task, nameOfList, MainModels.user.Username);
         }
 
-        public static bool UpdateTask(string text, bool isDone)
+        public static bool UpdateTask(string text,string nameofList, bool isDone)
         {
             UserTask task = new UserTask(text, isDone);
-            return TaskData.Update(task, MainModels.user.Username);
+            return TaskData.Update(task, nameofList, MainModels.user.Username);
         }
     }
 }

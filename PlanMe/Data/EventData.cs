@@ -17,7 +17,7 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                int id = GetUserId(username, conn);
+                int id = MainCommands.GetUserId(username, conn);
 
                 string query = "INSERT INTO events (name, date, time, additional_info, user_id) " +
                     "VALUES (@name, @date, @time, @info, @user_id)";
@@ -29,7 +29,7 @@ namespace PlanMe.Data
                 cmd.Parameters.AddWithValue("@info", action.Info);
                 cmd.Parameters.AddWithValue("@user_id", id);
 
-                return RunNonQuery(cmd);
+                return MainCommands.RunNonQuery(cmd);
             }
         }
 
@@ -42,7 +42,7 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                int id = GetUserId(username, conn);
+                int id = MainCommands.GetUserId(username, conn);
 
                 string query = "SELECT * FROM events WHERE user_id = @id";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -82,7 +82,7 @@ namespace PlanMe.Data
                 cmd.Parameters.AddWithValue("@date", oldEvent.Date);
                 cmd.Parameters.AddWithValue("@time", oldEvent.Time);
 
-                return RunNonQuery(cmd);
+                return MainCommands.RunNonQuery(cmd);
             }
         }
 
@@ -100,37 +100,8 @@ namespace PlanMe.Data
                 cmd.Parameters.AddWithValue("@date", action.Date);   
                 cmd.Parameters.AddWithValue("@time", action.Time);   
 
-                return RunNonQuery(cmd);
+                return MainCommands.RunNonQuery(cmd);
             }
-        }
-
-        //Returns user's id for the event
-        public static int GetUserId(string username, MySqlConnection conn)
-        {
-            string query = "SELECT id FROM users WHERE username = @username";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-
-            cmd.Parameters.AddWithValue("@username", username);
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            int id = 0;
-
-            while (reader.Read())
-            {
-                id = (int)reader["id"];
-            }
-
-            reader.Close();
-            return id;
-        }
-
-        //Runs the command and returns if the operation was successful
-        private static bool RunNonQuery(MySqlCommand cmd)
-        {
-            int rows = cmd.ExecuteNonQuery();
-            if (rows == 1)
-                return true;
-            return false;
         }
 
     }

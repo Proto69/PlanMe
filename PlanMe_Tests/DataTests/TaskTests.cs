@@ -16,7 +16,7 @@ namespace PlanMe_Tests.DataTests
         public void ChecksIfGetsAllTasks()
         {
             List<UserTask> listEvents = new List<UserTask>();
-            listEvents = TaskData.GetAll("Get all");
+            listEvents = TaskData.GetAll("Pesho", "Get all");
             Assert.AreEqual(2, listEvents.Count, "It does not return all events for user with username Get all!");
         }
 
@@ -27,7 +27,7 @@ namespace PlanMe_Tests.DataTests
             conn.Open();
             using (conn)
             {
-                int id = TaskData.GetUserId("UserId", conn);
+                int id = MainCommands.GetUserId("UserId", conn);
                 Assert.AreEqual(23, id, "Does not return right id for user Test");
             }
         }
@@ -36,8 +36,8 @@ namespace PlanMe_Tests.DataTests
         public void CheckIfUploadsTask()
         {
             UserTask task = new UserTask("Testtt");
-            TaskData.Upload(task, "UploadTest");
-            List<UserTask> userTasks = TaskData.GetAll("UploadTest");
+            TaskData.Upload(task, "Pesho", "UploadTest");
+            List<UserTask> userTasks = TaskData.GetAll("Pesho", "UploadTest");
             Assert.AreEqual(1, userTasks.Count, "The task was not uploaded!");
         }
 
@@ -45,8 +45,10 @@ namespace PlanMe_Tests.DataTests
         [Test]
         public void CheckIfDeletesTask()
         {
-            TaskData.Delete("Testtt");
-            List<UserTask> tasksAfterDeleting = TaskData.GetAll("UploadTest");
+            UserTask task = new UserTask("Testtt");
+            TaskData.Delete(task, "Pesho", "UploadTest");
+            List<UserTask> tasksAfterDeleting = TaskData.GetAll("Pesho", "UploadTest");
+
             Assert.AreEqual(0, tasksAfterDeleting.Count, "Task is not deleted!");
         }
 
@@ -54,19 +56,12 @@ namespace PlanMe_Tests.DataTests
         public void CheckIfUpdatesTask()
         {
             UserTask task = new UserTask("Update");
-            TaskData.Upload(task, "UploadTest");
+            TaskData.Upload(task, "Pesho", "UploadTest");
             task.IsDone = true;
-            TaskData.Update(task, "UploadTest");
-            List<UserTask> userTasks = TaskData.GetAll("UploadTest");
+            TaskData.Update(task, "Pesho", "UploadTest");
+            List<UserTask> userTasks = TaskData.GetAll("Pesho", "UploadTest");
             Assert.AreEqual(task.IsDone, userTasks[0].IsDone, "The task was not uploaded!");
-            TaskData.Delete("Update");
-        }
-
-        [Test] 
-        public void CheckIfChecksRight()
-        {
-            bool checker = TaskData.Check("Get all");
-            Assert.IsTrue(checker, "Task is not checked right!");
+            TaskData.Delete(task, "Pesho", "UploadTest");
         }
     }
 }

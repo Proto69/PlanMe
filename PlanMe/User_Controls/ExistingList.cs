@@ -24,13 +24,13 @@ namespace PlanMe.User_Controls
         private void ClickCheckBox(object sender, EventArgs e)
         {
             CheckBox box = (CheckBox)sender;
-            DataControl.UpdateTask(box.Text, box.Checked);
+            DataControl.UpdateTask(box.Text, MainModels.tasks.Name, box.Checked);
         }
 
         public void DisplayAllTasks()
         {
             checkedListBox1.Items.Clear();
-            List<UserTask> tasks = TaskData.GetAll(MainModels.user.Username);
+            List<UserTask> tasks = TaskData.GetAll(MainModels.tasks.Name, MainModels.user.Username);
             foreach (var task in tasks)
             {
                 CheckBox box = new CheckBox() { Text = task.Text, Checked = task.IsDone };
