@@ -41,15 +41,6 @@ namespace PlanMe_Tests.DataTests
             ListOfTasksData.Remove(newList);
         }
 
-        //Not for here
-        
-        //[Test]
-        //public void GetsTasksFromListOfTasks()
-        //{
-        //    ListOfTasks list = MainModels.user.GetListOfTasks("Pesho");
-        //    int count = list.Tasks.Count;
-        //    Assert.AreEqual(1, count, "The tasks are not gotten!");
-        //}
 
         [Test]
         public void ChecksIfGetsAllListOfTasksForCurrentUser()

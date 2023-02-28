@@ -22,22 +22,6 @@ namespace PlanMe_Tests.DataTests
             Assert.AreEqual(2, listEvents.Count, "It does not return all events for user with username Get all!");
         }
 
-        //May not the right test class :)
-
-        //[Test]
-        //
-        //public void ChecksIfReturnsUserId()
-        //
-        //{
-        //    MySqlConnection conn = Database.GetConnection();
-        //    conn.Open();
-        //    using (conn)
-        //    {
-        //        int id = MainCommands.GetUserId("UserId", conn);
-        //        Assert.AreEqual(17, id, "Does not return right id for user Test");
-        //    }
-        //}
-
         [Test]
         public void CheckIfUploadsEvent()
         {

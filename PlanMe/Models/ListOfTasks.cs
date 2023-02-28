@@ -16,7 +16,7 @@ namespace PlanMe.Models
         public ListOfTasks(string name, string username)
         {
             this.Name = name;
-            this.Username = username;  // Not checked
+            this.Username = username;
             this.Tasks = TaskData.GetAll(name, username);
         }
 
