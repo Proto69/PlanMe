@@ -53,12 +53,13 @@ namespace PlanMe_Tests.ControllsTests
         }
 
         [Test] 
+        //All users with username Update task test - id = 90
         public void CheckIfTaskIsUpdated()
         {
             UserTask task = new UserTask("UpdateTask");
-            TaskData.Upload(task, "Update task", "Update task test");
+            TaskData.Upload(task, "Update task");
             task.IsDone = true;
-            TaskData.Update(task, "Update task", "Update task test");
+            TaskData.Update(task, "Update task");
             var tasks = TaskData.GetAll("Update task", "Update task test");
             bool check = false;
             foreach (var item in tasks)
@@ -67,7 +68,7 @@ namespace PlanMe_Tests.ControllsTests
                     check = true;
             }
             Assert.IsTrue(true, "The task was not updated!");
-            TaskData.Delete(task, "Update task", "Update task test");
+            TaskData.Delete(task, "Update task");
         }
     }
 }

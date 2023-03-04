@@ -12,13 +12,13 @@ namespace PlanMe.Data
     public static class TaskData
     {
         //Adds task to the database for the current user
-        public static bool Upload(UserTask task, string name, string username)
+        public static bool Upload(UserTask task, string name)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
             using (conn)
             {
-                int userId = MainCommands.GetListId(name, username, conn);
+                int userId = MainCommands.GetListId(name, conn);
                 string query = "INSERT INTO tasks (list_id, text) VALUES (@id, @text)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
@@ -57,13 +57,13 @@ namespace PlanMe.Data
         }
 
         //Updates the task for the current user
-        public static bool Update(UserTask task, string name, string username)
+        public static bool Update(UserTask task, string name)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
             using (conn)
             {
-                int id = MainCommands.GetListId(name, username, conn);
+                int id = MainCommands.GetListId(name, conn);
                 string query = "UPDATE tasks SET is_done = @is_done WHERE text = @text AND list_id = @list_id";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@text", task.Text);
@@ -75,13 +75,13 @@ namespace PlanMe.Data
         }
 
         //Deletes task for the current user
-        public static bool Delete(UserTask task, string name, string username)
+        public static bool Delete(UserTask task, string name)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
             using(conn)
             {
-                int listId = MainCommands.GetListId(name, username, conn);
+                int listId = MainCommands.GetListId(name, conn);
 
                 string query = "DELETE FROM tasks WHERE text = @text AND list_id = @list_id";
                 MySqlCommand cmd = new MySqlCommand(query, conn);

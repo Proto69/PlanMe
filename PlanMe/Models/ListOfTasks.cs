@@ -29,7 +29,7 @@ namespace PlanMe.Models
         {
             foreach (var task in tasks)
             {
-                TaskData.Delete(task, this.name, MainModels.user.Username);
+                TaskData.Delete(task, this.name);
             }
             tasks = new();
         }

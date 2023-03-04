@@ -29,7 +29,7 @@ namespace PlanMe.Data
 
                 query = "INSERT INTO tasks (list_id, text) VALUES";
                 
-                int listId = MainCommands.GetListId(listOfTasks.Name, username, conn);
+                int listId = MainCommands.GetListId(listOfTasks.Name, conn);
 
                 List<string> list = new();
 

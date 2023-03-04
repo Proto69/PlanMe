@@ -61,5 +61,10 @@ namespace PlanMe.Models
             reader.Close();
             return id;
         }
+
+        public static int GetListId(string name, MySqlConnection conn)
+        {
+            return GetListId(name, MainModels.user.Username, conn);
+        }
     }
 }
