@@ -11,23 +11,23 @@ namespace PlanMe.Data
     public static class EventData
     {
         //Uploads text, date, time and info into the database
-        public static bool Upload(Event action, string username)
+        public static bool Upload(Event @event, string username)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
             using (conn)
             {
-                int id = MainCommands.GetUserId(conn);
+                int userId = MainCommands.GetUserId(conn);
 
                 string query = "INSERT INTO events (name, date, time, additional_info, user_id) " +
                     "VALUES (@name, @date, @time, @info, @user_id)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@name", action.Name);
-                cmd.Parameters.AddWithValue("@date", action.Date);
-                cmd.Parameters.AddWithValue("@time", action.Time);
-                cmd.Parameters.AddWithValue("@info", action.Info);
-                cmd.Parameters.AddWithValue("@user_id", id);
+                cmd.Parameters.AddWithValue("@name", @event.Name);
+                cmd.Parameters.AddWithValue("@date", @event.Date);
+                cmd.Parameters.AddWithValue("@time", @event.Time);
+                cmd.Parameters.AddWithValue("@info", @event.Info);
+                cmd.Parameters.AddWithValue("@user_id", userId);
 
                 return MainCommands.RunNonQuery(cmd);
             }
@@ -42,14 +42,15 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                int id = MainCommands.GetUserId(username, conn);
+                int userId = MainCommands.GetUserId(username, conn);
 
-                string query = "SELECT * FROM events WHERE user_id = @id";
+                string query = "SELECT * FROM events WHERE user_id = @userId";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@userId", userId);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
+
                 while (reader.Read())
                 {
                     string name = reader["name"].ToString();
@@ -57,6 +58,7 @@ namespace PlanMe.Data
                     TimeOnly time = TimeOnly.Parse(reader["time"].ToString());
                     string info = reader["additional_info"].ToString();
                     Event newEvent = new Event(name, date, time.ToString("HH:mm:ss"), info);
+
                     userEvents.Add(newEvent);
                 }
             }
@@ -67,6 +69,7 @@ namespace PlanMe.Data
         public static bool Update(Event oldEvent, Event newEvent)
         {
             MySqlConnection conn = Database.GetConnection();
+
             conn.Open();
             using (conn)
             {
@@ -78,6 +81,7 @@ namespace PlanMe.Data
                 cmd.Parameters.AddWithValue("@newDate", newEvent.Date);
                 cmd.Parameters.AddWithValue("@newTime", newEvent.Time);
                 cmd.Parameters.AddWithValue("@newInfo", newEvent.Info);
+
                 cmd.Parameters.AddWithValue("@text", oldEvent.Name);
                 cmd.Parameters.AddWithValue("@date", oldEvent.Date);
                 cmd.Parameters.AddWithValue("@time", oldEvent.Time);
@@ -90,6 +94,7 @@ namespace PlanMe.Data
         public static bool Delete(Event action)
         {
             MySqlConnection conn = Database.GetConnection();
+
             conn.Open();
             using (conn)
             {

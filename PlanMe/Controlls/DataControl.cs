@@ -30,7 +30,8 @@ namespace PlanMe.Controlls
         //Updates user's password
         public static void UpdateUserPassword(User user)
         {
-            throw new NotImplementedException();
+            UserData.UpdatePassword(user);
+            MainModels.user = user;
         }
 
         //Deletes a user specified, from the view

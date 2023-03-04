@@ -18,11 +18,11 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                int userId = MainCommands.GetListId(name, conn);
-                string query = "INSERT INTO tasks (list_id, text) VALUES (@id, @text)";
+                int listId = MainCommands.GetListId(name, conn);
+                string query = "INSERT INTO tasks (list_id, text) VALUES (@listId, @text)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@id", userId);
+                cmd.Parameters.AddWithValue("@listId", listId);
                 cmd.Parameters.AddWithValue("@text", task.Text);
 
                 return MainCommands.RunNonQuery(cmd);
@@ -38,12 +38,12 @@ namespace PlanMe.Data
             conn.Open();
             using (conn) 
             {
-                int id = MainCommands.GetListId(name, username, conn);
+                int listId = MainCommands.GetListId(name, username, conn);
 
-                string query = "SELECT text FROM tasks WHERE list_id = @id";
+                string query = "SELECT text FROM tasks WHERE list_id = @listId";
                 MySqlCommand cmd = new MySqlCommand(query,conn);
 
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@listId", listId);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -63,12 +63,15 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                int id = MainCommands.GetListId(name, conn);
+                int listId = MainCommands.GetListId(name, conn);
+
                 string query = "UPDATE tasks SET is_done = @is_done WHERE text = @text AND list_id = @list_id";
+                
                 MySqlCommand cmd = new MySqlCommand(query, conn);
+                
                 cmd.Parameters.AddWithValue("@text", task.Text);
                 cmd.Parameters.AddWithValue("@is_done", task.IsDone);
-                cmd.Parameters.AddWithValue("@list_id", id);
+                cmd.Parameters.AddWithValue("@list_id", listId);
 
                 return MainCommands.RunNonQuery(cmd);
             }

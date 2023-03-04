@@ -41,7 +41,17 @@ namespace PlanMe_Tests.ControllsTests
         [Test]
         public void CheckIfPasswordIsUpdated()
         {
-            throw new NotImplementedException("Password update test is not implemented!");
+            User user = new User("Test", "12345678");
+            UserData.Create(user);
+
+            user.Password = "123456789";
+            UserData.UpdatePassword(user);
+
+            User newUser = UserData.Check("Test", "123456789");
+
+            Assert.AreEqual(newUser.Password, user.Password, "The password is not updated!");
+
+            UserData.Delete("Test");
         }
     }
 }

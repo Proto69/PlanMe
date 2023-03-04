@@ -77,12 +77,13 @@ namespace PlanMe.Data
                 if (reader.HasRows)
                 {
                     reader.Read();
+
                     string user_password = reader["password"].ToString();
+
                     if (password == user_password)
                         return new User(username, user_password);
                 }
                 throw new ArgumentException("Invalid username or password!");
-
             }
         }
     }
