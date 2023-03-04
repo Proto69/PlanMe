@@ -20,6 +20,11 @@ namespace PlanMe.Models
             this.Tasks = TaskData.GetAll(name, username);
         }
 
+        public ListOfTasks(string name) : this(name, MainModels.user.Username)
+        {
+
+        }
+
         public void DeleteAllTasks()
         {
             foreach (var task in tasks)
