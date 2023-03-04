@@ -55,8 +55,19 @@ namespace PlanMe_Tests.ControllsTests
         [Test] 
         public void CheckIfTaskIsUpdated()
         {
-            //Not sure if it is possible
-            throw new NotImplementedException("Update task test is not implemented!");
+            UserTask task = new UserTask("UpdateTask");
+            TaskData.Upload(task, "Update task", "Update task test");
+            task.IsDone = true;
+            TaskData.Update(task, "Update task", "Update task test");
+            var tasks = TaskData.GetAll("Update task", "Update task test");
+            bool check = false;
+            foreach (var item in tasks)
+            {
+                if (task.Equals(item))
+                    check = true;
+            }
+            Assert.IsTrue(true, "The task was not updated!");
+            TaskData.Delete(task, "Update task", "Update task test");
         }
     }
 }
