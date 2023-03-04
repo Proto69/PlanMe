@@ -13,8 +13,6 @@ namespace PlanMe_Tests.DataTests
     [TestFixture]
     public class TaskDataTests
     {
-
-        //user - Update task test; UploadTest
         [SetUp]
         public void SetUp()
         {
@@ -57,9 +55,12 @@ namespace PlanMe_Tests.DataTests
         {
             UserTask task1 = new UserTask("DeleteTest1");
             UserTask task2 = new UserTask("DeleteTest2");
+
             TaskData.Upload(task1, "Update task");
             TaskData.Upload(task2, "Update task");
+
             TaskData.Delete(task1, "Update task");
+
             List<UserTask> tasksAfterDeleting = TaskData.GetAll("Update task", "TaskTests");
 
             Assert.AreEqual(1, tasksAfterDeleting.Count, "Task is not deleted!");
@@ -71,10 +72,13 @@ namespace PlanMe_Tests.DataTests
         {
             UserTask task = new UserTask("Update");
             TaskData.Upload(task, "Update task");
+
             task.IsDone = true;
             TaskData.Update(task, "Update task");
+
             List<UserTask> userTasks = TaskData.GetAll("Update task", "TaskTests");
             Assert.AreEqual(task.IsDone, userTasks[0].IsDone, "The task was not uploaded!");
+
             TaskData.Delete(task, "Update task");
         }
     }

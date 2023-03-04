@@ -39,36 +39,9 @@ namespace PlanMe_Tests.ControllsTests
         }
 
         [Test]
-       /* public void CheckIfTaskIsCreated()
-        {
-            DataControl.CreateTask("TEST TEXT", "Pesho");
-            bool checker = TaskData.Check("TEST TEXT");
-            Assert.IsTrue(checker, "Task is not created!");
-        }
-       
-        [Test]*/
         public void CheckIfPasswordIsUpdated()
         {
             throw new NotImplementedException("Password update test is not implemented!");
-        }
-
-        [Test] 
-        //All users with username Update task test - id = 90
-        public void CheckIfTaskIsUpdated()
-        {
-            UserTask task = new UserTask("UpdateTask");
-            TaskData.Upload(task, "Update task");
-            task.IsDone = true;
-            TaskData.Update(task, "Update task");
-            var tasks = TaskData.GetAll("Update task", "Update task test");
-            bool check = false;
-            foreach (var item in tasks)
-            {
-                if (task.Equals(item))
-                    check = true;
-            }
-            Assert.IsTrue(true, "The task was not updated!");
-            TaskData.Delete(task, "Update task");
         }
     }
 }

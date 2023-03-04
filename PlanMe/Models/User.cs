@@ -21,54 +21,7 @@ namespace PlanMe
             Events = EventData.GetAll(username);
             AllTasks = ListOfTasksData.GetAll(username);
         }
-        /*
-        //Adds event to the database for current user
-        public bool AddEvent(Event action)
-        {
-            Events.Add(action);
-            return EventData.Upload(action, Username);
-        }
-
-        //Removes event from the database for the current user
-        public bool RemoveEvent(Event action)
-        {
-            Events.Remove(action);
-            return EventData.Delete(action);
-        }
-
-        //Adds task to the database for current user
-        public bool AddListOfTasks(ListOfTasks task)
-        {
-            AllTasks.Add(task);
-            return ListOfTasksData.Upload(task);
-        }
-
-        //Removes task from the database for the current user
-        public bool RemoveListOfTasks(ListOfTasks task)
-        {
-            AllTasks.Remove(task);
-            return ListOfTasksData.Remove(task);
-        }
-
-        public ListOfTasks GetListOfTasks(string name)
-        {
-            ListOfTasks list = new(name, this.Username);
-            list.Tasks = TaskData.GetAll(name, this.Username);
-            return list;
-        }
-
-        //Gets the event by date
-        public Event GetEvent(DateOnly date)
-        {
-            throw new NotImplementedException();
-        }
-
-        //Gets the event by name
-        public Event GetEvent(string name)
-        {
-            throw new NotImplementedException();
-        }*/
-
+        
         public string Username
         {
             get { return username; }
