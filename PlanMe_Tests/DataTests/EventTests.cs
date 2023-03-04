@@ -14,6 +14,13 @@ namespace PlanMe_Tests.DataTests
     [TestFixture]
     public class EventTests
     {
+        [SetUp]
+        public void SetUp()
+        {
+            User user = new User("EventTests", "EventTests123");
+            MainModels.user = user;
+        }
+
         [Test]
         public void ChecksIfGetsAllEvents()
         {
@@ -32,7 +39,7 @@ namespace PlanMe_Tests.DataTests
             Event @event = new Event("Upload Test", date, "22:00:00", "Testing upload event method!");
 
             //Uploads it and gets the returned value
-            bool smth = EventData.Upload(@event, "UploadEventTest");
+            bool smth = EventData.Upload(@event, "EventTests");
 
             Assert.AreEqual(true, smth, "The event is not uploaded successfully!");
 
@@ -48,7 +55,7 @@ namespace PlanMe_Tests.DataTests
 
             Event @event = new Event("Delete test", date, time.ToString("HH:mm:ss"), "Testing delete event method!");
 
-            EventData.Upload(@event, "DeleteEventTest");
+            EventData.Upload(@event, "EventTests");
             
             bool check = EventData.Delete(@event);
 
@@ -59,14 +66,14 @@ namespace PlanMe_Tests.DataTests
         public void CheckIsUpdatesEvent()
         {
             List<Event> events = new List<Event>();
-            events = EventData.GetAll("UpdateEventTest");
+            events = EventData.GetAll("EventTests");
             Random random = new Random();
             string eventInfo = "Test updating " + random.Next().ToString();
             Event @event = new Event("Update test", DateTime.Parse("2023-02-21"), "16:51:43", eventInfo);
 
             EventData.Update(events[0], @event);
 
-            events = EventData.GetAll("UpdateEventTest");
+            events = EventData.GetAll("EventTests");
 
             Assert.AreEqual(@event.Info, events[0].Info, "The event is not updated!");
         }
