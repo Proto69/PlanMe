@@ -17,7 +17,7 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                int id = MainCommands.GetUserId(username, conn);
+                int id = MainCommands.GetUserId(conn);
 
                 string query = "INSERT INTO events (name, date, time, additional_info, user_id) " +
                     "VALUES (@name, @date, @time, @info, @user_id)";

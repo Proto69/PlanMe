@@ -29,6 +29,11 @@ namespace PlanMe.Models
             return id;
         }
 
+        public static int GetUserId(MySqlConnection conn)
+        {
+            return GetUserId(MainModels.user.Username, conn);
+        }
+
         public static bool RunNonQuery(MySqlCommand cmd)
         {
             int rows = cmd.ExecuteNonQuery();

@@ -18,21 +18,21 @@ namespace PlanMe
         {
             this.Username = username;
             this.Password = password;
-            events = EventData.GetAll(username);
+            Events = EventData.GetAll(username);
             AllTasks = ListOfTasksData.GetAll(username);
         }
-
+        /*
         //Adds event to the database for current user
         public bool AddEvent(Event action)
         {
-            events.Add(action);
+            Events.Add(action);
             return EventData.Upload(action, Username);
         }
 
         //Removes event from the database for the current user
         public bool RemoveEvent(Event action)
         {
-            events.Remove(action);
+            Events.Remove(action);
             return EventData.Delete(action);
         }
 
@@ -67,7 +67,7 @@ namespace PlanMe
         public Event GetEvent(string name)
         {
             throw new NotImplementedException();
-        }
+        }*/
 
         public string Username
         {
@@ -100,6 +100,7 @@ namespace PlanMe
         }
 
         public List<ListOfTasks> AllTasks { get => allTasks; set => allTasks = value; }
+        public List<Event> Events { get => events; set => events = value; }
 
         public override string? ToString()
         {
