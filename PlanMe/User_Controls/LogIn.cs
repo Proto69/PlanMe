@@ -1,4 +1,5 @@
 ﻿using PlanMe.Controlls;
+using PlanMe.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,7 @@ namespace PlanMe.User_Controls
         {
             try
             {
-                //Reads and checks info
+                LoginView.ReadInfo(usernameBox.Text, passwordBox.Text);
 
                 PageControl.MainScreen();
             }
