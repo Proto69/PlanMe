@@ -103,7 +103,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.ForestGreen;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.ForeColor = System.Drawing.Color.LightGray;
             this.textBox1.Location = new System.Drawing.Point(35, 29);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(348, 52);
