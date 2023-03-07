@@ -87,6 +87,7 @@
             this.logInLinkLabel.TabIndex = 4;
             this.logInLinkLabel.TabStop = true;
             this.logInLinkLabel.Text = "Log in";
+            this.logInLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logInLinkLabel_LinkClicked);
             // 
             // label1
             // 

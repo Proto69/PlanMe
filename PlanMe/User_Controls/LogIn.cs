@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlanMe.Controlls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,25 @@ namespace PlanMe.User_Controls
         public LogIn()
         {
             InitializeComponent();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PageControl.SignUp();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Reads and checks info
+
+                PageControl.MainScreen();
+            }
+            catch (Exception ex)
+            {
+                ErrorView.ShowError(ex.Message);
+            }
         }
     }
 }

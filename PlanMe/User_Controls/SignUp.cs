@@ -26,13 +26,18 @@ namespace PlanMe.User_Controls
             {
                 SignUpView.ReadInfo(nameTextBox.Text, passwordTextBox.Text, repeatPasswordTextBox.Text);
 
-                PageControl.ShowMainScreen();
+                PageControl.WelcomePage();
             }
             catch (Exception k)
             {
                 ErrorView.ShowError(k.Message);
             }
 
+        }
+
+        private void logInLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PageControl.LigIn();
         }
     }
 }

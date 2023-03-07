@@ -16,7 +16,7 @@ namespace PlanMe
         private void MainForm_Load(object sender, EventArgs e)
         {
             MainModels.form = this;
-            PageControl.ShowSignUp();
+            PageControl.SignUp();
         }
 
     }
