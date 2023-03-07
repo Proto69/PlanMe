@@ -55,8 +55,9 @@
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(286, 60);
             this.addButton.TabIndex = 4;
-            this.addButton.Text = "+ Add ";
+            this.addButton.Text = "+ Upload ";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // pictureBox1
             // 
@@ -78,6 +79,7 @@
             this.saveButton.TabIndex = 11;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // deleteButton
             // 
@@ -90,6 +92,7 @@
             this.deleteButton.TabIndex = 12;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // checkedListBox1
             // 
@@ -108,7 +111,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(348, 52);
             this.textBox1.TabIndex = 14;
-            this.textBox1.Text = " Name of the list";
+            this.textBox1.Text = " All tasks";
             // 
             // ExistingList
             // 

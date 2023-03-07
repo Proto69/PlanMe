@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.text = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -42,20 +42,20 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Add a task";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Upload a task";
             // 
-            // button1
+            // addButton
             // 
-            this.button1.BackColor = System.Drawing.Color.ForestGreen;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(158, 232);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
+            this.addButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.addButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.addButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.addButton.Location = new System.Drawing.Point(158, 232);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(150, 50);
+            this.addButton.TabIndex = 1;
+            this.addButton.Text = "Upload";
+            this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -66,20 +66,21 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "____________________________";
             // 
-            // textBox1
+            // text
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Location = new System.Drawing.Point(80, 150);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 27);
-            this.textBox1.TabIndex = 3;
+            this.text.BackColor = System.Drawing.Color.White;
+            this.text.Location = new System.Drawing.Point(80, 150);
+            this.text.Name = "text";
+            this.text.PlaceholderText = "Write your task here...";
+            this.text.Size = new System.Drawing.Size(317, 27);
+            this.text.TabIndex = 3;
             // 
             // AddATask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.text);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Name = "AddATask";
@@ -92,8 +93,8 @@
         #endregion
 
         private Label label1;
-        private Button button1;
+        private Button addButton;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox text;
     }
 }

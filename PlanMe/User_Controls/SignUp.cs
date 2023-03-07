@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PlanMe.Models;
+using PlanMe.Controlls;
 
 namespace PlanMe.User_Controls
 {
@@ -24,8 +25,8 @@ namespace PlanMe.User_Controls
             try
             {
                 SignUpView.ReadInfo(nameTextBox.Text, passwordTextBox.Text, repeatPasswordTextBox.Text);
-                
-                MainUserAndForm.form.ShowMainScreen();
+
+                PageControl.ShowMainScreen();
             }
             catch (Exception k)
             {

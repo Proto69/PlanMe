@@ -34,7 +34,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.infoButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.phraseBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -42,9 +42,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PlanMe.Properties.Resources.PlanMe1;
-            this.pictureBox1.Location = new System.Drawing.Point(598, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(897, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(230, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(345, 124);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
@@ -53,9 +54,10 @@
             this.plansButton.BackColor = System.Drawing.Color.ForestGreen;
             this.plansButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.plansButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.plansButton.Location = new System.Drawing.Point(391, 232);
+            this.plansButton.Location = new System.Drawing.Point(586, 348);
+            this.plansButton.Margin = new System.Windows.Forms.Padding(4);
             this.plansButton.Name = "plansButton";
-            this.plansButton.Size = new System.Drawing.Size(110, 60);
+            this.plansButton.Size = new System.Drawing.Size(165, 90);
             this.plansButton.TabIndex = 11;
             this.plansButton.Text = "plans";
             this.plansButton.UseVisualStyleBackColor = false;
@@ -66,9 +68,10 @@
             this.listsButton.BackColor = System.Drawing.Color.ForestGreen;
             this.listsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listsButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.listsButton.Location = new System.Drawing.Point(155, 356);
+            this.listsButton.Location = new System.Drawing.Point(232, 534);
+            this.listsButton.Margin = new System.Windows.Forms.Padding(4);
             this.listsButton.Name = "listsButton";
-            this.listsButton.Size = new System.Drawing.Size(110, 60);
+            this.listsButton.Size = new System.Drawing.Size(165, 90);
             this.listsButton.TabIndex = 12;
             this.listsButton.Text = "lists";
             this.listsButton.UseVisualStyleBackColor = false;
@@ -77,9 +80,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PlanMe.Properties.Resources.calendar;
-            this.pictureBox2.Location = new System.Drawing.Point(-29, -20);
+            this.pictureBox2.Location = new System.Drawing.Point(-44, -30);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(951, 546);
+            this.pictureBox2.Size = new System.Drawing.Size(1426, 819);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
@@ -89,9 +93,10 @@
             this.infoButton.BackColor = System.Drawing.Color.ForestGreen;
             this.infoButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.infoButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.infoButton.Location = new System.Drawing.Point(625, 419);
+            this.infoButton.Location = new System.Drawing.Point(938, 628);
+            this.infoButton.Margin = new System.Windows.Forms.Padding(4);
             this.infoButton.Name = "infoButton";
-            this.infoButton.Size = new System.Drawing.Size(110, 60);
+            this.infoButton.Size = new System.Drawing.Size(165, 90);
             this.infoButton.TabIndex = 14;
             this.infoButton.Text = "for the app";
             this.infoButton.UseVisualStyleBackColor = false;
@@ -102,36 +107,38 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(38, 21);
+            this.label1.Location = new System.Drawing.Point(57, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 28);
+            this.label1.Size = new System.Drawing.Size(254, 38);
             this.label1.TabIndex = 15;
             this.label1.Text = "Phrase of the day:";
             // 
-            // phraseBox
+            // label2
             // 
-            this.phraseBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.phraseBox.Location = new System.Drawing.Point(51, 61);
-            this.phraseBox.Multiline = true;
-            this.phraseBox.Name = "phraseBox";
-            this.phraseBox.ReadOnly = true;
-            this.phraseBox.Size = new System.Drawing.Size(430, 43);
-            this.phraseBox.TabIndex = 16;
-            this.phraseBox.Text = "daily phrase";
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(57, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(452, 74);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.UseCompatibleTextRendering = true;
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.phraseBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.infoButton);
             this.Controls.Add(this.listsButton);
             this.Controls.Add(this.plansButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainScreen";
-            this.Size = new System.Drawing.Size(900, 500);
+            this.Size = new System.Drawing.Size(1350, 750);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -147,6 +154,6 @@
         private PictureBox pictureBox2;
         private Button infoButton;
         private Label label1;
-        private TextBox phraseBox;
+        private Label label2;
     }
 }

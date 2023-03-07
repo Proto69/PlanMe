@@ -1,4 +1,5 @@
-﻿using PlanMe.Data;
+﻿using PlanMe.Controlls;
+using PlanMe.Data;
 using PlanMe.Models;
 using System;
 using System.Collections.Generic;
@@ -17,17 +18,18 @@ namespace PlanMe
         public MainScreen()
         {
             InitializeComponent();
-            phraseBox.Text = PhraseData.GetPhrase();
+            label2.Text = PhraseData.GetPhrase();
         }
 
         private void listsButton_Click(object sender, EventArgs e)
         {
-            MainUserAndForm.form.ShowExistingList();
+            //Трябва да показва друго ама още го няма
+            PageControl.ShowExistingList();
         }
 
         private void plansButton_Click(object sender, EventArgs e)
         {
-            MainUserAndForm.form.ShowAddATask();
+            
         }
     }
 }

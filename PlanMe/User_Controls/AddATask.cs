@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PlanMe.Models;
+using PlanMe.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +19,17 @@ namespace PlanMe.User_Controls
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                AddATaskView.CreateTask(text.Text);
+                MainModels.lists.DisplayAllTasks();
+            }
+            catch (Exception ex)
+            {
+                ErrorView.ShowError(ex.Message);
+            }
         }
     }
 }

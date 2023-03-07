@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using PlanMe.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace PlanMe.Data
                 cmd.Parameters.AddWithValue("@username", user.Username);
                 cmd.Parameters.AddWithValue("@password", user.Password);
 
-                return RunNonQuery(cmd);
+                return MainCommands.RunNonQuery(cmd);
             }
         }
 
@@ -39,7 +40,7 @@ namespace PlanMe.Data
                 cmd.Parameters.AddWithValue("@password", user.Password);
                 cmd.Parameters.AddWithValue("@username", user.Username);
 
-                return RunNonQuery(cmd);
+                return MainCommands.RunNonQuery(cmd);
             }
         }
 
@@ -55,11 +56,11 @@ namespace PlanMe.Data
 
                 cmd.Parameters.AddWithValue("@username", username);
 
-                return RunNonQuery(cmd);
+                return MainCommands.RunNonQuery(cmd);
             }
         }
 
-        //Checks is the username and password are valid and returns the User
+        //Checks if the username and password are valid and returns the User
         public static User Check(string username, string password)
         {
             MySqlConnection conn = Database.GetConnection();
@@ -76,22 +77,14 @@ namespace PlanMe.Data
                 if (reader.HasRows)
                 {
                     reader.Read();
+
                     string user_password = reader["password"].ToString();
+
                     if (password == user_password)
                         return new User(username, user_password);
                 }
                 throw new ArgumentException("Invalid username or password!");
-
             }
-        }
-
-        //Runs the command and returns if the operation was successful
-        private static bool RunNonQuery(MySqlCommand cmd)
-        {
-            int rows = cmd.ExecuteNonQuery();
-            if (rows == 1) 
-                return true;
-            return false;
         }
     }
 }

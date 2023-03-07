@@ -5,31 +5,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PlanMe.Data
 {
     public static class TaskData
     {
         //Adds task to the database for the current user
-        public static bool Upload(UserTask task, string username)
+        public static bool Upload(UserTask task, string name)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
             using (conn)
             {
-                int userId = GetUserId(username, conn);
-                string query = "INSERT INTO tasks (user_id, text) VALUES (@id, @text)";
+                int listId = MainCommands.GetListId(name, conn);
+                string query = "INSERT INTO tasks (list_id, text) VALUES (@listId, @text)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@id", userId);
+                cmd.Parameters.AddWithValue("@listId", listId);
                 cmd.Parameters.AddWithValue("@text", task.Text);
 
-                return RunNonQuery(cmd);
+                return MainCommands.RunNonQuery(cmd);
             }
         }
 
         //Returns all tasks for the current user
-        public static List<UserTask> GetAll(string username)
+        public static List<UserTask> GetAll(string name, string username)
         {
             List<UserTask> userTasks = new List<UserTask>();
             MySqlConnection conn = Database.GetConnection();
@@ -37,12 +38,12 @@ namespace PlanMe.Data
             conn.Open();
             using (conn) 
             {
-                int id = GetUserId(username, conn);
+                int listId = MainCommands.GetListId(name, username, conn);
 
-                string query = "SELECT * FROM tasks WHERE user_id = @id";
+                string query = "SELECT text FROM tasks WHERE list_id = @listId";
                 MySqlCommand cmd = new MySqlCommand(query,conn);
 
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@listId", listId);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -56,64 +57,44 @@ namespace PlanMe.Data
         }
 
         //Updates the task for the current user
-        public static bool Update(UserTask task, string username)
+        public static bool Update(UserTask task, string name)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
             using (conn)
             {
-                string query = "UPDATE tasks SET text = @text, is_done = @is_done";
+                int listId = MainCommands.GetListId(name, conn);
+
+                string query = "UPDATE tasks SET is_done = @is_done WHERE text = @text AND list_id = @list_id";
+                
                 MySqlCommand cmd = new MySqlCommand(query, conn);
+                
                 cmd.Parameters.AddWithValue("@text", task.Text);
                 cmd.Parameters.AddWithValue("@is_done", task.IsDone);
+                cmd.Parameters.AddWithValue("@list_id", listId);
 
-                return RunNonQuery(cmd);
+                return MainCommands.RunNonQuery(cmd);
             }
         }
 
         //Deletes task for the current user
-        public static bool Delete(UserTask task)
+        public static bool Delete(UserTask task, string name)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
             using(conn)
             {
-                string query = "DELETE FROM tasks WHERE text = @text";
+                int listId = MainCommands.GetListId(name, conn);
+
+                string query = "DELETE FROM tasks WHERE text = @text AND list_id = @list_id";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@text", task.Text);
+                cmd.Parameters.AddWithValue("@list_id", listId);
 
-                return RunNonQuery(cmd);
+                return MainCommands.RunNonQuery(cmd);
             }
         }
 
-        //Returns user's id
-        public static int GetUserId(string username, MySqlConnection conn)
-        {
-            string query = "SELECT id FROM users WHERE username = @username";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-
-            cmd.Parameters.AddWithValue("@username", username);
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            int id = 0;
-
-            while (reader.Read())
-            {
-                id = (int)reader["id"];
-            }
-
-            reader.Close();
-            return id;
-        }
-
-        //Runs the command and returns if the operation was successful
-        private static bool RunNonQuery(MySqlCommand cmd)
-        {
-            int rows = cmd.ExecuteNonQuery();
-            if (rows == 1)
-                return true;
-            return false;
-        }
     }
 }

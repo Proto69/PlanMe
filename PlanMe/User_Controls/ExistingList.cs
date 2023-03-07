@@ -1,4 +1,5 @@
-﻿using PlanMe.Data;
+﻿using PlanMe.Controlls;
+using PlanMe.Data;
 using PlanMe.Models;
 using System;
 using System.Collections.Generic;
@@ -17,13 +18,48 @@ namespace PlanMe.User_Controls
         public ExistingList()
         {
             InitializeComponent();
-            List<UserTask> tasks = TaskData.GetAll(MainUserAndForm.user.Username);
+            DisplayAllTasks();
+        }
+
+        private void ClickCheckBox(object sender, EventArgs e)
+        {
+            CheckBox box = (CheckBox)sender;
+            DataControl.UpdateTask(box.Text, MainModels.tasks.Name, box.Checked);
+        }
+
+        public void DisplayAllTasks()
+        {
+            checkedListBox1.Items.Clear();
+            List<UserTask> tasks = TaskData.GetAll(MainModels.tasks.Name, MainModels.user.Username);
             foreach (var task in tasks)
             {
                 CheckBox box = new CheckBox() { Text = task.Text, Checked = task.IsDone };
+                if (box.Checked)
+                    box.Enabled = false;
+                box.CheckedChanged += ClickCheckBox;
+
                 checkedListBox1.Items.Add(box);
                 checkedListBox1.DisplayMember = "Text";
             }
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            AddATaskForm form = new AddATaskForm();
+            form.ShowDialog();
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            PageControl.ShowMainScreen();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            //Идеята ми е да се отваря нов прозорец в който да
+            //се покажат всички задачи като check box и да се маркират 
+            //и после да натиснеш Delete и да се изтрият маркираните, като
+            //има и бутон Delete All който да изтрива всичко
         }
     }
 }
