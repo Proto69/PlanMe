@@ -67,7 +67,7 @@ namespace PlanMe.Data
             conn.Open();
             using (conn)
             {
-                string query = "SELECT username, password FROM users WHERE username = @username";
+                string query = "SELECT username, password FROM users WHERE BINARY username = @username";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@username", username);
@@ -80,11 +80,12 @@ namespace PlanMe.Data
 
                     string user_password = reader["password"].ToString();
 
-                    if (password == user_password)
+                    if (password == user_password && reader["username"].ToString() == username)
                         return new User(username, user_password);
                 }
                 throw new ArgumentException("Invalid username or password!");
             }
         }
+
     }
 }
