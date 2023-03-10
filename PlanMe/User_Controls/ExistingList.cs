@@ -61,5 +61,10 @@ namespace PlanMe.User_Controls
             //и после да натиснеш Delete и да се изтрият маркираните, като
             //има и бутон Delete All който да изтрива всичко
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
