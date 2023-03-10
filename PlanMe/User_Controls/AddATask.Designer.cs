@@ -37,6 +37,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(144, 50);
             this.label1.Name = "label1";
@@ -48,19 +49,20 @@
             // addButton
             // 
             this.addButton.BackColor = System.Drawing.Color.ForestGreen;
-            this.addButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.addButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.addButton.Location = new System.Drawing.Point(158, 232);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(150, 50);
             this.addButton.TabIndex = 1;
-            this.addButton.Text = "Upload";
+            this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(144, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 20);
@@ -70,16 +72,18 @@
             // text
             // 
             this.text.BackColor = System.Drawing.Color.White;
-            this.text.Location = new System.Drawing.Point(80, 150);
+            this.text.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.text.Location = new System.Drawing.Point(79, 147);
             this.text.Name = "text";
             this.text.PlaceholderText = "Write your task here...";
-            this.text.Size = new System.Drawing.Size(317, 27);
+            this.text.Size = new System.Drawing.Size(317, 34);
             this.text.TabIndex = 3;
             // 
             // AddATask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PlanMe.Properties.Resources.background;
             this.Controls.Add(this.text);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.label1);
