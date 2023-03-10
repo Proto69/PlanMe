@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usernameBox = new System.Windows.Forms.TextBox();
+            this.passwordBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -45,21 +45,22 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // usernameBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(301, 245);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 27);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Text = "Enter username";
+            this.usernameBox.Location = new System.Drawing.Point(301, 245);
+            this.usernameBox.Name = "usernameBox";
+            this.usernameBox.PlaceholderText = "Enter username";
+            this.usernameBox.Size = new System.Drawing.Size(290, 27);
+            this.usernameBox.TabIndex = 11;
             // 
-            // textBox2
+            // passwordBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(301, 295);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(290, 27);
-            this.textBox2.TabIndex = 12;
-            this.textBox2.Text = "Enter password";
+            this.passwordBox.Location = new System.Drawing.Point(301, 295);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.PasswordChar = '*';
+            this.passwordBox.PlaceholderText = "Enter password";
+            this.passwordBox.Size = new System.Drawing.Size(290, 27);
+            this.passwordBox.TabIndex = 12;
             // 
             // button1
             // 
@@ -71,6 +72,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "Log In";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkLabel1
             // 
@@ -82,6 +84,7 @@
             this.linkLabel1.TabIndex = 15;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "I don\'t have an account.";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // LogIn
             // 
@@ -89,8 +92,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.usernameBox);
             this.Controls.Add(this.pictureBox1);
             this.Name = "LogIn";
             this.Size = new System.Drawing.Size(900, 500);
@@ -103,8 +106,8 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox usernameBox;
+        private TextBox passwordBox;
         private Button button1;
         private LinkLabel linkLabel1;
     }

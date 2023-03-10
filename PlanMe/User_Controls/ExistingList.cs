@@ -51,7 +51,7 @@ namespace PlanMe.User_Controls
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            PageControl.ShowMainScreen();
+            PageControl.MainScreen();
         }
 
         private void deleteButton_Click(object sender, EventArgs e)

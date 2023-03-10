@@ -13,23 +13,36 @@ namespace PlanMe.Controlls
     {
         private static MainForm mainForm = MainModels.form;
         private static Panel panel1 = mainForm.Controls["panel1"] as Panel;
-        public static void ShowMainScreen()
+
+        public static void MainScreen()
         {
             panel1.Controls.Clear();
             MainScreen mainScreen = new MainScreen();
             mainScreen.Dock = DockStyle.Fill;
             panel1.Controls.Add(mainScreen);
         }
-
-        public static void ShowSignUp()
+        public static void SignUp()
         {
             panel1.Controls.Clear();
             SignUp signUp = new();
             signUp.Dock = DockStyle.Fill;
             panel1.Controls.Add(signUp);
         }
-
-        public static void ShowExistingList()
+        public static void LigIn()
+        {
+            panel1.Controls.Clear();
+            LogIn login = new();
+            login.Dock = DockStyle.Fill;
+            panel1.Controls.Add(login);
+        }
+        public static void WelcomePage()
+        {
+            panel1.Controls.Clear();
+            WelcomePage page = new();
+            page.Dock = DockStyle.Fill;
+            page.Controls.Add(page);
+        }
+        public static void ExistingList()
         {
             panel1.Controls.Clear();
             ExistingList lists = new();
@@ -37,8 +50,7 @@ namespace PlanMe.Controlls
             lists.Dock = DockStyle.Fill;
             panel1.Controls.Add(lists);
         }
-
-        public static void ShowAddATask()
+        public static void AddATask()
         {
             panel1.Controls.Clear();
             AddATaskForm tasks = new();
