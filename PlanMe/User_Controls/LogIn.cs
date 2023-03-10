@@ -37,5 +37,10 @@ namespace PlanMe.User_Controls
                 ErrorView.ShowError(ex.Message);
             }
         }
+
+        private void passwordBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

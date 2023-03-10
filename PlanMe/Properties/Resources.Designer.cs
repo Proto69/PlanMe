@@ -63,9 +63,9 @@ namespace PlanMe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap calendar {
+        internal static System.Drawing.Bitmap background {
             get {
-                object obj = ResourceManager.GetObject("calendar", resourceCulture);
+                object obj = ResourceManager.GetObject("background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace PlanMe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PlanMe {
+        internal static System.Drawing.Bitmap LogIn {
             get {
-                object obj = ResourceManager.GetObject("PlanMe", resourceCulture);
+                object obj = ResourceManager.GetObject("LogIn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace PlanMe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PlanMe1 {
+        internal static System.Drawing.Bitmap SingUp {
             get {
-                object obj = ResourceManager.GetObject("PlanMe1", resourceCulture);
+                object obj = ResourceManager.GetObject("SingUp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

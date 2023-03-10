@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.addButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.saveButton = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,18 +44,6 @@
             this.label2.Size = new System.Drawing.Size(357, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "__________________________________________________________";
-            // 
-            // addButton
-            // 
-            this.addButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addButton.ForeColor = System.Drawing.Color.ForestGreen;
-            this.addButton.Location = new System.Drawing.Point(585, 357);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(286, 60);
-            this.addButton.TabIndex = 4;
-            this.addButton.Text = "+ Upload ";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // pictureBox1
             // 
@@ -81,19 +67,6 @@
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.BackColor = System.Drawing.Color.ForestGreen;
-            this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.deleteButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.deleteButton.Location = new System.Drawing.Point(585, 423);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(140, 60);
-            this.deleteButton.TabIndex = 12;
-            this.deleteButton.Text = "Delete";
-            this.deleteButton.UseVisualStyleBackColor = false;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // checkedListBox1
             // 
@@ -120,10 +93,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.addButton);
             this.Controls.Add(this.label2);
             this.Name = "ExistingList";
             this.Size = new System.Drawing.Size(900, 500);
@@ -135,10 +106,8 @@
 
         #endregion
         private Label label2;
-        private Button addButton;
         private PictureBox pictureBox1;
         private Button saveButton;
-        private Button deleteButton;
         private CheckedListBox checkedListBox1;
         private TextBox textBox1;
     }
