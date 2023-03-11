@@ -36,7 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // nameTextBox
@@ -127,6 +129,16 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "_______________________________________________________";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PlanMe.Properties.Resources.SingUp_BG;
+            this.pictureBox2.Location = new System.Drawing.Point(-75, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1050, 517);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -140,9 +152,11 @@
             this.Controls.Add(this.signUpButton);
             this.Controls.Add(this.repeatPasswordTextBox);
             this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "SignUp";
             this.Size = new System.Drawing.Size(900, 500);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +172,6 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label label2;
+        private PictureBox pictureBox2;
     }
 }

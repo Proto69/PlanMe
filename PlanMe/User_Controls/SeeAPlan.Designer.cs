@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -38,7 +40,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(190, 56);
+            this.label1.Location = new System.Drawing.Point(190, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 46);
             this.label1.TabIndex = 2;
@@ -62,14 +64,35 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(243, 30);
             this.dateTimePicker1.TabIndex = 4;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(186, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(177, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "____________________________";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(313, 298);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 51);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // SeeAPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PlanMe.Properties.Resources.background;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Name = "SeeAPlan";
             this.Size = new System.Drawing.Size(600, 400);
             this.ResumeLayout(false);
@@ -82,5 +105,7 @@
         private Label label1;
         private TextBox textBox1;
         private DateTimePicker dateTimePicker1;
+        private Label label2;
+        private Button button1;
     }
 }
