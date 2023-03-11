@@ -1,5 +1,5 @@
 using Google.Protobuf.Collections;
-using PlanMe.Controlls;
+using PlanMe.Controls;
 using PlanMe.Models;
 using PlanMe.User_Controls;
 using PlanMe.Views;

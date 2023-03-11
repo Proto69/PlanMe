@@ -1,12 +1,4 @@
-﻿using Org.BouncyCastle.Asn1.Mozilla;
-using PlanMe.Controlls;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PlanMe_Tests.ControllsTests
+﻿namespace PlanMe_Tests.ControllsTests
 {
     [TestFixture]
     public class DataControlTests

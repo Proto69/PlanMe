@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PlanMe.Models;
-using PlanMe.Controlls;
+using PlanMe.Controls;
 
 namespace PlanMe.User_Controls
 {

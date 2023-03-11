@@ -1,12 +1,4 @@
-﻿using PlanMe.Controlls;
-using PlanMe.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PlanMe.Views
+﻿namespace PlanMe.Views
 {
     public static class AddATaskView
     {

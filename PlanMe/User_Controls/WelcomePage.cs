@@ -1,4 +1,4 @@
-﻿using PlanMe.Controlls;
+﻿using PlanMe.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

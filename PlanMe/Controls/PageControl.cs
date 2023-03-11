@@ -1,13 +1,4 @@
-﻿using PlanMe.Models;
-using PlanMe.User_Controls;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace PlanMe.Controlls
+﻿namespace PlanMe.Controls
 {
     public static class PageControl
     {

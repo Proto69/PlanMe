@@ -1,13 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using PlanMe.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-
-namespace PlanMe_Tests.DataTests
+﻿namespace PlanMe_Tests.DataTests
 {
     [TestFixture]
     public class EventTests

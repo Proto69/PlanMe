@@ -1,7 +1,3 @@
-using PlanMe.Data;
-using System.Text.RegularExpressions;
-using System.Linq;
-
 namespace PlanMe.Models
 {
     //Model for user

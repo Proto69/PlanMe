@@ -1,11 +1,4 @@
-﻿using PlanMe.User_Controls;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PlanMe.Models
+﻿namespace PlanMe.Models
 {
     public static class MainModels
     {
