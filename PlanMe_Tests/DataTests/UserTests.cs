@@ -1,11 +1,4 @@
-﻿using PlanMe;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PlanMe_Tests.DataTests
+﻿namespace PlanMe_Tests.DataTests
 {
     [TestFixture]
     public class UserTests
@@ -36,6 +29,8 @@ namespace PlanMe_Tests.DataTests
             User checkedUser = UserData.Check("UPDATE TEST", password);
 
             Assert.AreEqual(user.ToString(), checkedUser.ToString(), "Does not return right user!");
+
+            UserData.Delete(user.Username);
         }
 
         [Test]

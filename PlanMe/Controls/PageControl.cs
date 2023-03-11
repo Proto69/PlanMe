@@ -1,13 +1,4 @@
-﻿using PlanMe.Models;
-using PlanMe.User_Controls;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace PlanMe.Controlls
+﻿namespace PlanMe.Controls
 {
     public static class PageControl
     {
@@ -28,7 +19,7 @@ namespace PlanMe.Controlls
             signUp.Dock = DockStyle.Fill;
             panel1.Controls.Add(signUp);
         }
-        public static void LigIn()
+        public static void LogIn()
         {
             panel1.Controls.Clear();
             LogIn login = new();
@@ -40,12 +31,12 @@ namespace PlanMe.Controlls
             panel1.Controls.Clear();
             WelcomePage page = new();
             page.Dock = DockStyle.Fill;
-            page.Controls.Add(page);
+            panel1.Controls.Add(page);
         }
         public static void ExistingList()
         {
             panel1.Controls.Clear();
-            ExistingList lists = new();
+            TaskScreen lists = new();
             MainModels.lists = lists;
             lists.Dock = DockStyle.Fill;
             panel1.Controls.Add(lists);
@@ -53,7 +44,7 @@ namespace PlanMe.Controlls
         public static void AddATask()
         {
             panel1.Controls.Clear();
-            AddATaskForm tasks = new();
+            PopUpForm tasks = new();
             tasks.Dock = DockStyle.Fill;
             panel1.Controls.Add(tasks);
         }

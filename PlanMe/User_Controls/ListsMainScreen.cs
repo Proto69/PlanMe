@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PlanMe
+namespace PlanMe.User_Controls
 {
-    public partial class AddATaskForm : Form
+    public partial class ListsMainScreen : UserControl
     {
-        public AddATaskForm()
+        public ListsMainScreen()
         {
             InitializeComponent();
         }

@@ -1,11 +1,4 @@
-﻿using PlanMe.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PlanMe.Models
+﻿namespace PlanMe.Models
 {
     public class ListOfTasks
     {

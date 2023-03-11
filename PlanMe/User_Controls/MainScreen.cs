@@ -1,4 +1,4 @@
-﻿using PlanMe.Controlls;
+﻿using PlanMe.Controls;
 using PlanMe.Data;
 using PlanMe.Models;
 using System;

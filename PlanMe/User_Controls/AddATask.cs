@@ -31,10 +31,5 @@ namespace PlanMe.User_Controls
                 ErrorView.ShowError(ex.Message);
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

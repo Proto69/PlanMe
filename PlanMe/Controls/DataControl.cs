@@ -1,12 +1,4 @@
-﻿using PlanMe.Data;
-using PlanMe.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PlanMe.Controlls
+﻿namespace PlanMe.Controls
 {
     public static class DataControl
     {

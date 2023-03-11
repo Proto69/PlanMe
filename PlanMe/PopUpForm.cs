@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PlanMe.User_Controls
+namespace PlanMe
 {
-    public partial class Lists : UserControl
+    public partial class PopUpForm : Form
     {
-        public Lists()
+        public PopUpForm()
         {
             InitializeComponent();
         }

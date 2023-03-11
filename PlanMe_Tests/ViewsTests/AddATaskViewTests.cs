@@ -1,12 +1,4 @@
-﻿using PlanMe.User_Controls;
-using PlanMe.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PlanMe_Tests.ViewsTests
+﻿namespace PlanMe_Tests.ViewsTests
 {
     [TestFixture]
     public class AddATaskViewTests

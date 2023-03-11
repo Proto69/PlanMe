@@ -1,11 +1,4 @@
-﻿using PlanMe;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PlanMe_Tests.DataTests
+﻿namespace PlanMe_Tests.DataTests
 {
     [TestFixture]
     public class ListOfTasksTests

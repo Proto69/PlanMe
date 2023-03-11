@@ -1,13 +1,13 @@
-﻿namespace PlanMe
+﻿namespace PlanMe.User_Controls
 {
-    partial class AddATaskForm
+    partial class ListsMainScreen
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,38 +20,38 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.addaTask1 = new PlanMe.User_Controls.AddATask();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // addaTask1
+            // panel1
             // 
-            this.addaTask1.Location = new System.Drawing.Point(0, 0);
-            this.addaTask1.Name = "addaTask1";
-            this.addaTask1.Size = new System.Drawing.Size(460, 379);
-            this.addaTask1.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Location = new System.Drawing.Point(193, 154);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(518, 301);
+            this.panel1.TabIndex = 0;
             // 
-            // AddATask
+            // Lists
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 385);
-            this.Controls.Add(this.addaTask1);
-            this.Name = "AddATask";
-            this.Text = "AddATask";
+            this.Controls.Add(this.panel1);
+            this.Name = "Lists";
+            this.Size = new System.Drawing.Size(900, 500);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private User_Controls.AddATask addaTask1;
+        private Panel panel1;
     }
 }

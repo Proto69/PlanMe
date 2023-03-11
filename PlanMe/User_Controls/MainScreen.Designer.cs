@@ -39,7 +39,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PlanMe.Properties.Resources.PlanMe1;
+            //this.pictureBox1.Image = global::PlanMe.Properties.Resources.PlanMe1;
             this.pictureBox1.Location = new System.Drawing.Point(598, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(230, 83);

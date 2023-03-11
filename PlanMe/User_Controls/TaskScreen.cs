@@ -1,4 +1,4 @@
-﻿using PlanMe.Controlls;
+﻿using PlanMe.Controls;
 using PlanMe.Data;
 using PlanMe.Models;
 using System;
@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace PlanMe.User_Controls
 {
-    public partial class ExistingList : UserControl
+    public partial class TaskScreen : UserControl
     {
-        public ExistingList()
+        public TaskScreen()
         {
             InitializeComponent();
             DisplayAllTasks();
@@ -45,7 +45,7 @@ namespace PlanMe.User_Controls
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            AddATaskForm form = new AddATaskForm();
+            PopUpForm form = new PopUpForm();
             form.ShowDialog();
         }
 
