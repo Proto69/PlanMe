@@ -36,6 +36,8 @@ namespace PlanMe_Tests.DataTests
             User checkedUser = UserData.Check("UPDATE TEST", password);
 
             Assert.AreEqual(user.ToString(), checkedUser.ToString(), "Does not return right user!");
+
+            UserData.Delete(user.Username);
         }
 
         [Test]

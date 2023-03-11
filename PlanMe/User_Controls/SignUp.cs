@@ -37,7 +37,7 @@ namespace PlanMe.User_Controls
 
         private void logInLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PageControl.LigIn();
+            PageControl.LogIn();
         }
     }
 }

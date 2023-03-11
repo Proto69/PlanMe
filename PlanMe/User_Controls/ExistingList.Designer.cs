@@ -47,13 +47,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PlanMe.Properties.Resources.PlanMe1;
+            //this.pictureBox1.Image = global::PlanMe.Properties.Resources.PlanMe1;
             this.pictureBox1.Location = new System.Drawing.Point(653, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(230, 77);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // saveButton
             // 
