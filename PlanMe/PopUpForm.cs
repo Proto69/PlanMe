@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PlanMe
 {
-    public partial class AddATaskForm : Form
+    public partial class PopUpForm : Form
     {
-        public AddATaskForm()
+        public PopUpForm()
         {
             InitializeComponent();
         }

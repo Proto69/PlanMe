@@ -53,7 +53,7 @@ namespace PlanMe.Controlls
         public static void AddATask()
         {
             panel1.Controls.Clear();
-            AddATaskForm tasks = new();
+            PopUpForm tasks = new();
             tasks.Dock = DockStyle.Fill;
             panel1.Controls.Add(tasks);
         }

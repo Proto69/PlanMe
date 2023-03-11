@@ -1,4 +1,4 @@
-namespace PlanMe
+namespace PlanMe.Views
 {
     public static class ErrorView
     {

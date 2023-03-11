@@ -45,7 +45,7 @@ namespace PlanMe.User_Controls
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            AddATaskForm form = new AddATaskForm();
+            PopUpForm form = new PopUpForm();
             form.ShowDialog();
         }
 

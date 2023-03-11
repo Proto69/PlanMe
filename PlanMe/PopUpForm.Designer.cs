@@ -1,6 +1,6 @@
 ﻿namespace PlanMe
 {
-    partial class AddATaskForm
+    partial class PopUpForm
     {
         /// <summary>
         /// Required designer variable.

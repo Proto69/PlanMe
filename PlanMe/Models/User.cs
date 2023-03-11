@@ -1,9 +1,8 @@
 using PlanMe.Data;
-using PlanMe.Models;
 using System.Text.RegularExpressions;
 using System.Linq;
 
-namespace PlanMe
+namespace PlanMe.Models
 {
     //Model for user
     public class User
@@ -16,12 +15,12 @@ namespace PlanMe
 
         public User(string username, string password)
         {
-            this.Username = username;
-            this.Password = password;
+            Username = username;
+            Password = password;
             Events = EventData.GetAll(username);
             AllTasks = ListOfTasksData.GetAll(username);
         }
-        
+
         public string Username
         {
             get { return username; }
