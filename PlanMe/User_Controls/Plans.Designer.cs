@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,9 +40,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::PlanMe.Properties.Resources.MyPlans;
-            this.pictureBox1.Location = new System.Drawing.Point(306, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(127, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(255, 93);
+            this.pictureBox1.Size = new System.Drawing.Size(619, 127);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -66,19 +68,31 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(255, 70);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Add a plan";
+            this.button2.Text = "See a plan";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.ForestGreen;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(306, 351);
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(306, 365);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(255, 70);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Add a plan";
+            this.button3.Text = "Show all plans";
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(101, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(717, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "_________________________________________________________________________________" +
+    "_____________________________________";
             // 
             // Plans
             // 
@@ -89,10 +103,12 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
             this.Name = "Plans";
             this.Size = new System.Drawing.Size(900, 500);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -102,5 +118,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Label label2;
     }
 }

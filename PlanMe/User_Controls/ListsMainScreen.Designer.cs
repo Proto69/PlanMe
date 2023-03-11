@@ -39,12 +39,12 @@
             this.panel1.Size = new System.Drawing.Size(518, 301);
             this.panel1.TabIndex = 0;
             // 
-            // Lists
+            // ListsMainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "Lists";
+            this.Name = "ListsMainScreen";
             this.Size = new System.Drawing.Size(900, 500);
             this.ResumeLayout(false);
 
