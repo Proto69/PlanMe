@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace PlanMe.User_Controls
 {
-    public partial class ExistingList : UserControl
+    public partial class TaskScreen : UserControl
     {
-        public ExistingList()
+        public TaskScreen()
         {
             InitializeComponent();
             DisplayAllTasks();

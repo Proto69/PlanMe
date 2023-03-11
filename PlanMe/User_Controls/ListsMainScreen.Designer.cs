@@ -1,6 +1,6 @@
 ﻿namespace PlanMe.User_Controls
 {
-    partial class Lists
+    partial class ListsMainScreen
     {
         /// <summary> 
         /// Required designer variable.

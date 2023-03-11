@@ -1,6 +1,6 @@
 ﻿namespace PlanMe.User_Controls
 {
-    partial class ExistingList
+    partial class TaskScreen
     {
         /// <summary> 
         /// Required designer variable.

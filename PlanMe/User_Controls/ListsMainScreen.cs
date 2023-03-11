@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PlanMe.User_Controls
 {
-    public partial class Lists : UserControl
+    public partial class ListsMainScreen : UserControl
     {
-        public Lists()
+        public ListsMainScreen()
         {
             InitializeComponent();
         }

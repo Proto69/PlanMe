@@ -45,7 +45,7 @@ namespace PlanMe.Controlls
         public static void ExistingList()
         {
             panel1.Controls.Clear();
-            ExistingList lists = new();
+            TaskScreen lists = new();
             MainModels.lists = lists;
             lists.Dock = DockStyle.Fill;
             panel1.Controls.Add(lists);
