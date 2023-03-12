@@ -32,10 +32,11 @@
             // 
             // StartPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StartPage";
-            this.Size = new System.Drawing.Size(900, 500);
+            this.Size = new System.Drawing.Size(1350, 750);
             this.ResumeLayout(false);
 
         }

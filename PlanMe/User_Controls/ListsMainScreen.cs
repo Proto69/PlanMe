@@ -16,5 +16,20 @@ namespace PlanMe.User_Controls
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //PageControl.AddList();
+        }
+
+        private void ListsMainScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListOfTasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }

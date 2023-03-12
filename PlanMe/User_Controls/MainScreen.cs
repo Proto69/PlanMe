@@ -24,7 +24,7 @@ namespace PlanMe
         private void listsButton_Click(object sender, EventArgs e)
         {
             //Трябва да показва друго ама още го няма
-            PageControl.ExistingList();
+            PageControl.TaskScreen();
         }
 
         private void plansButton_Click(object sender, EventArgs e)

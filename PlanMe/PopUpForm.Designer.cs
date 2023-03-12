@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.addaTask1 = new PlanMe.User_Controls.AddATask();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // addaTask1
+            // panel1
             // 
-            this.addaTask1.Location = new System.Drawing.Point(0, 0);
-            this.addaTask1.Name = "addaTask1";
-            this.addaTask1.Size = new System.Drawing.Size(460, 379);
-            this.addaTask1.TabIndex = 0;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(723, 504);
+            this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // AddATask
+            // PopUpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 385);
-            this.Controls.Add(this.addaTask1);
-            this.Name = "AddATask";
-            this.Text = "AddATask";
+            this.ClientSize = new System.Drawing.Size(724, 504);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "PopUpForm";
             this.ResumeLayout(false);
 
         }
@@ -53,5 +54,6 @@
         #endregion
 
         private User_Controls.AddATask addaTask1;
+        private Panel panel1;
     }
 }
