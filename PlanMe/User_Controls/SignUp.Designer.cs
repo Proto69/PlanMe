@@ -43,6 +43,7 @@
             // 
             // nameTextBox
             // 
+            this.nameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.nameTextBox.Location = new System.Drawing.Point(300, 224);
             this.nameTextBox.Name = "nameTextBox";
@@ -52,6 +53,7 @@
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.passwordTextBox.Location = new System.Drawing.Point(300, 272);
             this.passwordTextBox.Name = "passwordTextBox";
@@ -62,6 +64,7 @@
             // 
             // repeatPasswordTextBox
             // 
+            this.repeatPasswordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.repeatPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.repeatPasswordTextBox.Location = new System.Drawing.Point(300, 321);
             this.repeatPasswordTextBox.Name = "repeatPasswordTextBox";
@@ -72,6 +75,7 @@
             // 
             // signUpButton
             // 
+            this.signUpButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.signUpButton.BackColor = System.Drawing.Color.ForestGreen;
             this.signUpButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.signUpButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -85,6 +89,7 @@
             // 
             // logInLinkLabel
             // 
+            this.logInLinkLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.logInLinkLabel.AutoSize = true;
             this.logInLinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.logInLinkLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -99,6 +104,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -110,6 +116,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::PlanMe.Properties.Resources.SingUp;
             this.pictureBox1.Location = new System.Drawing.Point(345, 60);
@@ -121,6 +128,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(280, 140);
@@ -131,6 +139,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::PlanMe.Properties.Resources.SingUp_BG;
             this.pictureBox2.Location = new System.Drawing.Point(-75, -2);
             this.pictureBox2.Name = "pictureBox2";
