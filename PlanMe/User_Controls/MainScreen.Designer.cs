@@ -80,9 +80,10 @@
             this.plansButton.BackColor = System.Drawing.Color.ForestGreen;
             this.plansButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.plansButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.plansButton.Location = new System.Drawing.Point(387, 232);
+            this.plansButton.Location = new System.Drawing.Point(580, 348);
+            this.plansButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.plansButton.Name = "plansButton";
-            this.plansButton.Size = new System.Drawing.Size(120, 60);
+            this.plansButton.Size = new System.Drawing.Size(180, 90);
             this.plansButton.TabIndex = 11;
             this.plansButton.Text = "plans";
             this.plansButton.UseVisualStyleBackColor = false;
@@ -93,9 +94,10 @@
             this.listsButton.BackColor = System.Drawing.Color.ForestGreen;
             this.listsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listsButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.listsButton.Location = new System.Drawing.Point(142, 359);
+            this.listsButton.Location = new System.Drawing.Point(213, 538);
+            this.listsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listsButton.Name = "listsButton";
-            this.listsButton.Size = new System.Drawing.Size(120, 60);
+            this.listsButton.Size = new System.Drawing.Size(180, 90);
             this.listsButton.TabIndex = 12;
             this.listsButton.Text = "lists";
             this.listsButton.UseVisualStyleBackColor = false;
@@ -106,9 +108,10 @@
             this.infoButton.BackColor = System.Drawing.Color.ForestGreen;
             this.infoButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.infoButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.infoButton.Location = new System.Drawing.Point(628, 428);
+            this.infoButton.Location = new System.Drawing.Point(942, 642);
+            this.infoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.infoButton.Name = "infoButton";
-            this.infoButton.Size = new System.Drawing.Size(120, 60);
+            this.infoButton.Size = new System.Drawing.Size(180, 90);
             this.infoButton.TabIndex = 14;
             this.infoButton.Text = "for the app";
             this.infoButton.UseVisualStyleBackColor = false;
@@ -119,9 +122,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(35, 17);
+            this.label1.Location = new System.Drawing.Point(52, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 28);
+            this.label1.Size = new System.Drawing.Size(254, 38);
             this.label1.TabIndex = 15;
             this.label1.Text = "Phrase of the day:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -130,10 +134,9 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(35, 54);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(52, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(426, 49);
+            this.label2.Size = new System.Drawing.Size(639, 74);
             this.label2.TabIndex = 17;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,9 +146,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::PlanMe.Properties.Resources.PlanMeLogo;
-            this.pictureBox2.Location = new System.Drawing.Point(575, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(862, 26);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(311, 108);
+            this.pictureBox2.Size = new System.Drawing.Size(466, 162);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
@@ -156,9 +160,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label3.Location = new System.Drawing.Point(387, 169);
+            this.label3.Location = new System.Drawing.Point(580, 254);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 19);
+            this.label3.Size = new System.Drawing.Size(23, 25);
             this.label3.TabIndex = 20;
             this.label3.Text = "2";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -169,9 +174,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label4.Location = new System.Drawing.Point(509, 169);
+            this.label4.Location = new System.Drawing.Point(764, 254);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(17, 19);
+            this.label4.Size = new System.Drawing.Size(23, 25);
             this.label4.TabIndex = 21;
             this.label4.Text = "3";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -182,9 +188,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label5.Location = new System.Drawing.Point(597, 193);
+            this.label5.Location = new System.Drawing.Point(896, 290);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(17, 19);
+            this.label5.Size = new System.Drawing.Size(23, 25);
             this.label5.TabIndex = 22;
             this.label5.Text = "4";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -195,9 +202,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label6.Location = new System.Drawing.Point(265, 169);
+            this.label6.Location = new System.Drawing.Point(398, 254);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 19);
+            this.label6.Size = new System.Drawing.Size(23, 25);
             this.label6.TabIndex = 23;
             this.label6.Text = "1";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -208,9 +216,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label7.Location = new System.Drawing.Point(754, 169);
+            this.label7.Location = new System.Drawing.Point(1131, 254);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(17, 19);
+            this.label7.Size = new System.Drawing.Size(23, 25);
             this.label7.TabIndex = 24;
             this.label7.Text = "5";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -221,9 +230,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label8.Location = new System.Drawing.Point(21, 232);
+            this.label8.Location = new System.Drawing.Point(32, 348);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(17, 19);
+            this.label8.Size = new System.Drawing.Size(23, 25);
             this.label8.TabIndex = 25;
             this.label8.Text = "6";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -234,9 +244,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label9.Location = new System.Drawing.Point(142, 232);
+            this.label9.Location = new System.Drawing.Point(213, 348);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(17, 19);
+            this.label9.Size = new System.Drawing.Size(23, 25);
             this.label9.TabIndex = 26;
             this.label9.Text = "7";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -247,9 +258,10 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label10.Location = new System.Drawing.Point(265, 232);
+            this.label10.Location = new System.Drawing.Point(398, 348);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(17, 19);
+            this.label10.Size = new System.Drawing.Size(23, 25);
             this.label10.TabIndex = 27;
             this.label10.Text = "8";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -260,9 +272,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label11.Location = new System.Drawing.Point(509, 232);
+            this.label11.Location = new System.Drawing.Point(764, 348);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(25, 19);
+            this.label11.Size = new System.Drawing.Size(34, 25);
             this.label11.TabIndex = 28;
             this.label11.Text = "10";
             this.label11.Click += new System.EventHandler(this.label11_Click);
@@ -273,9 +286,10 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label12.Location = new System.Drawing.Point(597, 232);
+            this.label12.Location = new System.Drawing.Point(896, 348);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(25, 19);
+            this.label12.Size = new System.Drawing.Size(34, 25);
             this.label12.TabIndex = 29;
             this.label12.Text = "11";
             this.label12.Click += new System.EventHandler(this.label12_Click);
@@ -286,9 +300,10 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label13.Location = new System.Drawing.Point(754, 232);
+            this.label13.Location = new System.Drawing.Point(1131, 348);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(25, 19);
+            this.label13.Size = new System.Drawing.Size(34, 25);
             this.label13.TabIndex = 30;
             this.label13.Text = "13";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -299,9 +314,10 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label14.Location = new System.Drawing.Point(21, 296);
+            this.label14.Location = new System.Drawing.Point(32, 444);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(25, 19);
+            this.label14.Size = new System.Drawing.Size(34, 25);
             this.label14.TabIndex = 31;
             this.label14.Text = "13";
             this.label14.Click += new System.EventHandler(this.label14_Click);
@@ -312,9 +328,10 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label15.Location = new System.Drawing.Point(142, 296);
+            this.label15.Location = new System.Drawing.Point(213, 444);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(25, 19);
+            this.label15.Size = new System.Drawing.Size(34, 25);
             this.label15.TabIndex = 32;
             this.label15.Text = "14";
             this.label15.Click += new System.EventHandler(this.label15_Click);
@@ -325,9 +342,10 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label16.Location = new System.Drawing.Point(265, 296);
+            this.label16.Location = new System.Drawing.Point(398, 444);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(25, 19);
+            this.label16.Size = new System.Drawing.Size(34, 25);
             this.label16.TabIndex = 33;
             this.label16.Text = "15";
             this.label16.Click += new System.EventHandler(this.label16_Click);
@@ -338,9 +356,10 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label17.Location = new System.Drawing.Point(387, 295);
+            this.label17.Location = new System.Drawing.Point(580, 442);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(25, 19);
+            this.label17.Size = new System.Drawing.Size(34, 25);
             this.label17.TabIndex = 34;
             this.label17.Text = "16";
             // 
@@ -350,9 +369,10 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label18.Location = new System.Drawing.Point(509, 296);
+            this.label18.Location = new System.Drawing.Point(764, 444);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(25, 19);
+            this.label18.Size = new System.Drawing.Size(34, 25);
             this.label18.TabIndex = 35;
             this.label18.Text = "17";
             // 
@@ -362,9 +382,10 @@
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label19.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label19.Location = new System.Drawing.Point(597, 296);
+            this.label19.Location = new System.Drawing.Point(896, 444);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(25, 19);
+            this.label19.Size = new System.Drawing.Size(34, 25);
             this.label19.TabIndex = 36;
             this.label19.Text = "18";
             // 
@@ -374,9 +395,10 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label20.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label20.Location = new System.Drawing.Point(754, 296);
+            this.label20.Location = new System.Drawing.Point(1131, 444);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(25, 19);
+            this.label20.Size = new System.Drawing.Size(34, 25);
             this.label20.TabIndex = 37;
             this.label20.Text = "19";
             // 
@@ -386,9 +408,10 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label21.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label21.Location = new System.Drawing.Point(21, 359);
+            this.label21.Location = new System.Drawing.Point(32, 538);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(25, 19);
+            this.label21.Size = new System.Drawing.Size(34, 25);
             this.label21.TabIndex = 38;
             this.label21.Text = "20";
             this.label21.Click += new System.EventHandler(this.label21_Click);
@@ -399,9 +422,10 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label22.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label22.Location = new System.Drawing.Point(265, 359);
+            this.label22.Location = new System.Drawing.Point(398, 538);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(25, 19);
+            this.label22.Size = new System.Drawing.Size(34, 25);
             this.label22.TabIndex = 39;
             this.label22.Text = "22";
             this.label22.Click += new System.EventHandler(this.label22_Click);
@@ -412,9 +436,10 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label23.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label23.Location = new System.Drawing.Point(387, 359);
+            this.label23.Location = new System.Drawing.Point(580, 538);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(25, 19);
+            this.label23.Size = new System.Drawing.Size(34, 25);
             this.label23.TabIndex = 40;
             this.label23.Text = "23";
             // 
@@ -424,9 +449,10 @@
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label24.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label24.Location = new System.Drawing.Point(509, 359);
+            this.label24.Location = new System.Drawing.Point(764, 538);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(25, 19);
+            this.label24.Size = new System.Drawing.Size(34, 25);
             this.label24.TabIndex = 41;
             this.label24.Text = "24";
             // 
@@ -436,9 +462,10 @@
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label25.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label25.Location = new System.Drawing.Point(597, 341);
+            this.label25.Location = new System.Drawing.Point(896, 512);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(25, 19);
+            this.label25.Size = new System.Drawing.Size(34, 25);
             this.label25.TabIndex = 42;
             this.label25.Text = "25";
             // 
@@ -448,9 +475,10 @@
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label26.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label26.Location = new System.Drawing.Point(754, 359);
+            this.label26.Location = new System.Drawing.Point(1131, 538);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(25, 19);
+            this.label26.Size = new System.Drawing.Size(34, 25);
             this.label26.TabIndex = 43;
             this.label26.Text = "26";
             // 
@@ -460,9 +488,10 @@
             this.label27.BackColor = System.Drawing.Color.Transparent;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label27.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label27.Location = new System.Drawing.Point(35, 400);
+            this.label27.Location = new System.Drawing.Point(52, 600);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(25, 19);
+            this.label27.Size = new System.Drawing.Size(34, 25);
             this.label27.TabIndex = 44;
             this.label27.Text = "27";
             this.label27.Click += new System.EventHandler(this.label27_Click);
@@ -473,9 +502,10 @@
             this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label28.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label28.Location = new System.Drawing.Point(85, 384);
+            this.label28.Location = new System.Drawing.Point(128, 576);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(25, 19);
+            this.label28.Size = new System.Drawing.Size(34, 25);
             this.label28.TabIndex = 45;
             this.label28.Text = "28";
             this.label28.Click += new System.EventHandler(this.label28_Click);
@@ -486,9 +516,10 @@
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label29.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label29.Location = new System.Drawing.Point(317, 384);
+            this.label29.Location = new System.Drawing.Point(476, 576);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(25, 19);
+            this.label29.Size = new System.Drawing.Size(34, 25);
             this.label29.TabIndex = 46;
             this.label29.Text = "29";
             this.label29.Click += new System.EventHandler(this.label29_Click);
@@ -499,9 +530,10 @@
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label30.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label30.Location = new System.Drawing.Point(452, 384);
+            this.label30.Location = new System.Drawing.Point(678, 576);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(25, 19);
+            this.label30.Size = new System.Drawing.Size(34, 25);
             this.label30.TabIndex = 47;
             this.label30.Text = "30";
             this.label30.Click += new System.EventHandler(this.label30_Click);
@@ -512,9 +544,10 @@
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label31.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label31.Location = new System.Drawing.Point(518, 384);
+            this.label31.Location = new System.Drawing.Point(777, 576);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(25, 19);
+            this.label31.Size = new System.Drawing.Size(34, 25);
             this.label31.TabIndex = 48;
             this.label31.Text = "31";
             // 
@@ -524,9 +557,10 @@
             this.label32.BackColor = System.Drawing.Color.Transparent;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label32.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label32.Location = new System.Drawing.Point(35, 143);
+            this.label32.Location = new System.Drawing.Point(52, 214);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(75, 23);
+            this.label32.Size = new System.Drawing.Size(108, 32);
             this.label32.TabIndex = 49;
             this.label32.Text = "Monday";
             // 
@@ -536,9 +570,10 @@
             this.label33.BackColor = System.Drawing.Color.Transparent;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label33.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label33.Location = new System.Drawing.Point(165, 143);
+            this.label33.Location = new System.Drawing.Point(248, 214);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(74, 23);
+            this.label33.Size = new System.Drawing.Size(106, 32);
             this.label33.TabIndex = 50;
             this.label33.Text = "Tuesday";
             // 
@@ -548,9 +583,10 @@
             this.label34.BackColor = System.Drawing.Color.Transparent;
             this.label34.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label34.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label34.Location = new System.Drawing.Point(276, 143);
+            this.label34.Location = new System.Drawing.Point(414, 214);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(102, 23);
+            this.label34.Size = new System.Drawing.Size(145, 32);
             this.label34.TabIndex = 51;
             this.label34.Text = "Wednesday";
             // 
@@ -560,9 +596,10 @@
             this.label35.BackColor = System.Drawing.Color.Transparent;
             this.label35.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label35.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label35.Location = new System.Drawing.Point(406, 143);
+            this.label35.Location = new System.Drawing.Point(609, 214);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(83, 23);
+            this.label35.Size = new System.Drawing.Size(119, 32);
             this.label35.TabIndex = 52;
             this.label35.Text = "Thursday";
             // 
@@ -572,9 +609,10 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label36.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label36.Location = new System.Drawing.Point(533, 143);
+            this.label36.Location = new System.Drawing.Point(800, 214);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(60, 23);
+            this.label36.Size = new System.Drawing.Size(84, 32);
             this.label36.TabIndex = 53;
             this.label36.Text = "Friday";
             // 
@@ -584,9 +622,10 @@
             this.label37.BackColor = System.Drawing.Color.Transparent;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label37.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label37.Location = new System.Drawing.Point(650, 143);
+            this.label37.Location = new System.Drawing.Point(975, 214);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(82, 23);
+            this.label37.Size = new System.Drawing.Size(115, 32);
             this.label37.TabIndex = 54;
             this.label37.Text = "Saturday";
             // 
@@ -596,25 +635,28 @@
             this.label38.BackColor = System.Drawing.Color.Transparent;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label38.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label38.Location = new System.Drawing.Point(777, 143);
+            this.label38.Location = new System.Drawing.Point(1166, 214);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(69, 23);
+            this.label38.Size = new System.Drawing.Size(98, 32);
             this.label38.TabIndex = 55;
             this.label38.Text = "Sunday";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PlanMe.Properties.Resources.PlanMe_Design;
-            this.pictureBox1.Location = new System.Drawing.Point(-38, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-57, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(981, 500);
+            this.pictureBox1.Size = new System.Drawing.Size(1472, 750);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 56;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PlanMe.Properties.Resources.background;
             this.Controls.Add(this.label38);
@@ -660,8 +702,9 @@
             this.Controls.Add(this.listsButton);
             this.Controls.Add(this.plansButton);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainScreen";
-            this.Size = new System.Drawing.Size(900, 500);
+            this.Size = new System.Drawing.Size(1350, 750);
             this.Load += new System.EventHandler(this.MainScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

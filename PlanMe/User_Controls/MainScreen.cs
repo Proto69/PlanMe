@@ -24,7 +24,7 @@ namespace PlanMe
         private void listsButton_Click(object sender, EventArgs e)
         {
             //Трябва да показва друго ама още го няма
-            PageControl.TaskScreen();
+            PageControl.ListsMainScreen();
         }
 
         private void plansButton_Click(object sender, EventArgs e)
@@ -143,6 +143,11 @@ namespace PlanMe
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }

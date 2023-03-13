@@ -59,6 +59,24 @@
             }
         }
 
+        public static bool Update(string oldName, string newName)
+        {
+            MySqlConnection conn = Database.GetConnection();
+
+            conn.Open();
+            using (conn)
+            {
+                string query = "UPDATE list_of_tasks SET name = @newName " +
+                    "WHERE name = @oldName ";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@newName", newName);
+                cmd.Parameters.AddWithValue("@oldName", oldName);
+
+                return MainCommands.RunNonQuery(cmd);
+            }
+        }
+
         public static List<ListOfTasks> GetAll(string username)
         {
             List<ListOfTasks> result = new List<ListOfTasks>();

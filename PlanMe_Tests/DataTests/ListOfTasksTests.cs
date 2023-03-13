@@ -57,5 +57,14 @@
             int count = allLists.Count();
             Assert.AreEqual(1, count, "Get all method does not work!");
         }
+
+        [Test]
+        public void CheckIfUpdates()
+        {
+            var allLists = ListOfTasksData.GetAll("trytrytry");
+            ListOfTasksData.Update("TRYlist2", "TRY2");
+            Assert.IsFalse(allLists.Contains(new("TRYlist2")), "Update does not work!");
+            ListOfTasksData.Update("TRY2", "TRYlist2");
+        }
     }
 }
