@@ -39,5 +39,10 @@ namespace PlanMe.User_Controls
         {
             PageControl.LogIn();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,98 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.NameBox = new System.Windows.Forms.TextBox();
-            this.DateBox = new System.Windows.Forms.TextBox();
-            this.InfoBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            label1 = new Label();
+            NameBox = new TextBox();
+            DateBox = new TextBox();
+            InfoBox = new TextBox();
+            button1 = new Button();
+            label2 = new Label();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(304, 93);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 62);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Add a plan";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(203, 62);
+            label1.Name = "label1";
+            label1.Size = new Size(181, 46);
+            label1.TabIndex = 1;
+            label1.Text = "Add a plan";
             // 
             // NameBox
             // 
-            this.NameBox.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NameBox.Location = new System.Drawing.Point(206, 222);
-            this.NameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(457, 42);
-            this.NameBox.TabIndex = 2;
-            this.NameBox.Text = "Name ";
+            NameBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            NameBox.Location = new Point(137, 148);
+            NameBox.Name = "NameBox";
+            NameBox.PlaceholderText = "Name ";
+            NameBox.Size = new Size(306, 32);
+            NameBox.TabIndex = 2;
             // 
             // DateBox
             // 
-            this.DateBox.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DateBox.Location = new System.Drawing.Point(210, 297);
-            this.DateBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DateBox.Name = "DateBox";
-            this.DateBox.Size = new System.Drawing.Size(457, 42);
-            this.DateBox.TabIndex = 3;
-            this.DateBox.Text = "Date";
+            DateBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            DateBox.Location = new Point(140, 198);
+            DateBox.Name = "DateBox";
+            DateBox.PlaceholderText = "Date";
+            DateBox.Size = new Size(306, 32);
+            DateBox.TabIndex = 3;
             // 
             // InfoBox
             // 
-            this.InfoBox.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.InfoBox.Location = new System.Drawing.Point(206, 380);
-            this.InfoBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.InfoBox.Name = "InfoBox";
-            this.InfoBox.Size = new System.Drawing.Size(457, 42);
-            this.InfoBox.TabIndex = 4;
-            this.InfoBox.Text = "About";
+            InfoBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            InfoBox.Location = new Point(137, 253);
+            InfoBox.Name = "InfoBox";
+            InfoBox.PlaceholderText = "About";
+            InfoBox.Size = new Size(306, 32);
+            InfoBox.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.ForestGreen;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(302, 470);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(274, 70);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = Color.ForestGreen;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(201, 313);
+            button1.Name = "button1";
+            button1.Size = new Size(183, 47);
+            button1.TabIndex = 5;
+            button1.Text = "Add";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(206, 147);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(463, 30);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "__________________________________________________";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Location = new Point(137, 98);
+            label2.Name = "label2";
+            label2.Size = new Size(309, 20);
+            label2.TabIndex = 6;
+            label2.Text = "__________________________________________________";
             // 
             // AddAPlan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PlanMe.Properties.Resources.background;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.InfoBox);
-            this.Controls.Add(this.DateBox);
-            this.Controls.Add(this.NameBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "AddAPlan";
-            this.Size = new System.Drawing.Size(900, 600);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.background;
+            Controls.Add(button1);
+            Controls.Add(InfoBox);
+            Controls.Add(DateBox);
+            Controls.Add(NameBox);
+            Controls.Add(label1);
+            Controls.Add(label2);
+            Name = "AddAPlan";
+            Size = new Size(600, 400);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

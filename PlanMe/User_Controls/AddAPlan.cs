@@ -27,7 +27,7 @@ namespace PlanMe.User_Controls
                 {
                     date = DateTime.Parse(DateBox.Text);
                 }
-                catch(Exception ex) 
+                catch (Exception ex)
                 {
                     ErrorView.ShowError(ex.Message);
                 }

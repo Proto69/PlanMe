@@ -29,12 +29,11 @@ namespace PlanMe
 
         private void plansButton_Click(object sender, EventArgs e)
         {
-            
+            PageControl.Plans();
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
