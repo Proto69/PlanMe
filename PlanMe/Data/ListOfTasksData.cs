@@ -67,11 +67,12 @@
             using (conn)
             {
                 string query = "UPDATE list_of_tasks SET name = @newName " +
-                    "WHERE name = @oldName ";
+                    "WHERE name = @oldName  AND user_id = @user_id";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@newName", newName);
                 cmd.Parameters.AddWithValue("@oldName", oldName);
+                cmd.Parameters.AddWithValue("@user_id", MainCommands.GetUserId(MainModels.user.Username, conn));
 
                 return MainCommands.RunNonQuery(cmd);
             }
