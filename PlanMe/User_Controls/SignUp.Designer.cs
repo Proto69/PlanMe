@@ -139,14 +139,14 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Anchor = AnchorStyles.None;
-            pictureBox2.Image = Properties.Resources.SingUp_BG;
-            pictureBox2.Location = new Point(-75, -2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1050, 517);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 11;
-            pictureBox2.TabStop = false;
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = global::PlanMe.Properties.Resources.SingUp_BG;
+            this.pictureBox2.Location = new System.Drawing.Point(-75, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1050, 517);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // SignUp
             // 

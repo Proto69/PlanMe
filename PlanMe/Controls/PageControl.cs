@@ -12,6 +12,8 @@ namespace PlanMe.Controls
             PopUpForm popUpForm = new PopUpForm();
             Panel panel = popUpForm.Controls["panel1"] as Panel;
 
+            panel.Dock = DockStyle.Fill;
+
             ChangeControl(new AddAPlan(), panel);
 
             popUpForm.Show();
@@ -20,6 +22,7 @@ namespace PlanMe.Controls
         {
             PopUpForm popUpForm = new PopUpForm();
             Panel panel = popUpForm.Controls["panel1"] as Panel;
+            panel.Dock = DockStyle.Fill;
 
             ChangeControl(new AddATask(), panel);
 
@@ -29,6 +32,7 @@ namespace PlanMe.Controls
         {
             PopUpForm popUpForm = new PopUpForm();
             Panel panel = popUpForm.Controls["panel1"] as Panel;
+            panel.Dock = DockStyle.Fill;
 
             ChangeControl(new AddList(), panel);
 
@@ -84,6 +88,8 @@ namespace PlanMe.Controls
         private static void ChangeControl(UserControl control, Panel panel)
         {
             panel.Controls.Clear();
+            panel.Dock = DockStyle.Fill;
+
             panel.Controls.Add(control);
         }
     }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
             // 
             // panel1
             // 
@@ -49,6 +49,7 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "PlanMe";
             Load += MainForm_Load;
+            Resize += MainForm_Resize;
             ResumeLayout(false);
         }
 
