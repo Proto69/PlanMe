@@ -28,88 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::PlanMe.Properties.Resources.MyPlans;
-            this.pictureBox1.Location = new System.Drawing.Point(127, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(619, 127);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.MyPlans;
+            pictureBox1.Location = new Point(127, 18);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(619, 127);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.ForestGreen;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(306, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(255, 70);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add a plan";
-            this.button1.UseVisualStyleBackColor = false;
+            button1.BackColor = Color.ForestGreen;
+            button1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(306, 190);
+            button1.Name = "button1";
+            button1.Size = new Size(255, 70);
+            button1.TabIndex = 1;
+            button1.Text = "Add a plan";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.ForestGreen;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(306, 275);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(255, 70);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "See a plan";
-            this.button2.UseVisualStyleBackColor = false;
+            button2.BackColor = Color.ForestGreen;
+            button2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ButtonHighlight;
+            button2.Location = new Point(306, 275);
+            button2.Name = "button2";
+            button2.Size = new Size(255, 70);
+            button2.TabIndex = 2;
+            button2.Text = "See a plan";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.ForestGreen;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(306, 365);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(255, 70);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Show all plans";
-            this.button3.UseVisualStyleBackColor = false;
+            button3.BackColor = Color.ForestGreen;
+            button3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ButtonHighlight;
+            button3.Location = new Point(306, 365);
+            button3.Name = "button3";
+            button3.Size = new Size(255, 70);
+            button3.TabIndex = 3;
+            button3.Text = "Show all plans";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(101, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(717, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "_________________________________________________________________________________" +
-    "_____________________________________";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Location = new Point(101, 139);
+            label2.Name = "label2";
+            label2.Size = new Size(717, 20);
+            label2.TabIndex = 16;
+            label2.Text = "______________________________________________________________________________________________________________________";
             // 
             // Plans
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PlanMe.Properties.Resources.background;
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Name = "Plans";
-            this.Size = new System.Drawing.Size(900, 500);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.background;
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(pictureBox1);
+            Controls.Add(label2);
+            Name = "Plans";
+            Size = new Size(900, 500);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

@@ -16,10 +16,23 @@ namespace PlanMe.User_Controls
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            string name = textBox1.Text;
+            DateTime date = dateTimePicker1.Value;
+            if (name != "" && name != null)
+            {
+                List<Event> events = MainModels.user.Events.Where(x => x.Name == name).ToList();
+                dataGridView1.DataSource = events;
+            }
+            else if (dateTimePicker1.Checked)
+            {
+                List<Event> events = MainModels.user.Events.Where(x => x.Date.Date == date.Date).ToList();
+                dataGridView1.DataSource = events;
 
+            }
+            else
+                ErrorView.ShowError("You should type something!");
         }
     }
 }

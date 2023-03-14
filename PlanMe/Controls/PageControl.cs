@@ -56,7 +56,12 @@ namespace PlanMe.Controls
         }
         public static void SeeAPlan()
         {
-            ChangeControl(new SeeAPlan(), panel1);
+            PopUpForm popUpForm = new PopUpForm();
+            Panel panel = popUpForm.Controls["panel1"] as Panel;
+
+            ChangeControl(new SeeAPlan(), panel);
+
+            popUpForm.Show();
         }
         public static void SignUp()
         {
