@@ -32,6 +32,7 @@
             label2 = new Label();
             button1 = new Button();
             ListOfTasks = new DataGridView();
+            ShowTasks = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ListOfTasks).BeginInit();
             SuspendLayout();
@@ -60,7 +61,7 @@
             // button1
             // 
             button1.Location = new Point(672, 382);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(173, 69);
             button1.TabIndex = 18;
@@ -72,15 +73,23 @@
             // 
             ListOfTasks.AllowUserToAddRows = false;
             ListOfTasks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ListOfTasks.Location = new Point(317, 178);
-            ListOfTasks.Margin = new Padding(2, 2, 2, 2);
+            ListOfTasks.Columns.AddRange(new DataGridViewColumn[] { ShowTasks });
+            ListOfTasks.Location = new Point(243, 178);
+            ListOfTasks.Margin = new Padding(2);
             ListOfTasks.Name = "ListOfTasks";
             ListOfTasks.RowHeadersWidth = 72;
             ListOfTasks.RowTemplate.Height = 37;
-            ListOfTasks.Size = new Size(279, 245);
+            ListOfTasks.Size = new Size(433, 245);
             ListOfTasks.TabIndex = 19;
-            ListOfTasks.CellContentClick += ListOfTasks_CellContentClick;
             ListOfTasks.CellEndEdit += ListOfTasks_CellEndEdit;
+            // 
+            // ShowTasks
+            // 
+            ShowTasks.HeaderText = "ShowTasks";
+            ShowTasks.MinimumWidth = 6;
+            ShowTasks.Name = "ShowTasks";
+            ShowTasks.ReadOnly = true;
+            ShowTasks.Width = 125;
             // 
             // ListsMainScreen
             // 
@@ -105,5 +114,6 @@
         private Label label2;
         private Button button1;
         private DataGridView ListOfTasks;
+        private DataGridViewButtonColumn ShowTasks;
     }
 }

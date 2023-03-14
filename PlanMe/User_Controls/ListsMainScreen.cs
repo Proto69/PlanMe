@@ -36,27 +36,34 @@ namespace PlanMe.User_Controls
             ListOfTasks.DataSource = table;
         }
 
-        private void ListOfTasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            CheckForUpdate(e);
-        }
-
+        //Sus method
         private void CheckForUpdate(DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
             DataGridViewRow row = ListOfTasks.Rows[rowIndex];
 
             DataGridViewCell cell = ListOfTasks.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+            //Sus
             string oldValue = cell.OwningRow.Cells[e.ColumnIndex].Value.ToString();
-            object newValue = cell.Value;
 
-
-            string newName = row.Cells[0].Value.ToString();
-            string oldName = lists.Where(x => x.Name == oldValue).ToString();
-
-            if (!newName.Equals(oldName))
+            if (row.Cells[0].Value is null)
             {
+                //How to delete??
+                //ListOfTasksData.Remove(new(oldValue));
+            }
+            else
+            {
+                
+                object newValue = cell.Value;
+
+
+                string newName = row.Cells[0].Value.ToString();
+                string oldName = lists.Where(x => x.Name == oldValue).ToString();
+
+                
                 ListOfTasksData.Update(lists[rowIndex].Name, newName);
+                
             }
         }
 
