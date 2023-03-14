@@ -26,7 +26,7 @@ namespace PlanMe
 
             timer.Elapsed += OnTimerElapsed;
             timer.Start();
-            
+
 
         }
         private void OnTimerElapsed(object sender, ElapsedEventArgs e)
@@ -37,5 +37,10 @@ namespace PlanMe
             ((System.Timers.Timer)sender).Stop();
         }
 
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            panel1.Size = MainModels.form.Size;
+            panel1.Controls[0].Size = MainModels.form.Size;
+        }
     }
 }
