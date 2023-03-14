@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PlanMe.Models;
 using System.Windows.Forms;
 
 namespace PlanMe.User_Controls
@@ -34,7 +27,7 @@ namespace PlanMe.User_Controls
         {
             table.Columns.Add("Name", typeof(string));
 
-           
+
             for (int i = 0; i < lists.Count; i++)
             {
                 table.Rows.Add(lists[i].Name);
@@ -53,12 +46,23 @@ namespace PlanMe.User_Controls
             int rowIndex = e.RowIndex;
             DataGridViewRow row = ListOfTasks.Rows[rowIndex];
 
-            string name = row.Cells[0].Value.ToString();
+            DataGridViewCell cell = ListOfTasks.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            ListOfTasks oldValue = (ListOfTasks)cell.OwningRow.Cells[e.ColumnIndex].Value;
+            object newValue = cell.Value;
 
-            if (!name.Equals(lists[rowIndex].Name))
+
+            string newName = row.Cells[0].Value.ToString();
+            string oldName = lists.Where(x => x.Name == oldValue.Name).ToString();
+
+            if (!newName.Equals(oldName))
             {
-                ListOfTasksData.Update( lists[rowIndex].Name, name);
+                ListOfTasksData.Update(lists[rowIndex].Name, newName);
             }
+        }
+
+        private void ListOfTasks_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            CheckForUpdate(e);
         }
     }
 }
