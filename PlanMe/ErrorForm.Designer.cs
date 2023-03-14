@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "ErrorForm";
+            SuspendLayout();
+            // 
+            // ErrorForm
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(415, 203);
+            Name = "ErrorForm";
+            Text = "ErrorForm";
+            ResumeLayout(false);
         }
 
         #endregion
