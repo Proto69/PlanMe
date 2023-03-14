@@ -20,7 +20,12 @@ namespace PlanMe.User_Controls
         {
             string name = textBox1.Text;
             DateTime date = dateTimePicker1.Value;
-            if (name != "" && name != null)
+            if (name != "" && name != null && dateTimePicker1.Checked)
+            {
+                List<Event> events = MainModels.user.Events.Where(x => x.Name == name && x.Date.Date == date.Date).ToList();
+                dataGridView1.DataSource = events;
+            }
+            else if (name != "" && name != null)
             {
                 List<Event> events = MainModels.user.Events.Where(x => x.Name == name).ToList();
                 dataGridView1.DataSource = events;
