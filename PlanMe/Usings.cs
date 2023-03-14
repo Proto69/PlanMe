@@ -5,3 +5,4 @@ global using PlanMe.Views;
 global using PlanMe.Controls;
 global using MySql.Data.MySqlClient;
 global using System.Text.RegularExpressions;
+global using System.Data;

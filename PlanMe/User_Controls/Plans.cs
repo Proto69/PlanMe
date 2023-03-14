@@ -16,5 +16,20 @@ namespace PlanMe.User_Controls
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PageControl.Calendar();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PageControl.AddAPlan();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PageControl.SeeAPlan();
+        }
     }
 }
