@@ -28,28 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(900, 500);
-            panel1.TabIndex = 0;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(924, 523);
+            this.panel1.TabIndex = 0;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(924, 523);
-            Controls.Add(panel1);
-            Name = "MainForm";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "PlanMe";
-            Load += MainForm_Load;
-            Resize += MainForm_Resize;
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(924, 523);
+            this.Controls.Add(this.panel1);
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "PlanMe";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

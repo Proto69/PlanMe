@@ -66,7 +66,7 @@
             // 
             this.repeatPasswordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.repeatPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.repeatPasswordTextBox.Location = new System.Drawing.Point(300, 321);
+            this.repeatPasswordTextBox.Location = new System.Drawing.Point(300, 325);
             this.repeatPasswordTextBox.Name = "repeatPasswordTextBox";
             this.repeatPasswordTextBox.PasswordChar = '*';
             this.repeatPasswordTextBox.PlaceholderText = "Repeat password";
@@ -139,14 +139,15 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::PlanMe.Properties.Resources.SingUp_BG;
-            this.pictureBox2.Location = new System.Drawing.Point(-75, -2);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1050, 517);
+            this.pictureBox2.Size = new System.Drawing.Size(900, 500);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // SignUp
             // 
