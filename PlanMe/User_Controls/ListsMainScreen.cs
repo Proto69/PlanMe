@@ -47,12 +47,12 @@ namespace PlanMe.User_Controls
             DataGridViewRow row = ListOfTasks.Rows[rowIndex];
 
             DataGridViewCell cell = ListOfTasks.Rows[e.RowIndex].Cells[e.ColumnIndex];
-            ListOfTasks oldValue = (ListOfTasks)cell.OwningRow.Cells[e.ColumnIndex].Value;
+            string oldValue = cell.OwningRow.Cells[e.ColumnIndex].Value.ToString();
             object newValue = cell.Value;
 
 
             string newName = row.Cells[0].Value.ToString();
-            string oldName = lists.Where(x => x.Name == oldValue.Name).ToString();
+            string oldName = lists.Where(x => x.Name == oldValue).ToString();
 
             if (!newName.Equals(oldName))
             {
