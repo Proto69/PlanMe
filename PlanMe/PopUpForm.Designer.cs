@@ -28,27 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(723, 504);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(759, 548);
+            panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // PopUpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 504);
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "PopUpForm";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(760, 542);
+            Controls.Add(panel1);
+            Name = "PopUpForm";
+            ResumeLayout(false);
         }
 
         #endregion

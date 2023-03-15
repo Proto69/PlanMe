@@ -40,15 +40,15 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 519);
-            this.Controls.Add(this.panel1);
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "PlanMe";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(924, 523);
+            Controls.Add(panel1);
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "PlanMe";
+            Load += MainForm_Load;
+            ResumeLayout(false);
         }
 
         #endregion

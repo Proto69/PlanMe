@@ -1,4 +1,6 @@
-﻿using PlanMe.Models;
+﻿using Microsoft.VisualBasic;
+using PlanMe.Models;
+using System.Data;
 using System.Windows.Forms;
 
 namespace PlanMe.User_Controls
@@ -21,6 +23,8 @@ namespace PlanMe.User_Controls
         private void ListsMainScreen_Load(object sender, EventArgs e)
         {
             FillListOfTasksDataGridView();
+            ListOfTasks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            ListOfTasks.MultiSelect = false;
         }
 
         public void FillListOfTasksDataGridView()
@@ -40,30 +44,34 @@ namespace PlanMe.User_Controls
         private void CheckForUpdate(DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
+
             DataGridViewRow row = ListOfTasks.Rows[rowIndex];
 
             DataGridViewCell cell = ListOfTasks.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-            //Sus
-            string oldValue = cell.OwningRow.Cells[e.ColumnIndex].Value.ToString();
+            string oldName = lists[rowIndex].Name;
 
-            if (row.Cells[0].Value is null)
+            if (cell.Value.ToString() == "")
             {
-                //How to delete??
-                //ListOfTasksData.Remove(new(oldValue));
+                ListOfTasksData.Remove(new ListOfTasks(oldName, MainModels.user.Username));
+                ListOfTasks.Rows.RemoveAt(rowIndex);
             }
             else
             {
-                
-                object newValue = cell.Value;
 
+                string newName = row.Cells[1].Value.ToString();
 
-                string newName = row.Cells[0].Value.ToString();
-                string oldName = lists.Where(x => x.Name == oldValue).ToString();
+                ListOfTasksData.Update(oldName, newName);
 
-                
-                ListOfTasksData.Update(lists[rowIndex].Name, newName);
-                
+                for (int i = 0; i < lists.Count; i++)
+                {
+                    if (lists[i].Name == oldName)
+                    {
+                        lists[i].Name = newName;
+                        break;
+                    }
+                }
+
             }
         }
 
