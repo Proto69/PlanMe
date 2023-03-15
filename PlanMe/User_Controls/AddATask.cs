@@ -24,6 +24,7 @@ namespace PlanMe.User_Controls
             try
             {
                 AddATaskView.CreateTask(text.Text);
+                MainModels.tasks.Tasks.Add(new(text.Text));
                 MainModels.lists.DisplayAllTasks();
             }
             catch (Exception ex)

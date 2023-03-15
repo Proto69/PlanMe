@@ -5,7 +5,7 @@
         private string text;
         private bool isDone;
 
-        public UserTask(string text) : this(text, true) { }
+        public UserTask(string text) : this(text, false) { }
         
 
         public UserTask(string text, bool isDone)
