@@ -8,7 +8,7 @@ namespace PlanMe.User_Controls
     public partial class ListsMainScreen : UserControl
     {
         DataTable table = new();
-        List<ListOfTasks> lists = ListOfTasksData.GetAll(MainModels.user.Username);
+        List<ListOfTasks> lists = MainModels.user.AllTasks;
 
         public ListsMainScreen()
         {
@@ -23,8 +23,8 @@ namespace PlanMe.User_Controls
         private void ListsMainScreen_Load(object sender, EventArgs e)
         {
             FillListOfTasksDataGridView();
-            ListOfTasks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            ListOfTasks.MultiSelect = false;
+            listOfTasks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            listOfTasks.MultiSelect = false;
         }
 
         public void FillListOfTasksDataGridView()
@@ -37,7 +37,7 @@ namespace PlanMe.User_Controls
                 table.Rows.Add(lists[i].Name);
             }
 
-            ListOfTasks.DataSource = table;
+            listOfTasks.DataSource = table;
         }
 
         //Sus method
@@ -45,16 +45,16 @@ namespace PlanMe.User_Controls
         {
             int rowIndex = e.RowIndex;
 
-            DataGridViewRow row = ListOfTasks.Rows[rowIndex];
+            DataGridViewRow row = listOfTasks.Rows[rowIndex];
 
-            DataGridViewCell cell = ListOfTasks.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            DataGridViewCell cell = listOfTasks.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
             string oldName = lists[rowIndex].Name;
 
             if (cell.Value.ToString() == "")
             {
                 ListOfTasksData.Remove(new ListOfTasks(oldName, MainModels.user.Username));
-                ListOfTasks.Rows.RemoveAt(rowIndex);
+                listOfTasks.Rows.RemoveAt(rowIndex);
             }
             else
             {
@@ -78,6 +78,15 @@ namespace PlanMe.User_Controls
         private void ListOfTasks_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             CheckForUpdate(e);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (listOfTasks.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                MainModels.tasks = lists[e.RowIndex];
+                PageControl.TaskScreen();
+            }
         }
     }
 }

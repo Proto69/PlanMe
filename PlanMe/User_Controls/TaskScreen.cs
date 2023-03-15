@@ -1,70 +1,69 @@
-﻿using PlanMe.Controls;
-using PlanMe.Data;
+﻿using Google.Protobuf.Collections;
 using PlanMe.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PlanMe.User_Controls
 {
     public partial class TaskScreen : UserControl
     {
+        private DataTable table = new();
+        private List<UserTask> tasks = MainModels.tasks.Tasks;
+
         public TaskScreen()
         {
             InitializeComponent();
             DisplayAllTasks();
         }
 
-        private void ClickCheckBox(object sender, EventArgs e)
-        {
-            CheckBox box = (CheckBox)sender;
-            DataControl.UpdateTask(box.Text, MainModels.tasks.Name, box.Checked);
-        }
-
         public void DisplayAllTasks()
         {
-            checkedListBox1.Items.Clear();
-            List<UserTask> tasks = TaskData.GetAll(MainModels.tasks.Name, MainModels.user.Username);
-            foreach (var task in tasks)
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("Done?", typeof(bool));
+
+
+            for (int i = 0; i < tasks.Count; i++)
             {
-                CheckBox box = new CheckBox() { Text = task.Text, Checked = task.IsDone };
-                if (box.Checked)
-                    box.Enabled = false;
-                box.CheckedChanged += ClickCheckBox;
-
-                checkedListBox1.Items.Add(box);
-                checkedListBox1.DisplayMember = "Text";
+                table.Rows.Add(tasks[i].Text, tasks[i].IsDone);
             }
-        }
 
-        private void addButton_Click(object sender, EventArgs e)
-        {
-            PopUpForm form = new PopUpForm();
-            form.ShowDialog();
+            dataGridView1.DataSource = table;
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            PageControl.MainScreen();
+            PageControl.ListsMainScreen();
         }
 
-        private void deleteButton_Click(object sender, EventArgs e)
-        {
-            //Идеята ми е да се отваря нов прозорец в който да
-            //се покажат всички задачи като check box и да се маркират 
-            //и после да натиснеш Delete и да се изтрият маркираните, като
-            //има и бутон Delete All който да изтрива всичко
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
 
+            int rowIndex = e.RowIndex;
+            DataGridViewRow row = dataGridView1.Rows[rowIndex];
+
+            DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            if (cell is DataGridViewCheckBoxCell)
+            {
+                string name = tasks[rowIndex].Text;
+
+                if (cell.Value.ToString() == "")
+                {
+                    TaskData.Delete(new UserTask(name), MainModels.tasks.Name);
+                    dataGridView1.Rows.RemoveAt(rowIndex);
+                }
+                else
+                {
+                    TaskData.Update(new UserTask(name, (bool)row.Cells[1].Value), MainModels.tasks.Name);
+
+                    for (int i = 0; i < tasks.Count; i++)
+                    {
+                        if (tasks[i].Text == name)
+                        {
+                            tasks[i].IsDone = !(bool)row.Cells[1].Value;
+                            break;
+                        }
+                    }
+
+                }
+            }
         }
     }
 }

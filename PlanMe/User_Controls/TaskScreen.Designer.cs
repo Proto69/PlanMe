@@ -28,86 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            label2 = new Label();
+            pictureBox1 = new PictureBox();
+            saveButton = new Button();
+            textBox1 = new TextBox();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(357, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "__________________________________________________________";
+            label2.AutoSize = true;
+            label2.Location = new Point(35, 73);
+            label2.Name = "label2";
+            label2.Size = new Size(357, 20);
+            label2.TabIndex = 2;
+            label2.Text = "__________________________________________________________";
             // 
             // pictureBox1
             // 
-            //this.pictureBox1.Image = global::PlanMe.Properties.Resources.PlanMe1;
-            this.pictureBox1.Location = new System.Drawing.Point(653, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(230, 77);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Location = new Point(653, 16);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(230, 77);
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
             // 
             // saveButton
             // 
-            this.saveButton.BackColor = System.Drawing.Color.ForestGreen;
-            this.saveButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.saveButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.saveButton.Location = new System.Drawing.Point(731, 423);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(140, 60);
-            this.saveButton.TabIndex = 11;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = false;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(35, 96);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(357, 378);
-            this.checkedListBox1.TabIndex = 13;
+            saveButton.BackColor = Color.ForestGreen;
+            saveButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            saveButton.ForeColor = Color.WhiteSmoke;
+            saveButton.Location = new Point(731, 423);
+            saveButton.Name = "saveButton";
+            saveButton.Size = new Size(140, 60);
+            saveButton.TabIndex = 11;
+            saveButton.Text = "Save";
+            saveButton.UseVisualStyleBackColor = false;
+            saveButton.Click += saveButton_Click;
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.ForestGreen;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox1.Location = new System.Drawing.Point(35, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(348, 52);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.Text = " All tasks";
+            textBox1.BackColor = Color.ForestGreen;
+            textBox1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.ForeColor = Color.LightGray;
+            textBox1.Location = new Point(35, 29);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(348, 52);
+            textBox1.TabIndex = 14;
+            textBox1.Text = " All tasks";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(35, 103);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(345, 377);
+            dataGridView1.TabIndex = 15;
+            dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
             // 
             // TaskScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Name = "TaskScreen";
-            this.Size = new System.Drawing.Size(900, 500);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dataGridView1);
+            Controls.Add(textBox1);
+            Controls.Add(saveButton);
+            Controls.Add(pictureBox1);
+            Controls.Add(label2);
+            Name = "TaskScreen";
+            Size = new Size(900, 500);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
         private Label label2;
         private PictureBox pictureBox1;
         private Button saveButton;
-        private CheckedListBox checkedListBox1;
         private TextBox textBox1;
+        private DataGridView dataGridView1;
     }
 }
