@@ -28,132 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.repeatPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.signUpButton = new System.Windows.Forms.Button();
-            this.logInLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            nameTextBox = new TextBox();
+            passwordTextBox = new TextBox();
+            repeatPasswordTextBox = new TextBox();
+            signUpButton = new Button();
+            logInLinkLabel = new LinkLabel();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameTextBox.Location = new System.Drawing.Point(300, 224);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.PlaceholderText = "Enter username";
-            this.nameTextBox.Size = new System.Drawing.Size(300, 30);
-            this.nameTextBox.TabIndex = 0;
+            nameTextBox.Anchor = AnchorStyles.None;
+            nameTextBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            nameTextBox.Location = new Point(450, 336);
+            nameTextBox.Margin = new Padding(4);
+            nameTextBox.Name = "nameTextBox";
+            nameTextBox.PlaceholderText = "Enter username";
+            nameTextBox.Size = new Size(448, 39);
+            nameTextBox.TabIndex = 0;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passwordTextBox.Location = new System.Drawing.Point(300, 272);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.PlaceholderText = "Enter password";
-            this.passwordTextBox.Size = new System.Drawing.Size(300, 30);
-            this.passwordTextBox.TabIndex = 1;
+            passwordTextBox.Anchor = AnchorStyles.None;
+            passwordTextBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordTextBox.Location = new Point(450, 408);
+            passwordTextBox.Margin = new Padding(4);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.PasswordChar = '*';
+            passwordTextBox.PlaceholderText = "Enter password";
+            passwordTextBox.Size = new Size(448, 39);
+            passwordTextBox.TabIndex = 1;
             // 
             // repeatPasswordTextBox
             // 
-            this.repeatPasswordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.repeatPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.repeatPasswordTextBox.Location = new System.Drawing.Point(300, 321);
-            this.repeatPasswordTextBox.Name = "repeatPasswordTextBox";
-            this.repeatPasswordTextBox.PasswordChar = '*';
-            this.repeatPasswordTextBox.PlaceholderText = "Repeat password";
-            this.repeatPasswordTextBox.Size = new System.Drawing.Size(300, 30);
-            this.repeatPasswordTextBox.TabIndex = 2;
+            repeatPasswordTextBox.Anchor = AnchorStyles.None;
+            repeatPasswordTextBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            repeatPasswordTextBox.Location = new Point(450, 482);
+            repeatPasswordTextBox.Margin = new Padding(4);
+            repeatPasswordTextBox.Name = "repeatPasswordTextBox";
+            repeatPasswordTextBox.PasswordChar = '*';
+            repeatPasswordTextBox.PlaceholderText = "Repeat password";
+            repeatPasswordTextBox.Size = new Size(448, 39);
+            repeatPasswordTextBox.TabIndex = 2;
             // 
             // signUpButton
             // 
-            this.signUpButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.signUpButton.BackColor = System.Drawing.Color.ForestGreen;
-            this.signUpButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.signUpButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.signUpButton.Location = new System.Drawing.Point(300, 390);
-            this.signUpButton.Name = "signUpButton";
-            this.signUpButton.Size = new System.Drawing.Size(300, 55);
-            this.signUpButton.TabIndex = 3;
-            this.signUpButton.Text = "Sign up";
-            this.signUpButton.UseVisualStyleBackColor = false;
+            signUpButton.Anchor = AnchorStyles.None;
+            signUpButton.BackColor = Color.ForestGreen;
+            signUpButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            signUpButton.ForeColor = SystemColors.ButtonHighlight;
+            signUpButton.Location = new Point(450, 585);
+            signUpButton.Margin = new Padding(4);
+            signUpButton.Name = "signUpButton";
+            signUpButton.Size = new Size(450, 82);
+            signUpButton.TabIndex = 3;
+            signUpButton.Text = "Sign up";
+            signUpButton.UseVisualStyleBackColor = false;
             // 
             // logInLinkLabel
             // 
-            this.logInLinkLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.logInLinkLabel.AutoSize = true;
-            this.logInLinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.logInLinkLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.logInLinkLabel.LinkColor = System.Drawing.Color.Green;
-            this.logInLinkLabel.Location = new System.Drawing.Point(502, 176);
-            this.logInLinkLabel.Name = "logInLinkLabel";
-            this.logInLinkLabel.Size = new System.Drawing.Size(57, 23);
-            this.logInLinkLabel.TabIndex = 4;
-            this.logInLinkLabel.TabStop = true;
-            this.logInLinkLabel.Text = "Log in";
+            logInLinkLabel.Anchor = AnchorStyles.None;
+            logInLinkLabel.AutoSize = true;
+            logInLinkLabel.BackColor = Color.Transparent;
+            logInLinkLabel.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            logInLinkLabel.LinkColor = Color.Green;
+            logInLinkLabel.Location = new Point(753, 264);
+            logInLinkLabel.Margin = new Padding(4, 0, 4, 0);
+            logInLinkLabel.Name = "logInLinkLabel";
+            logInLinkLabel.Size = new Size(80, 32);
+            logInLinkLabel.TabIndex = 4;
+            logInLinkLabel.TabStop = true;
+            logInLinkLabel.Text = "Log in";
+            logInLinkLabel.Click += logInLinkLabel_Click;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(300, 176);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 23);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Already have an account?";
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(450, 264);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(287, 32);
+            label1.TabIndex = 8;
+            label1.Text = "Already have an account?";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::PlanMe.Properties.Resources.SingUp;
-            this.pictureBox1.Location = new System.Drawing.Point(345, 60);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 91);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.SingUp;
+            pictureBox1.Location = new Point(518, 90);
+            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(304, 136);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(280, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(339, 20);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "_______________________________________________________";
+            label2.Anchor = AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Location = new Point(420, 210);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(508, 30);
+            label2.TabIndex = 10;
+            label2.Text = "_______________________________________________________";
             // 
             // SignUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PlanMe.Properties.Resources.SignUp_BG;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.logInLinkLabel);
-            this.Controls.Add(this.signUpButton);
-            this.Controls.Add(this.repeatPasswordTextBox);
-            this.Controls.Add(this.passwordTextBox);
-            this.Name = "SignUp";
-            this.Size = new System.Drawing.Size(900, 500);
-            this.Load += new System.EventHandler(this.SignUp_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.SignUp_BG;
+            BackgroundImageLayout = ImageLayout.Zoom;
+            Controls.Add(pictureBox1);
+            Controls.Add(label2);
+            Controls.Add(nameTextBox);
+            Controls.Add(label1);
+            Controls.Add(logInLinkLabel);
+            Controls.Add(signUpButton);
+            Controls.Add(repeatPasswordTextBox);
+            Controls.Add(passwordTextBox);
+            Margin = new Padding(4);
+            Name = "SignUp";
+            Size = new Size(1350, 750);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

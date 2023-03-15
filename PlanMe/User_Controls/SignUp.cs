@@ -35,19 +35,9 @@ namespace PlanMe.User_Controls
 
         }
 
-        private void logInLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void logInLinkLabel_Click(object sender, EventArgs e)
         {
             PageControl.LogIn();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SignUp_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
