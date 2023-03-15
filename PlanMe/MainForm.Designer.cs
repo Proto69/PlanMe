@@ -49,7 +49,6 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "PlanMe";
             Load += MainForm_Load;
-            Resize += MainForm_Resize;
             ResumeLayout(false);
         }
 

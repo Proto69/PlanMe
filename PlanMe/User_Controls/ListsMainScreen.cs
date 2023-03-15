@@ -49,27 +49,28 @@ namespace PlanMe.User_Controls
 
             DataGridViewCell cell = ListOfTasks.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-            //Sus
-            string oldValue = cell.OwningRow.Cells[e.ColumnIndex].Value.ToString();
+            string oldName = lists[rowIndex].Name;
 
-            //doesn't check correct with both of them
-            //if (cell.Value == null || cell.Value == "")
-            if (row.Cells[1].Value is null || row.Cells[1].Value == "")
+            if (cell.Value.ToString() == "")
             {
-                ListOfTasksData.Remove(new ListOfTasks(row.Cells[1].Value.ToString(), MainModels.user.Username));
+                ListOfTasksData.Remove(new ListOfTasks(oldName, MainModels.user.Username));
                 ListOfTasks.Rows.RemoveAt(rowIndex);
             }
             else
             {
 
-                object newValue = cell.Value;
-
-
                 string newName = row.Cells[1].Value.ToString();
-                string oldName = lists.Where(x => x.Name == oldValue).ToString();
 
+                ListOfTasksData.Update(oldName, newName);
 
-                ListOfTasksData.Update(lists[rowIndex].Name, newName);
+                for (int i = 0; i < lists.Count; i++)
+                {
+                    if (lists[i].Name == oldName)
+                    {
+                        lists[i].Name = newName;
+                        break;
+                    }
+                }
 
             }
         }
