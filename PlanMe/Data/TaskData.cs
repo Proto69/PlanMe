@@ -31,7 +31,7 @@
             {
                 int listId = MainCommands.GetListId(name, username, conn);
 
-                string query = "SELECT text FROM tasks WHERE list_id = @listId";
+                string query = "SELECT text, is_done FROM tasks WHERE list_id = @listId";
                 MySqlCommand cmd = new MySqlCommand(query,conn);
 
                 cmd.Parameters.AddWithValue("@listId", listId);
@@ -40,7 +40,8 @@
                 while (reader.Read())
                 {
                     string text = reader["text"].ToString();
-                    UserTask newTask = new UserTask(text);
+                    bool isDone = (bool)reader["is_done"];
+                    UserTask newTask = new UserTask(text, isDone);
                     userTasks.Add(newTask);
                 }
             }
@@ -69,13 +70,13 @@
         }
 
         //Deletes task for the current user
-        public static bool Delete(UserTask task, string name)
+        public static bool Delete(UserTask task, string listName)
         {
             MySqlConnection conn = Database.GetConnection();
             conn.Open();
             using(conn)
             {
-                int listId = MainCommands.GetListId(name, conn);
+                int listId = MainCommands.GetListId(listName, conn);
 
                 string query = "DELETE FROM tasks WHERE text = @text AND list_id = @list_id";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
