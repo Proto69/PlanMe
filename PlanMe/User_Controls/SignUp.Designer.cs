@@ -149,6 +149,7 @@
             this.Controls.Add(this.passwordTextBox);
             this.Name = "SignUp";
             this.Size = new System.Drawing.Size(900, 500);
+            this.Load += new System.EventHandler(this.SignUp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

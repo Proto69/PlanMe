@@ -44,5 +44,10 @@ namespace PlanMe.User_Controls
         {
 
         }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
