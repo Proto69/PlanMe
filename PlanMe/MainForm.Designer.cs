@@ -33,11 +33,10 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.None;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(924, 523);
-            panel1.TabIndex = 0;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(898, 519);
+            this.panel1.TabIndex = 0;
             // 
             // MainForm
             // 

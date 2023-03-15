@@ -83,26 +83,6 @@ namespace PlanMe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap LogIn_BG {
-            get {
-                object obj = ResourceManager.GetObject("LogIn BG", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap MainScreen_BG {
-            get {
-                object obj = ResourceManager.GetObject("MainScreen BG", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap MyLists {
             get {
                 object obj = ResourceManager.GetObject("MyLists", resourceCulture);
@@ -123,16 +103,6 @@ namespace PlanMe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap PlanMe_Design {
-            get {
-                object obj = ResourceManager.GetObject("PlanMe Design", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap PlanMeLogo {
             get {
                 object obj = ResourceManager.GetObject("PlanMeLogo", resourceCulture);
@@ -143,9 +113,9 @@ namespace PlanMe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap SingUp {
+        public static System.Drawing.Bitmap SignUp_BG {
             get {
-                object obj = ResourceManager.GetObject("SingUp", resourceCulture);
+                object obj = ResourceManager.GetObject("SignUp BG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +123,9 @@ namespace PlanMe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap SingUp_BG {
+        public static System.Drawing.Bitmap SingUp {
             get {
-                object obj = ResourceManager.GetObject("SingUp BG", resourceCulture);
+                object obj = ResourceManager.GetObject("SingUp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
