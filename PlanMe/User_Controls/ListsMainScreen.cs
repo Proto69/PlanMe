@@ -40,7 +40,6 @@ namespace PlanMe.User_Controls
             listOfTasks.DataSource = table;
         }
 
-        //Sus method
         private void CheckForUpdate(DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
