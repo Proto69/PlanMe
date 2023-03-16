@@ -28,611 +28,658 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.plansButton = new System.Windows.Forms.Button();
-            this.listsButton = new System.Windows.Forms.Button();
-            this.infoButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
+            plansButton = new Button();
+            listsButton = new Button();
+            infoButton = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            pictureBox2 = new PictureBox();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            label13 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            label16 = new Label();
+            label17 = new Label();
+            label18 = new Label();
+            label19 = new Label();
+            label20 = new Label();
+            label21 = new Label();
+            label22 = new Label();
+            label23 = new Label();
+            label24 = new Label();
+            label25 = new Label();
+            label26 = new Label();
+            label27 = new Label();
+            label28 = new Label();
+            label29 = new Label();
+            label30 = new Label();
+            label31 = new Label();
+            label32 = new Label();
+            label33 = new Label();
+            label34 = new Label();
+            label35 = new Label();
+            label36 = new Label();
+            label37 = new Label();
+            label38 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            SuspendLayout();
             // 
             // plansButton
             // 
-            this.plansButton.BackColor = System.Drawing.Color.ForestGreen;
-            this.plansButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.plansButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.plansButton.Location = new System.Drawing.Point(387, 232);
-            this.plansButton.Name = "plansButton";
-            this.plansButton.Size = new System.Drawing.Size(120, 60);
-            this.plansButton.TabIndex = 11;
-            this.plansButton.Text = "plans";
-            this.plansButton.UseVisualStyleBackColor = false;
-            this.plansButton.Click += new System.EventHandler(this.plansButton_Click);
+            plansButton.Anchor = AnchorStyles.None;
+            plansButton.BackColor = Color.ForestGreen;
+            plansButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            plansButton.ForeColor = Color.WhiteSmoke;
+            plansButton.Location = new Point(392, 254);
+            plansButton.Name = "plansButton";
+            plansButton.Size = new Size(116, 54);
+            plansButton.TabIndex = 11;
+            plansButton.Text = "plans";
+            plansButton.UseVisualStyleBackColor = false;
+            plansButton.Click += plansButton_Click;
             // 
             // listsButton
             // 
-            this.listsButton.BackColor = System.Drawing.Color.ForestGreen;
-            this.listsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.listsButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.listsButton.Location = new System.Drawing.Point(142, 359);
-            this.listsButton.Name = "listsButton";
-            this.listsButton.Size = new System.Drawing.Size(120, 60);
-            this.listsButton.TabIndex = 12;
-            this.listsButton.Text = "lists";
-            this.listsButton.UseVisualStyleBackColor = false;
-            this.listsButton.Click += new System.EventHandler(this.listsButton_Click);
+            listsButton.Anchor = AnchorStyles.None;
+            listsButton.BackColor = Color.ForestGreen;
+            listsButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            listsButton.ForeColor = Color.WhiteSmoke;
+            listsButton.Location = new Point(154, 369);
+            listsButton.Name = "listsButton";
+            listsButton.Size = new Size(116, 54);
+            listsButton.TabIndex = 12;
+            listsButton.Text = "lists";
+            listsButton.UseVisualStyleBackColor = false;
+            listsButton.Click += listsButton_Click;
             // 
             // infoButton
             // 
-            this.infoButton.BackColor = System.Drawing.Color.ForestGreen;
-            this.infoButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.infoButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.infoButton.Location = new System.Drawing.Point(628, 428);
-            this.infoButton.Name = "infoButton";
-            this.infoButton.Size = new System.Drawing.Size(120, 60);
-            this.infoButton.TabIndex = 14;
-            this.infoButton.Text = "for the app";
-            this.infoButton.UseVisualStyleBackColor = false;
+            infoButton.Anchor = AnchorStyles.None;
+            infoButton.BackColor = Color.ForestGreen;
+            infoButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            infoButton.ForeColor = Color.WhiteSmoke;
+            infoButton.Location = new Point(630, 425);
+            infoButton.Name = "infoButton";
+            infoButton.Size = new Size(116, 54);
+            infoButton.TabIndex = 14;
+            infoButton.Text = "for the app";
+            infoButton.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(35, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 28);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Phrase of the day:";
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.ForestGreen;
+            label1.Location = new Point(45, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(170, 25);
+            label1.TabIndex = 15;
+            label1.Text = "Phrase of the day:";
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(35, 54);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(426, 49);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "label2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.UseCompatibleTextRendering = true;
+            label2.Anchor = AnchorStyles.None;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(54, 64);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(437, 49);
+            label2.TabIndex = 17;
+            label2.Text = "label2";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.UseCompatibleTextRendering = true;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::PlanMe.Properties.Resources.PlanMeLogo;
-            this.pictureBox2.Location = new System.Drawing.Point(575, 17);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(311, 108);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Anchor = AnchorStyles.None;
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = Properties.Resources.PlanMeLogo;
+            pictureBox2.Location = new Point(568, 27);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(304, 100);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 19;
+            pictureBox2.TabStop = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label3.Location = new System.Drawing.Point(387, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 19);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "2";
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.ForestGreen;
+            label3.Location = new Point(392, 199);
+            label3.Name = "label3";
+            label3.Size = new Size(17, 19);
+            label3.TabIndex = 20;
+            label3.Text = "2";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label4.Location = new System.Drawing.Point(509, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(17, 19);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "3";
+            label4.Anchor = AnchorStyles.None;
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.ForestGreen;
+            label4.Location = new Point(510, 199);
+            label4.Name = "label4";
+            label4.Size = new Size(17, 19);
+            label4.TabIndex = 21;
+            label4.Text = "3";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label5.Location = new System.Drawing.Point(597, 193);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(17, 19);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "4";
+            label5.Anchor = AnchorStyles.None;
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.ForestGreen;
+            label5.Location = new Point(630, 199);
+            label5.Name = "label5";
+            label5.Size = new Size(17, 19);
+            label5.TabIndex = 22;
+            label5.Text = "4";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label6.Location = new System.Drawing.Point(265, 169);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 19);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "1";
+            label6.Anchor = AnchorStyles.None;
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.ForestGreen;
+            label6.Location = new Point(273, 199);
+            label6.Name = "label6";
+            label6.Size = new Size(17, 19);
+            label6.TabIndex = 23;
+            label6.Text = "1";
+            label6.Click += label6_Click;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label7.Location = new System.Drawing.Point(754, 169);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(17, 19);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "5";
+            label7.Anchor = AnchorStyles.None;
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.ForestGreen;
+            label7.Location = new Point(750, 199);
+            label7.Name = "label7";
+            label7.Size = new Size(17, 19);
+            label7.TabIndex = 24;
+            label7.Text = "5";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label8.Location = new System.Drawing.Point(21, 232);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(17, 19);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "6";
+            label8.Anchor = AnchorStyles.None;
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.ForestGreen;
+            label8.Location = new Point(35, 256);
+            label8.Name = "label8";
+            label8.Size = new Size(17, 19);
+            label8.TabIndex = 25;
+            label8.Text = "6";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label9.Location = new System.Drawing.Point(142, 232);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(17, 19);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "7";
+            label9.Anchor = AnchorStyles.None;
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.ForestGreen;
+            label9.Location = new Point(154, 256);
+            label9.Name = "label9";
+            label9.Size = new Size(17, 19);
+            label9.TabIndex = 26;
+            label9.Text = "7";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label10.Location = new System.Drawing.Point(265, 232);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(17, 19);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "8";
+            label10.Anchor = AnchorStyles.None;
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = Color.ForestGreen;
+            label10.Location = new Point(273, 256);
+            label10.Name = "label10";
+            label10.Size = new Size(17, 19);
+            label10.TabIndex = 27;
+            label10.Text = "8";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label11.Location = new System.Drawing.Point(509, 232);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(25, 19);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "10";
+            label11.Anchor = AnchorStyles.None;
+            label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
+            label11.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.ForestGreen;
+            label11.Location = new Point(510, 256);
+            label11.Name = "label11";
+            label11.Size = new Size(25, 19);
+            label11.TabIndex = 28;
+            label11.Text = "10";
+            label11.Click += label11_Click;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label12.Location = new System.Drawing.Point(597, 232);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(25, 19);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "11";
+            label12.Anchor = AnchorStyles.None;
+            label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
+            label12.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = Color.ForestGreen;
+            label12.Location = new Point(630, 256);
+            label12.Name = "label12";
+            label12.Size = new Size(25, 19);
+            label12.TabIndex = 29;
+            label12.Text = "11";
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label13.Location = new System.Drawing.Point(754, 232);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(25, 19);
-            this.label13.TabIndex = 30;
-            this.label13.Text = "13";
+            label13.Anchor = AnchorStyles.None;
+            label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.ForeColor = Color.ForestGreen;
+            label13.Location = new Point(750, 256);
+            label13.Name = "label13";
+            label13.Size = new Size(25, 19);
+            label13.TabIndex = 30;
+            label13.Text = "12";
+            label13.Click += label13_Click;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label14.Location = new System.Drawing.Point(21, 296);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(25, 19);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "13";
+            label14.Anchor = AnchorStyles.None;
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.ForeColor = Color.ForestGreen;
+            label14.Location = new Point(35, 313);
+            label14.Name = "label14";
+            label14.Size = new Size(25, 19);
+            label14.TabIndex = 31;
+            label14.Text = "13";
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label15.Location = new System.Drawing.Point(142, 296);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(25, 19);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "14";
+            label15.Anchor = AnchorStyles.None;
+            label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
+            label15.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.ForeColor = Color.ForestGreen;
+            label15.Location = new Point(154, 313);
+            label15.Name = "label15";
+            label15.Size = new Size(25, 19);
+            label15.TabIndex = 32;
+            label15.Text = "14";
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label16.Location = new System.Drawing.Point(265, 296);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(25, 19);
-            this.label16.TabIndex = 33;
-            this.label16.Text = "15";
+            label16.Anchor = AnchorStyles.None;
+            label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
+            label16.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label16.ForeColor = Color.ForestGreen;
+            label16.Location = new Point(273, 313);
+            label16.Name = "label16";
+            label16.Size = new Size(25, 19);
+            label16.TabIndex = 33;
+            label16.Text = "15";
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label17.Location = new System.Drawing.Point(387, 295);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(25, 19);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "16";
+            label17.Anchor = AnchorStyles.None;
+            label17.AutoSize = true;
+            label17.BackColor = Color.Transparent;
+            label17.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label17.ForeColor = Color.ForestGreen;
+            label17.Location = new Point(392, 313);
+            label17.Name = "label17";
+            label17.Size = new Size(25, 19);
+            label17.TabIndex = 34;
+            label17.Text = "16";
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label18.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label18.Location = new System.Drawing.Point(509, 296);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(25, 19);
-            this.label18.TabIndex = 35;
-            this.label18.Text = "17";
+            label18.Anchor = AnchorStyles.None;
+            label18.AutoSize = true;
+            label18.BackColor = Color.Transparent;
+            label18.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label18.ForeColor = Color.ForestGreen;
+            label18.Location = new Point(510, 313);
+            label18.Name = "label18";
+            label18.Size = new Size(25, 19);
+            label18.TabIndex = 35;
+            label18.Text = "17";
+            label18.Click += label18_Click;
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label19.Location = new System.Drawing.Point(597, 296);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(25, 19);
-            this.label19.TabIndex = 36;
-            this.label19.Text = "18";
+            label19.Anchor = AnchorStyles.None;
+            label19.AutoSize = true;
+            label19.BackColor = Color.Transparent;
+            label19.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label19.ForeColor = Color.ForestGreen;
+            label19.Location = new Point(630, 313);
+            label19.Name = "label19";
+            label19.Size = new Size(25, 19);
+            label19.TabIndex = 36;
+            label19.Text = "18";
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label20.Location = new System.Drawing.Point(754, 296);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(25, 19);
-            this.label20.TabIndex = 37;
-            this.label20.Text = "19";
+            label20.Anchor = AnchorStyles.None;
+            label20.AutoSize = true;
+            label20.BackColor = Color.Transparent;
+            label20.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label20.ForeColor = Color.ForestGreen;
+            label20.Location = new Point(750, 313);
+            label20.Name = "label20";
+            label20.Size = new Size(25, 19);
+            label20.TabIndex = 37;
+            label20.Text = "19";
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label21.Location = new System.Drawing.Point(21, 359);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(25, 19);
-            this.label21.TabIndex = 38;
-            this.label21.Text = "20";
+            label21.Anchor = AnchorStyles.None;
+            label21.AutoSize = true;
+            label21.BackColor = Color.Transparent;
+            label21.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label21.ForeColor = Color.ForestGreen;
+            label21.Location = new Point(35, 369);
+            label21.Name = "label21";
+            label21.Size = new Size(25, 19);
+            label21.TabIndex = 38;
+            label21.Text = "20";
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label22.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label22.Location = new System.Drawing.Point(265, 359);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(25, 19);
-            this.label22.TabIndex = 39;
-            this.label22.Text = "22";
+            label22.Anchor = AnchorStyles.None;
+            label22.AutoSize = true;
+            label22.BackColor = Color.Transparent;
+            label22.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label22.ForeColor = Color.ForestGreen;
+            label22.Location = new Point(273, 369);
+            label22.Name = "label22";
+            label22.Size = new Size(25, 19);
+            label22.TabIndex = 39;
+            label22.Text = "22";
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label23.Location = new System.Drawing.Point(387, 359);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(25, 19);
-            this.label23.TabIndex = 40;
-            this.label23.Text = "23";
+            label23.Anchor = AnchorStyles.None;
+            label23.AutoSize = true;
+            label23.BackColor = Color.Transparent;
+            label23.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label23.ForeColor = Color.ForestGreen;
+            label23.Location = new Point(392, 369);
+            label23.Name = "label23";
+            label23.Size = new Size(25, 19);
+            label23.TabIndex = 40;
+            label23.Text = "23";
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label24.Location = new System.Drawing.Point(509, 359);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(25, 19);
-            this.label24.TabIndex = 41;
-            this.label24.Text = "24";
+            label24.Anchor = AnchorStyles.None;
+            label24.AutoSize = true;
+            label24.BackColor = Color.Transparent;
+            label24.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label24.ForeColor = Color.ForestGreen;
+            label24.Location = new Point(510, 369);
+            label24.Name = "label24";
+            label24.Size = new Size(25, 19);
+            label24.TabIndex = 41;
+            label24.Text = "24";
             // 
             // label25
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label25.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label25.Location = new System.Drawing.Point(597, 341);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(25, 19);
-            this.label25.TabIndex = 42;
-            this.label25.Text = "25";
+            label25.Anchor = AnchorStyles.None;
+            label25.AutoSize = true;
+            label25.BackColor = Color.Transparent;
+            label25.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label25.ForeColor = Color.ForestGreen;
+            label25.Location = new Point(630, 369);
+            label25.Name = "label25";
+            label25.Size = new Size(25, 19);
+            label25.TabIndex = 42;
+            label25.Text = "25";
             // 
             // label26
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label26.Location = new System.Drawing.Point(754, 359);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(25, 19);
-            this.label26.TabIndex = 43;
-            this.label26.Text = "26";
+            label26.Anchor = AnchorStyles.None;
+            label26.AutoSize = true;
+            label26.BackColor = Color.Transparent;
+            label26.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label26.ForeColor = Color.ForestGreen;
+            label26.Location = new Point(750, 369);
+            label26.Name = "label26";
+            label26.Size = new Size(25, 19);
+            label26.TabIndex = 43;
+            label26.Text = "26";
+            label26.Click += label26_Click;
             // 
             // label27
             // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label27.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label27.Location = new System.Drawing.Point(35, 400);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(25, 19);
-            this.label27.TabIndex = 44;
-            this.label27.Text = "27";
+            label27.Anchor = AnchorStyles.None;
+            label27.AutoSize = true;
+            label27.BackColor = Color.Transparent;
+            label27.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label27.ForeColor = Color.ForestGreen;
+            label27.Location = new Point(35, 426);
+            label27.Name = "label27";
+            label27.Size = new Size(25, 19);
+            label27.TabIndex = 44;
+            label27.Text = "27";
             // 
             // label28
             // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label28.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label28.Location = new System.Drawing.Point(85, 384);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(25, 19);
-            this.label28.TabIndex = 45;
-            this.label28.Text = "28";
+            label28.Anchor = AnchorStyles.None;
+            label28.AutoSize = true;
+            label28.BackColor = Color.Transparent;
+            label28.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label28.ForeColor = Color.ForestGreen;
+            label28.Location = new Point(154, 426);
+            label28.Name = "label28";
+            label28.Size = new Size(25, 19);
+            label28.TabIndex = 45;
+            label28.Text = "28";
             // 
             // label29
             // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label29.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label29.Location = new System.Drawing.Point(317, 384);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(25, 19);
-            this.label29.TabIndex = 46;
-            this.label29.Text = "29";
+            label29.Anchor = AnchorStyles.None;
+            label29.AutoSize = true;
+            label29.BackColor = Color.Transparent;
+            label29.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label29.ForeColor = Color.ForestGreen;
+            label29.Location = new Point(273, 426);
+            label29.Name = "label29";
+            label29.Size = new Size(25, 19);
+            label29.TabIndex = 46;
+            label29.Text = "29";
             // 
             // label30
             // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label30.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label30.Location = new System.Drawing.Point(452, 384);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(25, 19);
-            this.label30.TabIndex = 47;
-            this.label30.Text = "30";
+            label30.Anchor = AnchorStyles.None;
+            label30.AutoSize = true;
+            label30.BackColor = Color.Transparent;
+            label30.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label30.ForeColor = Color.ForestGreen;
+            label30.Location = new Point(392, 426);
+            label30.Name = "label30";
+            label30.Size = new Size(25, 19);
+            label30.TabIndex = 47;
+            label30.Text = "30";
             // 
             // label31
             // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label31.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label31.Location = new System.Drawing.Point(518, 384);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(25, 19);
-            this.label31.TabIndex = 48;
-            this.label31.Text = "31";
+            label31.Anchor = AnchorStyles.None;
+            label31.AutoSize = true;
+            label31.BackColor = Color.Transparent;
+            label31.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            label31.ForeColor = Color.ForestGreen;
+            label31.Location = new Point(510, 426);
+            label31.Name = "label31";
+            label31.Size = new Size(25, 19);
+            label31.TabIndex = 48;
+            label31.Text = "31";
             // 
             // label32
             // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label32.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label32.Location = new System.Drawing.Point(35, 143);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(75, 23);
-            this.label32.TabIndex = 49;
-            this.label32.Text = "Monday";
+            label32.Anchor = AnchorStyles.None;
+            label32.AutoSize = true;
+            label32.BackColor = Color.Transparent;
+            label32.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label32.ForeColor = Color.ForestGreen;
+            label32.Location = new Point(54, 165);
+            label32.Name = "label32";
+            label32.Size = new Size(75, 23);
+            label32.TabIndex = 49;
+            label32.Text = "Monday";
             // 
             // label33
             // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label33.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label33.Location = new System.Drawing.Point(165, 143);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(74, 23);
-            this.label33.TabIndex = 50;
-            this.label33.Text = "Tuesday";
+            label33.Anchor = AnchorStyles.None;
+            label33.AutoSize = true;
+            label33.BackColor = Color.Transparent;
+            label33.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label33.ForeColor = Color.ForestGreen;
+            label33.Location = new Point(172, 165);
+            label33.Name = "label33";
+            label33.Size = new Size(74, 23);
+            label33.TabIndex = 50;
+            label33.Text = "Tuesday";
             // 
             // label34
             // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label34.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label34.Location = new System.Drawing.Point(276, 143);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(102, 23);
-            this.label34.TabIndex = 51;
-            this.label34.Text = "Wednesday";
+            label34.Anchor = AnchorStyles.None;
+            label34.AutoSize = true;
+            label34.BackColor = Color.Transparent;
+            label34.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label34.ForeColor = Color.ForestGreen;
+            label34.Location = new Point(276, 165);
+            label34.Name = "label34";
+            label34.Size = new Size(102, 23);
+            label34.TabIndex = 51;
+            label34.Text = "Wednesday";
             // 
             // label35
             // 
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label35.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label35.Location = new System.Drawing.Point(406, 143);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(83, 23);
-            this.label35.TabIndex = 52;
-            this.label35.Text = "Thursday";
+            label35.Anchor = AnchorStyles.None;
+            label35.AutoSize = true;
+            label35.BackColor = Color.Transparent;
+            label35.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label35.ForeColor = Color.ForestGreen;
+            label35.Location = new Point(408, 165);
+            label35.Name = "label35";
+            label35.Size = new Size(83, 23);
+            label35.TabIndex = 52;
+            label35.Text = "Thursday";
             // 
             // label36
             // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label36.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label36.Location = new System.Drawing.Point(533, 143);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(60, 23);
-            this.label36.TabIndex = 53;
-            this.label36.Text = "Friday";
+            label36.Anchor = AnchorStyles.None;
+            label36.AutoSize = true;
+            label36.BackColor = Color.Transparent;
+            label36.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label36.ForeColor = Color.ForestGreen;
+            label36.Location = new Point(537, 165);
+            label36.Name = "label36";
+            label36.Size = new Size(60, 23);
+            label36.TabIndex = 53;
+            label36.Text = "Friday";
             // 
             // label37
             // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label37.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label37.Location = new System.Drawing.Point(650, 143);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(82, 23);
-            this.label37.TabIndex = 54;
-            this.label37.Text = "Saturday";
+            label37.Anchor = AnchorStyles.None;
+            label37.AutoSize = true;
+            label37.BackColor = Color.Transparent;
+            label37.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label37.ForeColor = Color.ForestGreen;
+            label37.Location = new Point(648, 165);
+            label37.Name = "label37";
+            label37.Size = new Size(82, 23);
+            label37.TabIndex = 54;
+            label37.Text = "Saturday";
             // 
             // label38
             // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label38.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label38.Location = new System.Drawing.Point(777, 143);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(69, 23);
-            this.label38.TabIndex = 55;
-            this.label38.Text = "Sunday";
+            label38.Anchor = AnchorStyles.None;
+            label38.AutoSize = true;
+            label38.BackColor = Color.Transparent;
+            label38.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label38.ForeColor = Color.ForestGreen;
+            label38.Location = new Point(775, 165);
+            label38.Name = "label38";
+            label38.Size = new Size(69, 23);
+            label38.TabIndex = 55;
+            label38.Text = "Sunday";
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PlanMe.Properties.Resources.background;
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label31);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.label29);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.infoButton);
-            this.Controls.Add(this.listsButton);
-            this.Controls.Add(this.plansButton);
-            this.Name = "MainScreen";
-            this.Size = new System.Drawing.Size(900, 500);
-            this.Load += new System.EventHandler(this.MainScreen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.MainScreenBG;
+            Controls.Add(label38);
+            Controls.Add(label37);
+            Controls.Add(label36);
+            Controls.Add(label35);
+            Controls.Add(label34);
+            Controls.Add(label33);
+            Controls.Add(label32);
+            Controls.Add(label31);
+            Controls.Add(label30);
+            Controls.Add(label29);
+            Controls.Add(label28);
+            Controls.Add(label27);
+            Controls.Add(label26);
+            Controls.Add(label25);
+            Controls.Add(label24);
+            Controls.Add(label23);
+            Controls.Add(label22);
+            Controls.Add(label21);
+            Controls.Add(label20);
+            Controls.Add(label19);
+            Controls.Add(label18);
+            Controls.Add(label17);
+            Controls.Add(label16);
+            Controls.Add(label15);
+            Controls.Add(label14);
+            Controls.Add(label1);
+            Controls.Add(label13);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(pictureBox2);
+            Controls.Add(label2);
+            Controls.Add(infoButton);
+            Controls.Add(listsButton);
+            Controls.Add(plansButton);
+            Name = "MainScreen";
+            Size = new Size(900, 500);
+            Load += MainScreen_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

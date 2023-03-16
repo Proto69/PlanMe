@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(898, 519);
-            this.panel1.TabIndex = 0;
+            panel1.Anchor = AnchorStyles.None;
+            panel1.Location = new Point(12, 27);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(900, 500);
+            panel1.TabIndex = 0;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(924, 523);
+            ClientSize = new Size(924, 539);
             Controls.Add(panel1);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterParent;

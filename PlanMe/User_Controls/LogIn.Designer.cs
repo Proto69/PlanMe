@@ -28,121 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.usernameBox = new System.Windows.Forms.TextBox();
-            this.passwordBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            usernameBox = new TextBox();
+            passwordBox = new TextBox();
+            button1 = new Button();
+            linkLabel1 = new LinkLabel();
+            label1 = new Label();
+            label3 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::PlanMe.Properties.Resources.LogIn;
-            this.pictureBox1.Location = new System.Drawing.Point(353, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 98);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.LogIn;
+            pictureBox1.Location = new Point(353, 62);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(182, 98);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
             // 
             // usernameBox
             // 
-            this.usernameBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.usernameBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.usernameBox.Location = new System.Drawing.Point(301, 245);
-            this.usernameBox.Name = "usernameBox";
-            this.usernameBox.PlaceholderText = "Enter username";
-            this.usernameBox.Size = new System.Drawing.Size(290, 30);
-            this.usernameBox.TabIndex = 11;
+            usernameBox.Anchor = AnchorStyles.None;
+            usernameBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            usernameBox.Location = new Point(301, 245);
+            usernameBox.Name = "usernameBox";
+            usernameBox.PlaceholderText = "Enter username";
+            usernameBox.Size = new Size(290, 30);
+            usernameBox.TabIndex = 11;
             // 
             // passwordBox
             // 
-            this.passwordBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.passwordBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passwordBox.Location = new System.Drawing.Point(301, 295);
-            this.passwordBox.Name = "passwordBox";
-            this.passwordBox.PasswordChar = '*';
-            this.passwordBox.PlaceholderText = "Enter password";
-            this.passwordBox.Size = new System.Drawing.Size(290, 30);
-            this.passwordBox.TabIndex = 12;
-            this.passwordBox.TextChanged += new System.EventHandler(this.passwordBox_TextChanged);
+            passwordBox.Anchor = AnchorStyles.None;
+            passwordBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordBox.Location = new Point(301, 295);
+            passwordBox.Name = "passwordBox";
+            passwordBox.PasswordChar = '*';
+            passwordBox.PlaceholderText = "Enter password";
+            passwordBox.Size = new Size(290, 30);
+            passwordBox.TabIndex = 12;
+            passwordBox.TextChanged += passwordBox_TextChanged;
             // 
             // button1
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.ForestGreen;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(301, 365);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(290, 50);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Log In";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Anchor = AnchorStyles.None;
+            button1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            button1.BackColor = Color.ForestGreen;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(301, 365);
+            button1.Name = "button1";
+            button1.Size = new Size(290, 50);
+            button1.TabIndex = 13;
+            button1.Text = "Log In";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
-            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.LinkColor = System.Drawing.Color.ForestGreen;
-            this.linkLabel1.Location = new System.Drawing.Point(498, 197);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(68, 23);
-            this.linkLabel1.TabIndex = 15;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sign up";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            linkLabel1.Anchor = AnchorStyles.None;
+            linkLabel1.AutoSize = true;
+            linkLabel1.BackColor = Color.Transparent;
+            linkLabel1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            linkLabel1.LinkColor = Color.ForestGreen;
+            linkLabel1.Location = new Point(498, 197);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(68, 23);
+            linkLabel1.TabIndex = 15;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Sign up";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(301, 197);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 23);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Don\'t have an account?";
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(301, 197);
+            label1.Name = "label1";
+            label1.Size = new Size(191, 23);
+            label1.TabIndex = 16;
+            label1.Text = "Don't have an account?";
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(277, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(339, 20);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "_______________________________________________________";
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Location = new Point(277, 153);
+            label3.Name = "label3";
+            label3.Size = new Size(339, 20);
+            label3.TabIndex = 18;
+            label3.Text = "_______________________________________________________";
             // 
             // LogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PlanMe.Properties.Resources.background;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.passwordBox);
-            this.Controls.Add(this.usernameBox);
-            this.Name = "LogIn";
-            this.Size = new System.Drawing.Size(900, 500);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.LogInBG;
+            Controls.Add(pictureBox1);
+            Controls.Add(label3);
+            Controls.Add(label1);
+            Controls.Add(linkLabel1);
+            Controls.Add(button1);
+            Controls.Add(passwordBox);
+            Controls.Add(usernameBox);
+            Name = "LogIn";
+            Size = new Size(900, 500);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
