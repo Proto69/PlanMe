@@ -15,6 +15,7 @@
             this.Info = info;
         }
 
+        //change
         public string Name
         {
             get { return name; }
