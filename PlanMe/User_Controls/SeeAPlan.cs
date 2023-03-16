@@ -16,7 +16,9 @@ namespace PlanMe.User_Controls
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
+       
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             string name = textBox1.Text;
             DateTime date = dateTimePicker1.Value;
@@ -40,22 +42,7 @@ namespace PlanMe.User_Controls
                 ErrorView.ShowError("You should type something!");
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             dateTimePicker1.Checked = false;
         }
