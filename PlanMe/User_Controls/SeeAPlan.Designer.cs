@@ -44,30 +44,27 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(137, 65);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(91, 43);
             label1.Name = "label1";
-            label1.Size = new Size(242, 62);
+            label1.Size = new Size(173, 46);
             label1.TabIndex = 2;
             label1.Text = "See a plan";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(71, 191);
-            textBox1.Margin = new Padding(4);
+            textBox1.Location = new Point(47, 127);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Name";
-            textBox1.Size = new Size(362, 39);
+            textBox1.Size = new Size(243, 30);
             textBox1.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(71, 282);
-            dateTimePicker1.Margin = new Padding(4);
+            dateTimePicker1.Location = new Point(47, 188);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(362, 39);
+            dateTimePicker1.Size = new Size(243, 30);
             dateTimePicker1.TabIndex = 4;
             dateTimePicker1.Value = new DateTime(2023, 3, 14, 16, 42, 27, 0);
             // 
@@ -75,19 +72,17 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(137, 117);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(91, 78);
             label2.Name = "label2";
-            label2.Size = new Size(265, 30);
+            label2.Size = new Size(177, 20);
             label2.TabIndex = 5;
             label2.Text = "____________________________";
             // 
             // button1
             // 
-            button1.Location = new Point(71, 474);
-            button1.Margin = new Padding(4);
+            button1.Location = new Point(47, 316);
             button1.Name = "button1";
-            button1.Size = new Size(364, 76);
+            button1.Size = new Size(243, 51);
             button1.TabIndex = 6;
             button1.Text = "Show";
             button1.UseVisualStyleBackColor = true;
@@ -97,21 +92,19 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(476, 65);
-            dataGridView1.Margin = new Padding(4);
+            dataGridView1.Location = new Point(296, 43);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(748, 612);
+            dataGridView1.Size = new Size(545, 408);
             dataGridView1.TabIndex = 7;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
             // 
             // button2
             // 
-            button2.Location = new Point(71, 373);
-            button2.Margin = new Padding(4);
+            button2.Location = new Point(47, 249);
             button2.Name = "button2";
-            button2.Size = new Size(364, 69);
+            button2.Size = new Size(243, 46);
             button2.TabIndex = 8;
             button2.Text = "Select by name";
             button2.UseVisualStyleBackColor = true;
@@ -119,17 +112,16 @@
             // 
             // button3
             // 
-            button3.Location = new Point(69, 585);
-            button3.Margin = new Padding(4);
+            button3.Location = new Point(46, 390);
             button3.Name = "button3";
-            button3.Size = new Size(364, 76);
+            button3.Size = new Size(243, 51);
             button3.TabIndex = 9;
             button3.Text = "Delete plan";
             button3.UseVisualStyleBackColor = true;
             // 
             // SeeAPlan
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
             Controls.Add(button3);
@@ -140,9 +132,8 @@
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(label2);
-            Margin = new Padding(4);
             Name = "SeeAPlan";
-            Size = new Size(1287, 750);
+            Size = new Size(858, 500);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

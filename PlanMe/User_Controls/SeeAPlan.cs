@@ -33,12 +33,12 @@ namespace PlanMe.User_Controls
             DateTime date = dateTimePicker1.Value;
             if (name != "" && name != null && dateTimePicker1.Checked)
             {
-                List<Event> events = allPlans.Where(x => x.Name == name && x.Date.Date == date.Date).ToList();
+                List<Event> events = allPlans.Where(x => x.Name.ToLower().Contains(name.ToLower()) && x.Date.Date == date.Date).ToList();
                 dataGridView1.DataSource = events;
             }
             else if (name != "" && name != null)
             {
-                List<Event> events = allPlans.Where(x => x.Name == name).ToList();
+                List<Event> events = allPlans.Where(x => x.Name.ToLower().Contains(name.ToLower())).ToList();
                 dataGridView1.DataSource = events;
             }
             else if (dateTimePicker1.Checked)
@@ -58,12 +58,12 @@ namespace PlanMe.User_Controls
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
     }
 }
