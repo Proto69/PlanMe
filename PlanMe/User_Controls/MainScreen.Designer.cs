@@ -116,7 +116,7 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
@@ -129,13 +129,14 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.None;
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(54, 64);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(437, 49);
+            label2.Size = new Size(46, 25);
             label2.TabIndex = 17;
             label2.Text = "label2";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -145,6 +146,7 @@
             // 
             pictureBox2.Anchor = AnchorStyles.None;
             pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox2.Image = Properties.Resources.PlanMeLogo;
             pictureBox2.Location = new Point(568, 27);
             pictureBox2.Name = "pictureBox2";
@@ -538,7 +540,7 @@
             // 
             // label32
             // 
-            label32.Anchor = AnchorStyles.None;
+            label32.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label32.AutoSize = true;
             label32.BackColor = Color.Transparent;
             label32.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
@@ -551,7 +553,7 @@
             // 
             // label33
             // 
-            label33.Anchor = AnchorStyles.None;
+            label33.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label33.AutoSize = true;
             label33.BackColor = Color.Transparent;
             label33.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
@@ -564,7 +566,7 @@
             // 
             // label34
             // 
-            label34.Anchor = AnchorStyles.None;
+            label34.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label34.AutoSize = true;
             label34.BackColor = Color.Transparent;
             label34.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
@@ -577,7 +579,7 @@
             // 
             // label35
             // 
-            label35.Anchor = AnchorStyles.None;
+            label35.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label35.AutoSize = true;
             label35.BackColor = Color.Transparent;
             label35.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
@@ -590,7 +592,7 @@
             // 
             // label36
             // 
-            label36.Anchor = AnchorStyles.None;
+            label36.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label36.AutoSize = true;
             label36.BackColor = Color.Transparent;
             label36.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
@@ -603,7 +605,7 @@
             // 
             // label37
             // 
-            label37.Anchor = AnchorStyles.None;
+            label37.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label37.AutoSize = true;
             label37.BackColor = Color.Transparent;
             label37.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
@@ -616,7 +618,7 @@
             // 
             // label38
             // 
-            label38.Anchor = AnchorStyles.None;
+            label38.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label38.AutoSize = true;
             label38.BackColor = Color.Transparent;
             label38.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
@@ -632,6 +634,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.MainScreenBG;
+            BackgroundImageLayout = ImageLayout.Stretch;
             Controls.Add(label38);
             Controls.Add(label37);
             Controls.Add(label36);
@@ -674,6 +677,7 @@
             Controls.Add(infoButton);
             Controls.Add(listsButton);
             Controls.Add(plansButton);
+            DoubleBuffered = true;
             Name = "MainScreen";
             Size = new Size(900, 500);
             Load += MainScreen_Load;
