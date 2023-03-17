@@ -8,6 +8,8 @@
         {
             User user = new User("ListOfTasksTests", "Tests1234");
             MainModels.user = user;
+            MainModels.user.FillEventsAndTasks();
+            MainModels.user.Id = 1;
         }
 
         [Test]

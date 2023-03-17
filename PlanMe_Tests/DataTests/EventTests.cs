@@ -8,13 +8,16 @@
         {
             User user = new User("EventTests", "EventTests123");
             MainModels.user = user;
+            MainModels.user.FillEventsAndTasks();
+            MainModels.user.Id = 23;
         }
 
         [Test]
         public void ChecksIfGetsAllEvents()
         {
+            MainModels.user.Id = 17;
             List<Event> listEvents = new List<Event>();
-            listEvents = EventData.GetAll("UserId");
+            listEvents = EventData.GetAll();
             Assert.AreEqual(2, listEvents.Count, "It does not return all events for user with username Get all!");
         }
 
@@ -55,14 +58,14 @@
         public void CheckIsUpdatesEvent()
         {
             List<Event> events = new List<Event>();
-            events = EventData.GetAll("EventTests");
+            events = EventData.GetAll();
             Random random = new Random();
             string eventInfo = "Test updating " + random.Next().ToString();
             Event @event = new Event("Update test", DateTime.Parse("2023-02-21"), "16:51:43", eventInfo);
 
             EventData.Update(events[0], @event);
 
-            events = EventData.GetAll("EventTests");
+            events = EventData.GetAll();
 
             Assert.AreEqual(@event.Info, events[0].Info, "The event is not updated!");
         }
