@@ -21,10 +21,6 @@
             return id;
         }
 
-        public static int GetUserId(MySqlConnection conn)
-        {
-            return GetUserId(MainModels.user.Username, conn);
-        }
 
         public static bool RunNonQuery(MySqlCommand cmd)
         {
@@ -34,13 +30,13 @@
             return false;
         }
 
-        public static int GetListId(string name, string username, MySqlConnection conn)
+        public static int GetListId(string name, MySqlConnection conn)
         {
             string query = "SELECT id FROM list_of_tasks WHERE name = @name AND user_id = @id";
             MySqlCommand cmd = new MySqlCommand(query, conn);
 
             cmd.Parameters.AddWithValue("@name", name);
-            cmd.Parameters.AddWithValue("@id", GetUserId(username, conn));
+            cmd.Parameters.AddWithValue("@id", MainModels.user.Id);
             MySqlDataReader reader = cmd.ExecuteReader();
 
             int id = 0;
@@ -52,11 +48,6 @@
 
             reader.Close();
             return id;
-        }
-
-        public static int GetListId(string name, MySqlConnection conn)
-        {
-            return GetListId(name, MainModels.user.Username, conn);
         }
     }
 }

@@ -10,7 +10,7 @@
         {
             this.Name = name;
             this.Username = username;
-            this.Tasks = TaskData.GetAll(name, username);
+            this.Tasks = TaskData.GetAll(name);
         }
 
         public ListOfTasks(string name) : this(name, MainModels.user.Username)

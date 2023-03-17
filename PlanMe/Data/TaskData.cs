@@ -21,7 +21,7 @@
         }
 
         //Returns all tasks for the current user
-        public static List<UserTask> GetAll(string name, string username)
+        public static List<UserTask> GetAll(string name)
         {
             List<UserTask> userTasks = new List<UserTask>();
             MySqlConnection conn = Database.GetConnection();
@@ -29,7 +29,7 @@
             conn.Open();
             using (conn) 
             {
-                int listId = MainCommands.GetListId(name, username, conn);
+                int listId = MainCommands.GetListId(name, conn);
 
                 string query = "SELECT text, is_done FROM tasks WHERE list_id = @listId";
                 MySqlCommand cmd = new MySqlCommand(query,conn);

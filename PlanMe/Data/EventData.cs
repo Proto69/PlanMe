@@ -9,7 +9,7 @@
             conn.Open();
             using (conn)
             {
-                int userId = MainCommands.GetUserId(conn);
+                int userId = MainModels.user.Id;
 
                 string query = "INSERT INTO events (name, date, time, additional_info, user_id) " +
                     "VALUES (@name, @date, @time, @info, @user_id)";
@@ -26,7 +26,7 @@
         }
 
         //Gets all events for current user
-        public static List<Event> GetAll(string username)
+        public static List<Event> GetAll()
         {
             List<Event> userEvents = new List<Event>();
             MySqlConnection conn = Database.GetConnection();
@@ -34,7 +34,7 @@
             conn.Open();
             using (conn)
             {
-                int userId = MainCommands.GetUserId(username, conn);
+                int userId = MainModels.user.Id;
 
                 string query = "SELECT * FROM events WHERE user_id = @userId";
                 MySqlCommand cmd = new MySqlCommand(query, conn);

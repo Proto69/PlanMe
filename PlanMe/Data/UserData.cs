@@ -15,7 +15,11 @@
                 cmd.Parameters.AddWithValue("@username", user.Username);
                 cmd.Parameters.AddWithValue("@password", user.Password);
 
-                return MainCommands.RunNonQuery(cmd);
+                bool smth = MainCommands.RunNonQuery(cmd);
+
+                MainModels.user.Id = MainCommands.GetUserId(user.Username, conn);
+
+                return smth;
             }
         }
 
@@ -66,15 +70,25 @@
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
+                string user_password = null;
+                string newUsername = null;
+
                 if (reader.HasRows)
                 {
                     reader.Read();
 
-                    string user_password = reader["password"].ToString();
-
-                    if (password == user_password && reader["username"].ToString() == username)
-                        return new User(username, user_password);
+                    user_password = reader["password"].ToString();
+                    newUsername = reader["username"].ToString();
                 }
+                 
+                reader.Close();
+                if (password == user_password && newUsername == username)
+                {
+                    User user = new User(username, user_password);
+                    user.Id = MainCommands.GetUserId(username, conn);
+                    return user;
+                }
+
                 throw new ArgumentException("Invalid username or password!");
             }
         }
