@@ -1,6 +1,4 @@
-﻿using System.Net.Http.Headers;
-
-namespace PlanMe.Controls
+﻿namespace PlanMe.Controls
 {
     public static class PageControl
     {
@@ -9,34 +7,15 @@ namespace PlanMe.Controls
 
         public static void AddAPlan()
         {
-            PopUpForm popUpForm = new PopUpForm();
-            Panel panel = popUpForm.Controls["panel1"] as Panel;
-
-            panel.Dock = DockStyle.Fill;
-
-            ChangeControl(new AddAPlan(), panel);
-
-            popUpForm.Show();
+            ChangeControlToForm(new AddAPlan());
         }
         public static void AddATask()
         {
-            PopUpForm popUpForm = new PopUpForm();
-            Panel panel = popUpForm.Controls["panel1"] as Panel;
-            panel.Dock = DockStyle.Fill;
-
-            ChangeControl(new AddATask(), panel);
-
-            popUpForm.Show();
+            ChangeControlToForm(new AddATask());
         }
         public static void AddList()
         {
-            PopUpForm popUpForm = new PopUpForm();
-            Panel panel = popUpForm.Controls["panel1"] as Panel;
-            panel.Dock = DockStyle.Fill;
-
-            ChangeControl(new AddList(), panel);
-
-            popUpForm.Show();
+            ChangeControlToForm(new AddList());
         }
         public static void Calendar()
         {
@@ -87,6 +66,17 @@ namespace PlanMe.Controls
             panel.Dock = DockStyle.Fill;
 
             panel.Controls.Add(control);
+        }
+
+        private static void ChangeControlToForm(UserControl control)
+        {
+            PopUpForm popUpForm = new PopUpForm();
+            Panel panel = popUpForm.Controls["panel1"] as Panel;
+            panel.Dock = DockStyle.Fill;
+
+            ChangeControl(control, panel);
+
+            popUpForm.Show();
         }
     }
 }
