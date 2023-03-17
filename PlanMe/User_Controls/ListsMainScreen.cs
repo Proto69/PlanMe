@@ -1,9 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using PlanMe.Models;
-using System.Data;
-using System.Windows.Forms;
-
-namespace PlanMe.User_Controls
+﻿namespace PlanMe.User_Controls
 {
     public partial class ListsMainScreen : UserControl
     {

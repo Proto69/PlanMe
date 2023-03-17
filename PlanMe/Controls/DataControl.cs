@@ -19,29 +19,10 @@
             MainModels.user = user;
         }
 
-        //Updates user's password
-        public static void UpdateUserPassword(User user)
-        {
-            UserData.UpdatePassword(user);
-            MainModels.user = user;
-        }
-
-        //Deletes a user specified, from the view
-        public static bool DeleteUser(User user)
-        {
-            throw new NotImplementedException();
-        }
-
         public static void CreateTask(string text, string nameOfList)
         {
             UserTask task = new UserTask(text);
             TaskData.Upload(task, nameOfList);
-        }
-
-        public static bool UpdateTask(string text,string nameofList, bool isDone)
-        {
-            UserTask task = new UserTask(text, isDone);
-            return TaskData.Update(task, nameofList);
         }
     }
 }

@@ -1,10 +1,3 @@
-using Google.Protobuf.Collections;
-using PlanMe.Controls;
-using PlanMe.Models;
-using PlanMe.User_Controls;
-using PlanMe.Views;
-using System.Timers;
-
 namespace PlanMe
 {
     public partial class MainForm : Form

@@ -1,17 +1,4 @@
-﻿using System;
-using PlanMe.Views;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PlanMe.Models;
-using PlanMe.Controls;
-
-namespace PlanMe.User_Controls
+﻿namespace PlanMe.User_Controls
 {
     public partial class SignUp : UserControl
     {
