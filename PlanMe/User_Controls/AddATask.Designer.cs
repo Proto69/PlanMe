@@ -32,7 +32,6 @@
             addButton = new Button();
             label2 = new Label();
             text = new TextBox();
-            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -51,7 +50,7 @@
             addButton.BackColor = Color.ForestGreen;
             addButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             addButton.ForeColor = Color.WhiteSmoke;
-            addButton.Location = new Point(235, 230);
+            addButton.Location = new Point(155, 220);
             addButton.Name = "addButton";
             addButton.Size = new Size(150, 50);
             addButton.TabIndex = 1;
@@ -79,24 +78,11 @@
             text.Size = new Size(317, 34);
             text.TabIndex = 3;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.ForestGreen;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.WhiteSmoke;
-            button1.Location = new Point(79, 230);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 50);
-            button1.TabIndex = 4;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // AddATask
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
-            Controls.Add(button1);
             Controls.Add(text);
             Controls.Add(addButton);
             Controls.Add(label1);
@@ -113,6 +99,5 @@
         private Button addButton;
         private Label label2;
         private TextBox text;
-        private Button button1;
     }
 }

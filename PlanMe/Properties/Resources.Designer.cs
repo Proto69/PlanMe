@@ -143,6 +143,26 @@ namespace PlanMe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap PlansBG {
+            get {
+                object obj = ResourceManager.GetObject("PlansBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap SeeAPlanBG {
+            get {
+                object obj = ResourceManager.GetObject("SeeAPlanBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap SignUpBG {
             get {
                 object obj = ResourceManager.GetObject("SignUpBG", resourceCulture);

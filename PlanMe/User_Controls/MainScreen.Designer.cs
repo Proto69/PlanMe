@@ -130,13 +130,12 @@
             // label2
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(54, 64);
+            label2.Location = new Point(45, 64);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(46, 25);
+            label2.Size = new Size(446, 50);
             label2.TabIndex = 17;
             label2.Text = "label2";
             label2.TextAlign = ContentAlignment.MiddleCenter;

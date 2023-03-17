@@ -114,7 +114,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.background;
+            BackgroundImage = Properties.Resources.PlansBG;
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);

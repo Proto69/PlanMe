@@ -28,56 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            panel1 = new Panel();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::PlanMe.Properties.Resources.MyPlans;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(319, 103);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.MyPlans;
+            pictureBox1.Location = new Point(21, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(319, 103);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(34, 137);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(826, 331);
-            this.panel1.TabIndex = 2;
+            panel1.BackColor = Color.Transparent;
+            panel1.Location = new Point(34, 141);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(826, 331);
+            panel1.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(0, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(897, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "_________________________________________________________________________________" +
-    "___________________________________________________________________";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Location = new Point(0, 103);
+            label2.Name = "label2";
+            label2.Size = new Size(897, 20);
+            label2.TabIndex = 6;
+            label2.Text = "____________________________________________________________________________________________________________________________________________________";
             // 
             // Calendar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PlanMe.Properties.Resources.background;
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Name = "Calendar";
-            this.Size = new System.Drawing.Size(900, 500);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.background;
+            Controls.Add(panel1);
+            Controls.Add(pictureBox1);
+            Controls.Add(label2);
+            Name = "Calendar";
+            Size = new Size(900, 500);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
