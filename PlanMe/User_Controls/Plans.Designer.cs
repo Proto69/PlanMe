@@ -82,7 +82,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(255, 70);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Show all plans";
+            this.button3.Text = "Show all allPlans";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
