@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label2 = new Label();
             saveButton = new Button();
             dataGridView1 = new DataGridView();
             button1 = new Button();
@@ -38,17 +37,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Location = new Point(64, 83);
-            label2.Name = "label2";
-            label2.Size = new Size(381, 20);
-            label2.TabIndex = 2;
-            label2.Text = "______________________________________________________________";
-            label2.Click += label2_Click;
             // 
             // saveButton
             // 
@@ -68,11 +56,11 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(83, 106);
+            dataGridView1.Location = new Point(67, 106);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(345, 377);
+            dataGridView1.Size = new Size(369, 377);
             dataGridView1.TabIndex = 15;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
@@ -96,8 +84,8 @@
             label1.BackColor = Color.Transparent;
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.ForestGreen;
-            label1.Location = new Point(196, 43);
+            label1.ForeColor = Color.Ivory;
+            label1.Location = new Point(194, 61);
             label1.Name = "label1";
             label1.Size = new Size(96, 42);
             label1.TabIndex = 17;
@@ -107,9 +95,10 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.MyLists;
-            pictureBox1.Location = new Point(628, 32);
+            pictureBox1.Location = new Point(616, 20);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(233, 98);
+            pictureBox1.Size = new Size(266, 108);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             // 
@@ -129,14 +118,13 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.TaskScreenBG;
+            BackgroundImage = Properties.Resources.TaskScreenBG2;
             Controls.Add(button2);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(saveButton);
-            Controls.Add(label2);
             Name = "TaskScreen";
             Size = new Size(900, 500);
             Load += TaskScreen_Load;
@@ -147,7 +135,6 @@
         }
 
         #endregion
-        private Label label2;
         private Button saveButton;
         private DataGridView dataGridView1;
         private Button button1;

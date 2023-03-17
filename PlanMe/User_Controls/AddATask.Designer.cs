@@ -51,7 +51,7 @@
             addButton.BackColor = Color.ForestGreen;
             addButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             addButton.ForeColor = Color.WhiteSmoke;
-            addButton.Location = new Point(232, 230);
+            addButton.Location = new Point(235, 230);
             addButton.Name = "addButton";
             addButton.Size = new Size(150, 50);
             addButton.TabIndex = 1;
