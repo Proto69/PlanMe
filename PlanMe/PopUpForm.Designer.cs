@@ -34,9 +34,9 @@
             // panel1
             // 
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(759, 548);
+            panel1.Size = new Size(482, 336);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -44,7 +44,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(760, 542);
+            ClientSize = new Size(482, 336);
             Controls.Add(panel1);
             Name = "PopUpForm";
             ResumeLayout(false);

@@ -10,13 +10,16 @@ namespace PlanMe_Tests.DataTests
         {
             User user = new User("TaskTests", "TaskTests1234");
             MainModels.user = user;
+            MainModels.user.FillEventsAndTasks();
+            MainModels.user.Id = 90;
         }
 
         [Test]
         public void ChecksIfGetsAllTasks()
         {
+            MainModels.user.Id = 1;
             List<UserTask> listEvents = new List<UserTask>();
-            listEvents = TaskData.GetAll("Get all test", "UserId");
+            listEvents = TaskData.GetAll("Get all test");
             Assert.AreEqual(2, listEvents.Count, "It does not return all events for user with username Get all!");
         }
 
@@ -37,7 +40,7 @@ namespace PlanMe_Tests.DataTests
         {
             UserTask task = new UserTask("UploadTest");
             TaskData.Upload(task, "Update task");
-            List<UserTask> userTasks = TaskData.GetAll("Update task", "TaskTests");
+            List<UserTask> userTasks = TaskData.GetAll("Update task");
             Assert.AreEqual(1, userTasks.Count, "The task was not uploaded!");
             TaskData.Delete(task, "Update task");
         }
@@ -53,7 +56,7 @@ namespace PlanMe_Tests.DataTests
 
             TaskData.Delete(task1, "Update task");
 
-            List<UserTask> tasksAfterDeleting = TaskData.GetAll("Update task", "TaskTests");
+            List<UserTask> tasksAfterDeleting = TaskData.GetAll("Update task");
 
             Assert.AreEqual(1, tasksAfterDeleting.Count, "Task is not deleted!");
             TaskData.Delete(task2, "Update task");
@@ -68,7 +71,7 @@ namespace PlanMe_Tests.DataTests
             task.IsDone = true;
             TaskData.Update(task, "Update task");
 
-            List<UserTask> userTasks = TaskData.GetAll("Update task", "TaskTests");
+            List<UserTask> userTasks = TaskData.GetAll("Update task");
             Assert.AreEqual(task.IsDone, userTasks[0].IsDone, "The task was not uploaded!");
 
             TaskData.Delete(task, "Update task");

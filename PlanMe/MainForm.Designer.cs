@@ -33,23 +33,26 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.None;
-            panel1.Location = new Point(12, 27);
+            panel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            panel1.AutoSize = true;
+            panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel1.Location = new Point(-4, 6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(900, 500);
+            panel1.Size = new Size(0, 0);
             panel1.TabIndex = 0;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(924, 539);
+            ClientSize = new Size(900, 499);
             Controls.Add(panel1);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "PlanMe";
             Load += MainForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

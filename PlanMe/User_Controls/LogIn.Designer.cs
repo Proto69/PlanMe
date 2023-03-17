@@ -40,12 +40,14 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Image = Properties.Resources.LogIn;
             pictureBox1.Location = new Point(353, 62);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(182, 98);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
@@ -129,6 +131,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.LogInBG;
+            BackgroundImageLayout = ImageLayout.Stretch;
             Controls.Add(pictureBox1);
             Controls.Add(label3);
             Controls.Add(label1);
@@ -136,6 +139,7 @@
             Controls.Add(button1);
             Controls.Add(passwordBox);
             Controls.Add(usernameBox);
+            DoubleBuffered = true;
             Name = "LogIn";
             Size = new Size(900, 500);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

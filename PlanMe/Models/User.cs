@@ -3,7 +3,7 @@ namespace PlanMe.Models
     //Model for user
     public class User
     {
-        //The username will be used as id
+        private int id;
         private string username;
         private string password;
         private List<Event> events;
@@ -13,7 +13,13 @@ namespace PlanMe.Models
         {
             Username = username;
             Password = password;
-            Events = EventData.GetAll(username);
+            //Events = EventData.GetAll(username);
+            //AllTasks = ListOfTasksData.GetAll(username);
+        }
+
+        public void FillEventsAndTasks()
+        {
+            Events = EventData.GetAll();
             AllTasks = ListOfTasksData.GetAll(username);
         }
 
@@ -49,6 +55,7 @@ namespace PlanMe.Models
 
         public List<ListOfTasks> AllTasks { get => allTasks; set => allTasks = value; }
         public List<Event> Events { get => events; set => events = value; }
+        public int Id { get => id; set => id = value; }
 
         public override string? ToString()
         {

@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace PlanMe.Models
+﻿namespace PlanMe.Models
 {
     public class Event : IComparable<Event>
     {
@@ -26,17 +24,9 @@ namespace PlanMe.Models
             get { return name; }
             set
             {
-                if (value != null)
-                {
-                    if (value.Length > 150 && value != null)
-                        throw new ArgumentException("The name is too long!");
-                    this.name = value;
-                }
-                else
-                {
-                    this.name = value;
-                }
-
+                if (value.Length > 150)
+                    throw new ArgumentException("The name is too long!");
+                this.name = value;
             }
         }
         public DateTime Date
@@ -45,7 +35,6 @@ namespace PlanMe.Models
             set
             {
                 this.date = value;
-
             }
         }
         public string Time
@@ -53,14 +42,7 @@ namespace PlanMe.Models
             get { return time.ToString("HH:mm:ss"); }
             set
             {
-                try
-                {
-                    this.time = TimeOnly.ParseExact(value, "HH:mm:ss");
-                }
-                catch(FormatException)
-                {
-                    this.time = TimeOnly.ParseExact(value, "hh:mm tt", CultureInfo.InvariantCulture);
-                }
+                this.time = TimeOnly.ParseExact(value, "HH:mm:ss");
             }
         }
         public string Info

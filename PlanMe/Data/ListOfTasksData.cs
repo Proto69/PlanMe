@@ -12,7 +12,7 @@
                 string query = "INSERT INTO list_of_tasks (user_id, name) VALUES (@id, @name)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@id", MainCommands.GetUserId(conn));
+                cmd.Parameters.AddWithValue("@id", MainModels.user.Id);
                 cmd.Parameters.AddWithValue("@name", listOfTasks.Name);
 
                 check = MainCommands.RunNonQuery(cmd);
@@ -53,7 +53,7 @@
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@name", listOfTasks.Name);
-                cmd.Parameters.AddWithValue("@user_id", MainCommands.GetUserId(conn));
+                cmd.Parameters.AddWithValue("@user_id", MainModels.user.Id);
 
                 return MainCommands.RunNonQuery(cmd);
             }
@@ -72,7 +72,7 @@
 
                 cmd.Parameters.AddWithValue("@newName", newName);
                 cmd.Parameters.AddWithValue("@oldName", oldName);
-                cmd.Parameters.AddWithValue("@user_id", MainCommands.GetUserId(MainModels.user.Username, conn));
+                cmd.Parameters.AddWithValue("@user_id", MainModels.user.Id);
 
                 return MainCommands.RunNonQuery(cmd);
             }
@@ -86,7 +86,7 @@
             conn.Open();
             using (conn)
             {
-                int id = MainCommands.GetUserId(username, conn);
+                int id = MainModels.user.Id;
                 string query = "SELECT name FROM list_of_tasks WHERE user_id = @id";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 

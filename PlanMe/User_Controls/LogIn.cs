@@ -31,6 +31,9 @@ namespace PlanMe.User_Controls
                 LoginView.ReadInfo(usernameBox.Text, passwordBox.Text);
 
                 PageControl.MainScreen();
+
+                MainModels.user.FillEventsAndTasks();
+
             }
             catch (Exception ex)
             {
