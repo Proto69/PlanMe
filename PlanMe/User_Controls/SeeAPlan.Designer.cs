@@ -91,7 +91,7 @@
             button1.TabIndex = 6;
             button1.Text = "Show";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            button1.Click += showButton_Click_Event;
             // 
             // dataGridView1
             // 
@@ -103,7 +103,6 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(748, 612);
             dataGridView1.TabIndex = 7;
-            dataGridView1.AllowUserToDeleteRowsChanged += button3_Click;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
             // 
@@ -116,7 +115,7 @@
             button2.TabIndex = 8;
             button2.Text = "Select by name";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click_1;
+            button2.Click += onlyNameSearch_Click_Event;
             // 
             // button3
             // 
@@ -127,7 +126,6 @@
             button3.TabIndex = 9;
             button3.Text = "Delete plan";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // SeeAPlan
             // 
