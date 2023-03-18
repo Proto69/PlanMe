@@ -16,7 +16,8 @@
                 cmd.Parameters.AddWithValue("@password", user.Password);
 
                 bool smth = MainCommands.RunNonQuery(cmd);
-
+                if (smth)
+                    MainModels.user = user;
                 MainModels.user.Id = MainCommands.GetUserId(user.Username, conn);
 
                 return smth;

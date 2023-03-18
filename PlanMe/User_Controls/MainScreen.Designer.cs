@@ -97,7 +97,7 @@
             listsButton.Name = "listsButton";
             listsButton.Size = new Size(116, 54);
             listsButton.TabIndex = 12;
-            listsButton.Text = "lists";
+            listsButton.Text = "taskScreen";
             listsButton.UseVisualStyleBackColor = false;
             listsButton.Click += listsButton_Click;
             // 
@@ -167,7 +167,6 @@
             label3.Size = new Size(17, 19);
             label3.TabIndex = 20;
             label3.Text = "2";
-            label3.Click += label3_Click;
             // 
             // label4
             // 

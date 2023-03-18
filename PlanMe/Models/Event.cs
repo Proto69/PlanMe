@@ -1,6 +1,6 @@
 ﻿namespace PlanMe.Models
 {
-    public class Event : IComparable<Event>
+    public class Event
     {
         private string name;
         private DateTime date;
@@ -24,6 +24,7 @@
             get { return name; }
             set
             {
+                //Checks the length to be less than 150
                 if (value.Length > 150)
                     throw new ArgumentException("The name is too long!");
                 this.name = value;
@@ -55,21 +56,6 @@
                 else
                     this.info = value;
             }
-        }
-
-        public int CompareTo(Event? other)
-        {
-            bool name = this.Name == other.Name;
-            bool date = this.Date == other.Date;
-            bool time = this.Time == other.Time;
-
-            if (name && time && date) return 0;
-            return 1;
-        }
-
-        public override string? ToString()
-        {
-            return $"{Name} on {Date} at {Time}";
         }
     }
 }

@@ -13,10 +13,9 @@ namespace PlanMe.Models
         {
             Username = username;
             Password = password;
-            //Events = EventData.GetAll(username);
-            //AllTasks = ListOfTasksData.GetAll(username);
         }
 
+        //Filling the data for the user
         public void FillEventsAndTasks()
         {
             Events = EventData.GetAll();

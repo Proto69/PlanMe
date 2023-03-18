@@ -14,14 +14,6 @@
             this.IsDone = isDone;
         }
 
-        public void Complete()
-        {
-            //Checks if users's task is done
-            if (isDone)
-                throw new InvalidOperationException("This task is already done!");
-            isDone = true;
-        }
-
         public string Text
         {
             get { return text; }
@@ -37,11 +29,6 @@
             {
                 isDone = value;
             }
-        }
-
-        public override string ToString()
-        {
-            return $"{text} {isDone}";
         }
     }
 }
