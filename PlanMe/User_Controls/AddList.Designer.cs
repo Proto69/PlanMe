@@ -58,25 +58,25 @@
             // 
             // CreateListButton
             // 
-            button1.BackColor = Color.ForestGreen;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(158, 232);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 50);
-            button1.TabIndex = 4;
-            button1.Text = "Create";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            CreateListButton.BackColor = Color.ForestGreen;
+            CreateListButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            CreateListButton.ForeColor = SystemColors.Control;
+            CreateListButton.Location = new Point(158, 232);
+            CreateListButton.Name = "button1";
+            CreateListButton.Size = new Size(150, 50);
+            CreateListButton.TabIndex = 4;
+            CreateListButton.Text = "Create";
+            CreateListButton.UseVisualStyleBackColor = false;
+            CreateListButton.Click += CreateListButton_Click;
             // 
             // ListNameBox
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(89, 151);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Write list's name...";
-            textBox1.Size = new Size(320, 34);
-            textBox1.TabIndex = 5;
+            ListNameBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ListNameBox.Location = new Point(89, 151);
+            ListNameBox.Name = "textBox1";
+            ListNameBox.PlaceholderText = "Write list's name...";
+            ListNameBox.Size = new Size(320, 34);
+            ListNameBox.TabIndex = 5;
             // 
             // AddList
             // 

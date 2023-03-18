@@ -35,7 +35,7 @@
         {
             //Gets the name from the NameBox
             string name = NameBox.Text;
-            
+
             //Picks the date from the DatePlanPicker
             DateTime date = DatePlanPicker.Value;
 
@@ -62,21 +62,24 @@
                 currentPlans = events;
             }
             else
-                ErrorView.ShowError("You should type something!");
+            {
+                FillTable(allPlans);
+                currentPlans = allPlans;
+            }
         }
 
         private void onlyNameSearch_Click_Event(object sender, EventArgs e)
         {
-            dateTimePicker1.Checked = false;
+            DatePlanPicker.Checked = false;
         }
 
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void PlansDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
 
-            DataGridViewRow row = dataGridView1.Rows[rowIndex];
+            DataGridViewRow row = PlansDataGridView.Rows[rowIndex];
 
-            DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            DataGridViewCell cell = PlansDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
             string oldName = currentPlans[rowIndex].Name;
             DateTime oldDate = currentPlans[rowIndex].Date;
@@ -89,7 +92,7 @@
             {
                 EventData.Delete(oldEvent);
                 MainModels.user.Events = EventData.GetAll();
-                dataGridView1.Rows.RemoveAt(rowIndex);
+                PlansDataGridView.Rows.RemoveAt(rowIndex);
                 allPlans = MainModels.user.Events;
             }
             else
@@ -119,11 +122,6 @@
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         public void FillTable(List<Event> list)
         {
             table = new();
@@ -138,12 +136,7 @@
                 table.Rows.Add(list[i].Name, list[i].Date, list[i].Time, list[i].Info);
             }
 
-            dataGridView1.DataSource = table;
-        }
-
-        private void back_Click(object sender, EventArgs e)
-        {
-            PageControl.Plans();
+            PlansDataGridView.DataSource = table;
         }
     }
 }
