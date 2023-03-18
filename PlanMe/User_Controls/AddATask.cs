@@ -18,20 +18,6 @@
                 AddATaskView.CreateTask(NameOfTaskBox.Text);
 
                 //Adds the task to the main model for the current user
-
-                /*
-                var smth = MainModels.tasks;
-                MainModels.user.AllTasks[new ListOfTasks(smth.Name, smth.Username)].Tasks.Add(newTask);
-                ...
-                */
-
-                //Somehting needs to be done
-
-                /*
-                var smth1 = MainModels.tasks;
-                var currentList = MainModels.user.AllTasks.Where(x => x.Name == smth1.Name).ToList();
-                ...
-                */
                 MainModels.tasks.Tasks.Add(newTask);
 
                 //Displays the new task
