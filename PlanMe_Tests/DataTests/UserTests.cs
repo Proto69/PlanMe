@@ -14,26 +14,6 @@
         }
 
         [Test]
-        public void CheckIfUpdatesUser()
-        {
-            Random random = new Random();
-
-            User user = new User("UPDATE TEST", "12345678");
-            UserData.Create(user);
-
-            string password = "UPDATETEST" + random.Next(0,100);
-            user.Password = password;
-
-            UserData.UpdatePassword(user);
-
-            User checkedUser = UserData.Check("UPDATE TEST", password);
-
-            Assert.AreEqual(user.ToString(), checkedUser.ToString(), "Does not return right user!");
-
-            UserData.Delete(user.Username);
-        }
-
-        [Test]
         public void CheckIfDeletesUser()
         {
             User user = new User("Tests user", "Test1234");

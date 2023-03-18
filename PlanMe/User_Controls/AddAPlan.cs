@@ -23,7 +23,7 @@
                 }
                 string time = date.TimeOfDay.ToString();
                 Event currEvent = new Event(NameBox.Text, date, time, InfoBox.Text);
-                EventData.Upload(currEvent, MainModels.user.Username);
+                EventData.Upload(currEvent);
             }
             catch (Exception ex)
             {

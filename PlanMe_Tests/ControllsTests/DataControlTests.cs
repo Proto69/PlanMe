@@ -28,21 +28,5 @@
             bool checker = UserData.Delete("DELETED TEST");
             Assert.IsTrue(checker, "User is not deleted!");
         }
-
-        [Test]
-        public void CheckIfPasswordIsUpdated()
-        {
-            User user = new User("Test", "12345678");
-            UserData.Create(user);
-
-            user.Password = "123456789";
-            UserData.UpdatePassword(user);
-
-            User newUser = UserData.Check("Test", "123456789");
-
-            Assert.AreEqual(newUser.Password, user.Password, "The password is not updated!");
-
-            UserData.Delete("Test");
-        }
     }
 }

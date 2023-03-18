@@ -31,7 +31,7 @@
             Event @event = new Event("Upload Test", date, "22:00:00", "Testing upload event method!");
 
             //Uploads it and gets the returned value
-            bool smth = EventData.Upload(@event, "EventTests");
+            bool smth = EventData.Upload(@event);
 
             Assert.AreEqual(true, smth, "The event is not uploaded successfully!");
 
@@ -47,7 +47,7 @@
 
             Event @event = new Event("Delete test", date, time.ToString("HH:mm:ss"), "Testing delete event method!");
 
-            EventData.Upload(@event, "EventTests");
+            EventData.Upload(@event);
             
             bool check = EventData.Delete(@event);
 
