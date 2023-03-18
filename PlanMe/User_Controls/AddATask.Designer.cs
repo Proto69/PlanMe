@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            addButton = new Button();
+            AddTaskButton = new Button();
             label2 = new Label();
-            text = new TextBox();
+            NameOfTaskBox = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -39,56 +39,61 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(144, 50);
+            label1.Location = new Point(216, 75);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(177, 46);
+            label1.Size = new Size(246, 62);
             label1.TabIndex = 0;
             label1.Text = "Add a task";
             // 
-            // addButton
+            // AddTaskButton
             // 
-            addButton.BackColor = Color.ForestGreen;
-            addButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            addButton.ForeColor = Color.WhiteSmoke;
-            addButton.Location = new Point(155, 220);
-            addButton.Name = "addButton";
-            addButton.Size = new Size(150, 50);
-            addButton.TabIndex = 1;
-            addButton.Text = "Add";
-            addButton.UseVisualStyleBackColor = false;
-            addButton.Click += button1_Click;
+            AddTaskButton.BackColor = Color.ForestGreen;
+            AddTaskButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            AddTaskButton.ForeColor = Color.WhiteSmoke;
+            AddTaskButton.Location = new Point(232, 330);
+            AddTaskButton.Margin = new Padding(4);
+            AddTaskButton.Name = "AddTaskButton";
+            AddTaskButton.Size = new Size(225, 75);
+            AddTaskButton.TabIndex = 1;
+            AddTaskButton.Text = "Add";
+            AddTaskButton.UseVisualStyleBackColor = false;
+            AddTaskButton.Click += AddTaskButton_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(144, 86);
+            label2.Location = new Point(216, 129);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(177, 20);
+            label2.Size = new Size(265, 30);
             label2.TabIndex = 2;
             label2.Text = "____________________________";
             // 
-            // text
+            // NameOfTaskBox
             // 
-            text.BackColor = Color.White;
-            text.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            text.Location = new Point(79, 147);
-            text.Name = "text";
-            text.PlaceholderText = "Write your task here...";
-            text.Size = new Size(317, 34);
-            text.TabIndex = 3;
+            NameOfTaskBox.BackColor = Color.White;
+            NameOfTaskBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            NameOfTaskBox.Location = new Point(118, 220);
+            NameOfTaskBox.Margin = new Padding(4);
+            NameOfTaskBox.Name = "NameOfTaskBox";
+            NameOfTaskBox.PlaceholderText = "Write your task here...";
+            NameOfTaskBox.Size = new Size(474, 45);
+            NameOfTaskBox.TabIndex = 3;
             // 
             // AddATask
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
-            Controls.Add(text);
-            Controls.Add(addButton);
+            Controls.Add(NameOfTaskBox);
+            Controls.Add(AddTaskButton);
             Controls.Add(label1);
             Controls.Add(label2);
+            Margin = new Padding(4);
             Name = "AddATask";
-            Size = new Size(485, 328);
+            Size = new Size(728, 492);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -96,8 +101,8 @@
         #endregion
 
         private Label label1;
-        private Button addButton;
+        private Button AddTaskButton;
         private Label label2;
-        private TextBox text;
+        private TextBox NameOfTaskBox;
     }
 }

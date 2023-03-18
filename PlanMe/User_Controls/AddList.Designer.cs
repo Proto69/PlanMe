@@ -30,8 +30,8 @@
         {
             label1 = new Label();
             label2 = new Label();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            CreateListButton = new Button();
+            ListNameBox = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -39,9 +39,10 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(135, 49);
+            label1.Location = new Point(202, 74);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(195, 46);
+            label1.Size = new Size(270, 62);
             label1.TabIndex = 1;
             label1.Text = "Create a list";
             label1.UseMnemonic = false;
@@ -50,45 +51,49 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(135, 86);
+            label2.Location = new Point(202, 129);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(201, 20);
+            label2.Size = new Size(301, 30);
             label2.TabIndex = 3;
             label2.Text = "________________________________";
             // 
-            // button1
+            // CreateListButton
             // 
-            button1.BackColor = Color.ForestGreen;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(158, 232);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 50);
-            button1.TabIndex = 4;
-            button1.Text = "Create";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            CreateListButton.BackColor = Color.ForestGreen;
+            CreateListButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            CreateListButton.ForeColor = SystemColors.Control;
+            CreateListButton.Location = new Point(237, 348);
+            CreateListButton.Margin = new Padding(4);
+            CreateListButton.Name = "CreateListButton";
+            CreateListButton.Size = new Size(225, 75);
+            CreateListButton.TabIndex = 4;
+            CreateListButton.Text = "Create";
+            CreateListButton.UseVisualStyleBackColor = false;
+            CreateListButton.Click += CreateListButton_Click;
             // 
-            // textBox1
+            // ListNameBox
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(89, 151);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Write list's name...";
-            textBox1.Size = new Size(320, 34);
-            textBox1.TabIndex = 5;
+            ListNameBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ListNameBox.Location = new Point(134, 226);
+            ListNameBox.Margin = new Padding(4);
+            ListNameBox.Name = "ListNameBox";
+            ListNameBox.PlaceholderText = "Write list's name...";
+            ListNameBox.Size = new Size(478, 45);
+            ListNameBox.TabIndex = 5;
             // 
             // AddList
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
-            Controls.Add(textBox1);
-            Controls.Add(button1);
+            Controls.Add(ListNameBox);
+            Controls.Add(CreateListButton);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(4);
             Name = "AddList";
-            Size = new Size(482, 336);
+            Size = new Size(723, 504);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,7 +102,7 @@
 
         private Label label1;
         private Label label2;
-        private Button button1;
-        private TextBox textBox1;
+        private Button CreateListButton;
+        private TextBox ListNameBox;
     }
 }

@@ -32,7 +32,7 @@
             NameBox = new TextBox();
             DateBox = new TextBox();
             InfoBox = new TextBox();
-            button1 = new Button();
+            AddPlanButton = new Button();
             label2 = new Label();
             SuspendLayout();
             // 
@@ -41,75 +41,82 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(203, 62);
+            label1.Location = new Point(304, 93);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(181, 46);
+            label1.Size = new Size(253, 62);
             label1.TabIndex = 1;
             label1.Text = "Add a plan";
             // 
             // NameBox
             // 
             NameBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            NameBox.Location = new Point(137, 148);
+            NameBox.Location = new Point(206, 222);
+            NameBox.Margin = new Padding(4);
             NameBox.Name = "NameBox";
             NameBox.PlaceholderText = "Name ";
-            NameBox.Size = new Size(306, 32);
+            NameBox.Size = new Size(457, 42);
             NameBox.TabIndex = 2;
             // 
             // DateBox
             // 
             DateBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            DateBox.Location = new Point(140, 198);
+            DateBox.Location = new Point(210, 297);
+            DateBox.Margin = new Padding(4);
             DateBox.Name = "DateBox";
             DateBox.PlaceholderText = "Date";
-            DateBox.Size = new Size(306, 32);
+            DateBox.Size = new Size(457, 42);
             DateBox.TabIndex = 3;
             // 
             // InfoBox
             // 
             InfoBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            InfoBox.Location = new Point(140, 247);
+            InfoBox.Location = new Point(210, 370);
+            InfoBox.Margin = new Padding(4);
             InfoBox.Name = "InfoBox";
             InfoBox.PlaceholderText = "About";
-            InfoBox.Size = new Size(306, 32);
+            InfoBox.Size = new Size(457, 42);
             InfoBox.TabIndex = 4;
             // 
-            // button1
+            // AddPlanButton
             // 
-            button1.BackColor = Color.ForestGreen;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(220, 310);
-            button1.Name = "button1";
-            button1.Size = new Size(143, 47);
-            button1.TabIndex = 5;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
+            AddPlanButton.BackColor = Color.ForestGreen;
+            AddPlanButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            AddPlanButton.ForeColor = SystemColors.ButtonHighlight;
+            AddPlanButton.Location = new Point(330, 465);
+            AddPlanButton.Margin = new Padding(4);
+            AddPlanButton.Name = "AddPlanButton";
+            AddPlanButton.Size = new Size(214, 70);
+            AddPlanButton.TabIndex = 5;
+            AddPlanButton.Text = "Add";
+            AddPlanButton.UseVisualStyleBackColor = false;
+            AddPlanButton.Click += AddPlanButton_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(137, 98);
+            label2.Location = new Point(206, 147);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(309, 20);
+            label2.Size = new Size(463, 30);
             label2.TabIndex = 6;
             label2.Text = "__________________________________________________";
             // 
             // AddAPlan
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
-            Controls.Add(button1);
+            Controls.Add(AddPlanButton);
             Controls.Add(InfoBox);
             Controls.Add(DateBox);
             Controls.Add(NameBox);
             Controls.Add(label1);
             Controls.Add(label2);
+            Margin = new Padding(4);
             Name = "AddAPlan";
-            Size = new Size(600, 400);
+            Size = new Size(900, 600);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -120,7 +127,7 @@
         private TextBox NameBox;
         private TextBox DateBox;
         private TextBox InfoBox;
-        private Button button1;
+        private Button AddPlanButton;
         private Label label2;
     }
 }

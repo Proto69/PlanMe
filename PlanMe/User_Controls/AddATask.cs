@@ -7,12 +7,34 @@
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //Activates when the button is clicked
+        private void AddTaskButton_Click(object sender, EventArgs e)
         {
+            //Trys to create task, add the task to main model and then to display it and throws exception if something can't be done
             try
             {
-                AddATaskView.CreateTask(text.Text);
-                MainModels.tasks.Tasks.Add(new(text.Text));
+                //Creates task
+                var newTask = new UserTask(NameOfTaskBox.Text);
+                AddATaskView.CreateTask(NameOfTaskBox.Text);
+
+                //Adds the task to the main model for the current user
+
+                /*
+                var smth = MainModels.tasks;
+                MainModels.user.AllTasks[new ListOfTasks(smth.Name, smth.Username)].Tasks.Add(newTask);
+                ...
+                */
+
+                //Somehting needs to be done
+
+                /*
+                var smth1 = MainModels.tasks;
+                var currentList = MainModels.user.AllTasks.Where(x => x.Name == smth1.Name).ToList();
+                ...
+                */
+                MainModels.tasks.Tasks.Add(newTask);
+
+                //Displays the new task
                 MainModels.lists.DisplayAllTasks();
             }
             catch (Exception ex)

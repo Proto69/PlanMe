@@ -2,7 +2,7 @@
 {
     public static class DataControl
     {
-        //Creates user by getting name and pass from the view
+        //Creates user by getting name and password from the view
         public static void CreateUser(string name, string pass)
         {
             //We will set a global variable to this user instance
@@ -19,6 +19,7 @@
             MainModels.user = user;
         }
 
+        //Creates task by getting text and name for the current list
         public static void CreateTask(string text, string nameOfList)
         {
             UserTask task = new UserTask(text);

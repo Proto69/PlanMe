@@ -80,7 +80,6 @@
             }
         }
 
-
         // This method retrieves all the list of tasks belonging to a user identified by their username
         public static List<ListOfTasks> GetAll(string username)
         {

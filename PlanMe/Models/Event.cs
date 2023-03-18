@@ -7,10 +7,12 @@
         private TimeOnly time;
         private string info;
 
+        //An empty constructor
         public Event()
         {
         }
 
+        //Constructor with params
         public Event(string name, DateTime date, string time, string info)
         {
             this.Name = name;
@@ -19,6 +21,7 @@
             this.Info = info;
         }
 
+        //Getters and Setters
         public string Name
         {
             get { return name; }
@@ -43,6 +46,7 @@
             get { return time.ToString("HH:mm:ss"); }
             set
             {
+                //Gets the value as a string and then converts it into the needed format for pushing it into the database
                 this.time = TimeOnly.ParseExact(value, "HH:mm:ss");
             }
         }
@@ -52,6 +56,7 @@
             set
             {
                 if (value == null)
+                    //Checks if the value is null and puts default info if it is
                     this.info = "No additional info!";
                 else
                     this.info = value;

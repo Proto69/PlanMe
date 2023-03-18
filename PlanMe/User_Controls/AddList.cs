@@ -7,11 +7,21 @@
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CreateListButton_Click(object sender, EventArgs e)
         {
+            //Trys to create new ListOfTasks and then to upload it into the database
             try
             {
-                ListOfTasksData.Upload(new ListOfTasks(textBox1.Text, MainModels.user.Username));
+                //Takes params from the ListNameBox (TextBox) and the username from the main model and creates a listOfTasks
+                var newList = new ListOfTasks(ListNameBox.Text, MainModels.user.Username);
+
+                //Uploads the new list into the database
+                ListOfTasksData.Upload(newList);
+                
+                //Puts the new list into the main model
+                MainModels.user.AllTasks.Add(newList);
+                
+                //Opens the ListMainScreen control?
                 PageControl.ListsMainScreen();
             }
             catch (Exception ex)

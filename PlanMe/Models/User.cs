@@ -9,6 +9,7 @@ namespace PlanMe.Models
         private List<Event> events;
         private List<ListOfTasks> allTasks;
 
+        //Constructor with params
         public User(string username, string password)
         {
             Username = username;
@@ -22,6 +23,7 @@ namespace PlanMe.Models
             AllTasks = ListOfTasksData.GetAll(username);
         }
 
+        //Getters and Setters
         public string Username
         {
             get { return username; }
@@ -51,11 +53,11 @@ namespace PlanMe.Models
                 }
             }
         }
-
         public List<ListOfTasks> AllTasks { get => allTasks; set => allTasks = value; }
         public List<Event> Events { get => events; set => events = value; }
         public int Id { get => id; set => id = value; }
 
+        //Override ToString
         public override string? ToString()
         {
             return $"{username} => {password}";
