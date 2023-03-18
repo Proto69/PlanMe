@@ -21,9 +21,12 @@
                 {
                     ErrorView.ShowError(ex.Message);
                 }
+
                 string time = date.TimeOfDay.ToString();
+
                 Event currEvent = new Event(NameBox.Text, date, time, InfoBox.Text);
                 EventData.Upload(currEvent);
+                MainModels.user.Events.Add(currEvent);
             }
             catch (Exception ex)
             {

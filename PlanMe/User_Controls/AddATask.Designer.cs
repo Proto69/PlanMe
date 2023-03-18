@@ -39,7 +39,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(144, 50);
+            label1.Location = new Point(194, 49);
             label1.Name = "label1";
             label1.Size = new Size(177, 46);
             label1.TabIndex = 0;
@@ -50,9 +50,9 @@
             addButton.BackColor = Color.ForestGreen;
             addButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             addButton.ForeColor = Color.WhiteSmoke;
-            addButton.Location = new Point(155, 220);
+            addButton.Location = new Point(194, 209);
             addButton.Name = "addButton";
-            addButton.Size = new Size(150, 50);
+            addButton.Size = new Size(177, 67);
             addButton.TabIndex = 1;
             addButton.Text = "Add";
             addButton.UseVisualStyleBackColor = false;
@@ -62,7 +62,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(144, 86);
+            label2.Location = new Point(194, 95);
             label2.Name = "label2";
             label2.Size = new Size(177, 20);
             label2.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             text.BackColor = Color.White;
             text.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            text.Location = new Point(79, 147);
+            text.Location = new Point(120, 144);
             text.Name = "text";
             text.PlaceholderText = "Write your task here...";
             text.Size = new Size(317, 34);
@@ -88,7 +88,7 @@
             Controls.Add(label1);
             Controls.Add(label2);
             Name = "AddATask";
-            Size = new Size(485, 328);
+            Size = new Size(600, 400);
             ResumeLayout(false);
             PerformLayout();
         }
