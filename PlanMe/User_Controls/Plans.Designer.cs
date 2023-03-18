@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            AddPlanButton = new Button();
+            SeePlanButton = new Button();
+            ShowAllPlansButton = new Button();
+            BackButton = new Button();
             label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -41,88 +41,95 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.MyPlans;
-            pictureBox1.Location = new Point(170, 72);
+            pictureBox1.Location = new Point(255, 108);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(543, 116);
+            pictureBox1.Size = new Size(814, 174);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // AddPlanButton
             // 
-            button1.BackColor = Color.ForestGreen;
-            button1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(170, 227);
-            button1.Name = "button1";
-            button1.Size = new Size(255, 70);
-            button1.TabIndex = 1;
-            button1.Text = "Add a plan";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += addPlan_Click;
+            AddPlanButton.BackColor = Color.ForestGreen;
+            AddPlanButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            AddPlanButton.ForeColor = SystemColors.ButtonHighlight;
+            AddPlanButton.Location = new Point(255, 340);
+            AddPlanButton.Margin = new Padding(4);
+            AddPlanButton.Name = "AddPlanButton";
+            AddPlanButton.Size = new Size(382, 105);
+            AddPlanButton.TabIndex = 1;
+            AddPlanButton.Text = "Add a plan";
+            AddPlanButton.UseVisualStyleBackColor = false;
+            AddPlanButton.Click += AddPlanButton_Click;
             // 
-            // button2
+            // SeePlanButton
             // 
-            button2.BackColor = Color.ForestGreen;
-            button2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(458, 227);
-            button2.Name = "button2";
-            button2.Size = new Size(255, 70);
-            button2.TabIndex = 2;
-            button2.Text = "See a plan";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += seePlan_Click;
+            SeePlanButton.BackColor = Color.ForestGreen;
+            SeePlanButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            SeePlanButton.ForeColor = SystemColors.ButtonHighlight;
+            SeePlanButton.Location = new Point(687, 340);
+            SeePlanButton.Margin = new Padding(4);
+            SeePlanButton.Name = "SeePlanButton";
+            SeePlanButton.Size = new Size(382, 105);
+            SeePlanButton.TabIndex = 2;
+            SeePlanButton.Text = "See a plan";
+            SeePlanButton.UseVisualStyleBackColor = false;
+            SeePlanButton.Click += SeePlanButton_Click;
             // 
-            // button3
+            // ShowAllPlansButton
             // 
-            button3.BackColor = Color.ForestGreen;
-            button3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(458, 312);
-            button3.Name = "button3";
-            button3.Size = new Size(255, 70);
-            button3.TabIndex = 3;
-            button3.Text = "Show all Plans";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += calendar_Click;
+            ShowAllPlansButton.BackColor = Color.ForestGreen;
+            ShowAllPlansButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            ShowAllPlansButton.ForeColor = SystemColors.ButtonHighlight;
+            ShowAllPlansButton.Location = new Point(687, 468);
+            ShowAllPlansButton.Margin = new Padding(4);
+            ShowAllPlansButton.Name = "ShowAllPlansButton";
+            ShowAllPlansButton.Size = new Size(382, 105);
+            ShowAllPlansButton.TabIndex = 3;
+            ShowAllPlansButton.Text = "Show all Plans";
+            ShowAllPlansButton.UseVisualStyleBackColor = false;
+            ShowAllPlansButton.Click += ShowAllPlansButton_Click;
             // 
-            // button4
+            // BackButton
             // 
-            button4.BackColor = Color.ForestGreen;
-            button4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.ForeColor = SystemColors.ButtonHighlight;
-            button4.Location = new Point(170, 312);
-            button4.Name = "button4";
-            button4.Size = new Size(255, 70);
-            button4.TabIndex = 17;
-            button4.Text = "Back";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += back_Click;
+            BackButton.BackColor = Color.ForestGreen;
+            BackButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BackButton.ForeColor = SystemColors.ButtonHighlight;
+            BackButton.Location = new Point(255, 468);
+            BackButton.Margin = new Padding(4);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(382, 105);
+            BackButton.TabIndex = 17;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = false;
+            BackButton.Click += BackButton_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(108, 180);
+            label2.Location = new Point(162, 270);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(699, 20);
+            label2.Size = new Size(1048, 30);
             label2.TabIndex = 18;
             label2.Text = "___________________________________________________________________________________________________________________";
             // 
             // Plans
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.PlansBG;
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(BackButton);
+            Controls.Add(ShowAllPlansButton);
+            Controls.Add(SeePlanButton);
+            Controls.Add(AddPlanButton);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
+            Margin = new Padding(4);
             Name = "Plans";
-            Size = new Size(900, 500);
+            Size = new Size(1350, 750);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -131,10 +138,10 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button AddPlanButton;
+        private Button SeePlanButton;
+        private Button ShowAllPlansButton;
+        private Button BackButton;
         private Label label2;
     }
 }

@@ -6,26 +6,32 @@
         {
             InitializeComponent();
         }
-
-
-        private void addPlan_Click(object sender, EventArgs e)
+        //Activates after clicking on the AddPlanButton
+        private void AddPlanButton_Click(object sender, EventArgs e)
         {
+            //Opens AddAPlan control
             PageControl.AddAPlan();
         }
 
-        private void seePlan_Click(object sender, EventArgs e)
+        //Activates after clicking on the BackButton
+        private void BackButton_Click(object sender, EventArgs e)
         {
-            PageControl.SeeAPlan();
+            //Opens MainScreen control
+            PageControl.MainScreen();
         }
 
-        private void calendar_Click(object sender, EventArgs e)
+        //Activates after clicking on the ShowAllPlansButton
+        private void ShowAllPlansButton_Click(object sender, EventArgs e)
         {
+            //Opens Calendar control
             PageControl.Calendar();
         }
 
-        private void back_Click(object sender, EventArgs e)
+        //Activates after clicking on the SeePlanButton
+        private void SeePlanButton_Click(object sender, EventArgs e)
         {
-            PageControl.MainScreen();
+            //Opens SeeAPlan control
+            PageControl.SeeAPlan();
         }
     }
 }

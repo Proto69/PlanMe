@@ -11,52 +11,56 @@
         public SeeAPlan()
         {
             InitializeComponent();
-            dateTimePicker1.Checked = false;
+
+            //Clears date picker
+            DatePlanPicker.Checked = false;
         }
 
-
-        private void showButton_Click_Event(object sender, EventArgs e)
+        //Activates after clicking on the BackButton
+        private void BackButton_Click(object sender, EventArgs e)
         {
-            string name = textBox1.Text;
-            DateTime date = dateTimePicker1.Value;
-            if (name != "" && name != null && dateTimePicker1.Checked)
+            //Opens Plans control
+            PageControl.Plans();
+        }
+
+        //Activates after clicking on the ClearDateButton
+        private void ClearDateButton_Click(object sender, EventArgs e)
+        {
+            //Clears date picker
+            DatePlanPicker.Checked = false;
+        }
+
+        //Activates after clicking on the ShowButton
+        private void ShowButton_Click(object sender, EventArgs e)
+        {
+            //Gets the name from the NameBox
+            string name = NameBox.Text;
+            
+            //Picks the date from the DatePlanPicker
+            DateTime date = DatePlanPicker.Value;
+
+            //Checks if the name is valid and if the DatePlanPicker is checked otherwise throws an exception (if both are not valid)
+            if (name != "" && name != null && DatePlanPicker.Checked)
             {
+                //Displays all events that match both the name and the date
                 List<Event> events = allPlans.Where(x => x.Name.ToLower().Contains(name.ToLower()) && x.Date.Date == date.Date).ToList();
-                dataGridView1.DataSource = events;
+                PlansDataGridView.DataSource = events;
             }
             else if (name != "" && name != null)
             {
+                //Displays all events that match the name
                 List<Event> events = allPlans.Where(x => x.Name.ToLower().Contains(name.ToLower())).ToList();
-                dataGridView1.DataSource = events;
+                PlansDataGridView.DataSource = events;
             }
-            else if (dateTimePicker1.Checked)
+            else if (DatePlanPicker.Checked)
             {
+                //Displays all events that match the date
                 List<Event> events = allPlans.Where(x => x.Date.Date == date.Date).ToList();
-                dataGridView1.DataSource = events;
+                PlansDataGridView.DataSource = events;
 
             }
             else
                 ErrorView.ShowError("You should type something!");
-        }
-
-        private void onlyNameSearch_Click_Event(object sender, EventArgs e)
-        {
-            dateTimePicker1.Checked = false;
-        }
-
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void back_Click(object sender, EventArgs e)
-        {
-            PageControl.Plans();
         }
     }
 }

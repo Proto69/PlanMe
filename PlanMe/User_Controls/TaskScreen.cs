@@ -8,10 +8,11 @@
         public TaskScreen()
         {
             InitializeComponent();
-
             DisplayAllTasks();
         }
 
+
+        //Displays all tasks in the table
         public void DisplayAllTasks()
         {
             try
@@ -25,7 +26,7 @@
                     table.Rows.Add(tasks[i].Text, tasks[i].IsDone);
                 }
 
-                dataGridView1.DataSource = table;
+                TaskDataGridView.DataSource = table;
             }
             catch
             {
@@ -35,36 +36,46 @@
                     table.Rows.Add(tasks[i].Text, tasks[i].IsDone);
                 }
 
-                dataGridView1.DataSource = table;
+                TaskDataGridView.DataSource = table;
             }
         }
 
-        private void saveButton_Click(object sender, EventArgs e)
+        //Activates after changing the cell value ant pressing 'enter'
+        private void TaskDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            PageControl.ListsMainScreen();
-        }
-
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
+            //Takes the index of the row for the changed cell
             int rowIndex = e.RowIndex;
-            DataGridViewRow row = dataGridView1.Rows[rowIndex];
-            DataGridViewCell cell = dataGridView1.Rows[rowIndex].Cells[e.ColumnIndex];
+
+            //Takes the whole row that has changes
+            DataGridViewRow row = TaskDataGridView.Rows[rowIndex];
+
+            //Takes the cell that is changed
+            DataGridViewCell cell = TaskDataGridView.Rows[rowIndex].Cells[e.ColumnIndex];
+
             string nameChecker = cell.Value.ToString();
             bool checkBoxChecker = (bool)row.Cells[1].Value;
             string name = tasks[rowIndex].Text;
 
+
+            //Checks if the task has to be deleted or updated
             if (nameChecker == "" && checkBoxChecker is true)
             {
-
+                //Deletes the task from the database
                 TaskData.Delete(new UserTask(name), MainModels.tasks.Name);
+
+                //Deletes the task from the main model
                 tasks.RemoveAt(rowIndex);
                 MainModels.tasks.Tasks = tasks;
 
-                dataGridView1.Rows.RemoveAt(rowIndex);
+                //Deletes the task from the table
+                TaskDataGridView.Rows.RemoveAt(rowIndex);
             }
             else
             {
+                //Updates the task in the database
                 TaskData.Update(new UserTask(name, (bool)row.Cells[1].Value), MainModels.tasks.Name);
+
+                //Updates the task in the main model
                 for (int i = 0; i < tasks.Count; i++)
                 {
                     if (tasks[i].Text == name)
@@ -77,19 +88,33 @@
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TaskScreen_Load(object sender, EventArgs e)
         {
+            //Autosize mode activated (resizes the columns to fit perfectly)
+            TaskDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            //Doesn't allow to choose more than one cell/row
+            TaskDataGridView.MultiSelect = false;
+        }
+
+        //Activates after clicking on the BackButton
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            //Opens the ListsMainScreen controler
+            PageControl.ListsMainScreen();
+        }
+
+        //Activates after clicking on the AddTaskButton
+        private void AddTaskButton_Click(object sender, EventArgs e)
+        {
+            //Opens the AddATask controler
             PageControl.AddATask();
         }
 
-        private void TaskScreen_Load(object sender, EventArgs e)
+        //Activates after clicking on the SaveButton
+        private void SaveButton_Click_1(object sender, EventArgs e)
         {
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.MultiSelect = false;
-        }
-        
-        private void back_Click(object sender, EventArgs e)
-        {
+            //Opens the LisfsMainScreen controler
             PageControl.ListsMainScreen();
         }
     }
