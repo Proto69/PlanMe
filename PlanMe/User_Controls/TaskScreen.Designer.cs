@@ -28,54 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            saveButton = new Button();
-            dataGridView1 = new DataGridView();
-            button1 = new Button();
+            SaveButton = new Button();
+            TaskDataGridView = new DataGridView();
+            AddTaskButton = new Button();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            BackButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)TaskDataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // saveButton
+            // SaveButton
             // 
-            saveButton.BackColor = Color.ForestGreen;
-            saveButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            saveButton.ForeColor = Color.WhiteSmoke;
-            saveButton.Location = new Point(721, 423);
-            saveButton.Name = "saveButton";
-            saveButton.Size = new Size(140, 60);
-            saveButton.TabIndex = 11;
-            saveButton.Text = "Save";
-            saveButton.UseVisualStyleBackColor = false;
-            saveButton.Click += saveButton_Click;
+            SaveButton.BackColor = Color.ForestGreen;
+            SaveButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveButton.ForeColor = Color.WhiteSmoke;
+            SaveButton.Location = new Point(1082, 634);
+            SaveButton.Margin = new Padding(4);
+            SaveButton.Name = "SaveButton";
+            SaveButton.Size = new Size(210, 90);
+            SaveButton.TabIndex = 11;
+            SaveButton.Text = "Save";
+            SaveButton.UseVisualStyleBackColor = false;
+            SaveButton.Click += SaveButton_Click_1;
             // 
-            // dataGridView1
+            // TaskDataGridView
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.BackgroundColor = SystemColors.Control;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(67, 106);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(369, 377);
-            dataGridView1.TabIndex = 15;
-            dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
+            TaskDataGridView.AllowUserToAddRows = false;
+            TaskDataGridView.BackgroundColor = SystemColors.Control;
+            TaskDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            TaskDataGridView.Location = new Point(100, 159);
+            TaskDataGridView.Margin = new Padding(4);
+            TaskDataGridView.Name = "TaskDataGridView";
+            TaskDataGridView.RowHeadersWidth = 51;
+            TaskDataGridView.RowTemplate.Height = 29;
+            TaskDataGridView.Size = new Size(554, 566);
+            TaskDataGridView.TabIndex = 15;
+            TaskDataGridView.CellEndEdit += TaskDataGridView_CellEndEdit;
             // 
-            // button1
+            // AddTaskButton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.ForestGreen;
-            button1.Location = new Point(575, 357);
-            button1.Name = "button1";
-            button1.Size = new Size(286, 60);
-            button1.TabIndex = 16;
-            button1.Text = "Add a task";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            AddTaskButton.BackColor = Color.Transparent;
+            AddTaskButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            AddTaskButton.ForeColor = Color.ForestGreen;
+            AddTaskButton.Location = new Point(862, 536);
+            AddTaskButton.Margin = new Padding(4);
+            AddTaskButton.Name = "AddTaskButton";
+            AddTaskButton.Size = new Size(429, 90);
+            AddTaskButton.TabIndex = 16;
+            AddTaskButton.Text = "Add a task";
+            AddTaskButton.UseVisualStyleBackColor = false;
+            AddTaskButton.Click += AddTaskButton_Click;
             // 
             // label1
             // 
@@ -84,9 +87,10 @@
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Ivory;
-            label1.Location = new Point(194, 61);
+            label1.Location = new Point(291, 92);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(96, 42);
+            label1.Size = new Size(132, 56);
             label1.TabIndex = 17;
             label1.Text = "label1";
             // 
@@ -94,52 +98,55 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.MyLists;
-            pictureBox1.Location = new Point(616, 20);
+            pictureBox1.Location = new Point(924, 30);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(266, 108);
+            pictureBox1.Size = new Size(399, 162);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             // 
-            // button2
+            // BackButton
             // 
-            button2.BackColor = Color.ForestGreen;
-            button2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.WhiteSmoke;
-            button2.Location = new Point(575, 423);
-            button2.Name = "button2";
-            button2.Size = new Size(140, 60);
-            button2.TabIndex = 19;
-            button2.Text = "Back";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += back_Click;
+            BackButton.BackColor = Color.ForestGreen;
+            BackButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            BackButton.ForeColor = Color.WhiteSmoke;
+            BackButton.Location = new Point(862, 634);
+            BackButton.Margin = new Padding(4);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(210, 90);
+            BackButton.TabIndex = 19;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = false;
+            BackButton.Click += BackButton_Click;
             // 
             // TaskScreen
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.TaskScreenBG2;
-            Controls.Add(button2);
+            Controls.Add(BackButton);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
-            Controls.Add(saveButton);
+            Controls.Add(AddTaskButton);
+            Controls.Add(TaskDataGridView);
+            Controls.Add(SaveButton);
+            Margin = new Padding(4);
             Name = "TaskScreen";
-            Size = new Size(900, 500);
+            Size = new Size(1350, 750);
             Load += TaskScreen_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TaskDataGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button saveButton;
-        private DataGridView dataGridView1;
-        private Button button1;
+        private Button SaveButton;
+        private DataGridView TaskDataGridView;
+        private Button AddTaskButton;
         private Label label1;
         private PictureBox pictureBox1;
-        private Button button2;
+        private Button BackButton;
     }
 }

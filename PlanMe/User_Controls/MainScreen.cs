@@ -5,20 +5,24 @@
         public MainScreen()
         {
             InitializeComponent();
-            label2.Text = PhraseData.GetPhrase();
+            //Sets PhraseLabel to today's phrase
+            PhraseLabel.Text = PhraseData.GetPhrase();
         }
 
-        private void listsButton_Click(object sender, EventArgs e)
-        {
-            PageControl.ListsMainScreen();
-        }
-
-        private void plansButton_Click(object sender, EventArgs e)
+        //Activates after clicking on the PlansButton
+        private void PlansButton_Click_1(object sender, EventArgs e)
         {
             PageControl.Plans();
         }
 
-        private void infoButton_Click(object sender, EventArgs e)
+        //Activates after clicking on the ListsButton
+        private void ListsButton_Click_1(object sender, EventArgs e)
+        {
+            PageControl.ListsMainScreen();
+        }
+
+        //Activates after clicking on the InfoButton
+        private void InfoButton_Click_1(object sender, EventArgs e)
         {
             PageControl.WelcomePage();
         }

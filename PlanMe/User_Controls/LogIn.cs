@@ -7,19 +7,18 @@
             InitializeComponent();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            PageControl.SignUp();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        //Activates after clicking on LogInButton
+        private void LogInButton_Click(object sender, EventArgs e)
         {
             try
             {
-                LoginView.ReadInfo(usernameBox.Text, passwordBox.Text);
+                //Reads the username from the UsernameBox and the password from the PasswordBox and checks if user with these params exist
+                LoginView.ReadInfo(UsernameBox.Text, PasswordBox.Text);
 
+                //If the user does exist opens the MainScreen controler otherwise throws an exception
                 PageControl.MainScreen();
 
+                //Loads the data for the current user
                 MainModels.user.FillEventsAndTasks();
 
             }
@@ -27,6 +26,13 @@
             {
                 ErrorView.ShowError(ex.Message);
             }
+        }
+
+        //Activates after clicking on SignUpLinkedLabel
+        private void SignUpLinkedLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Opens SignUp control
+            PageControl.SignUp();
         }
     }
 }

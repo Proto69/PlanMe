@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            plansButton = new Button();
-            listsButton = new Button();
-            infoButton = new Button();
+            PlansButton = new Button();
+            ListsButton = new Button();
+            InfoButton = new Button();
             label1 = new Label();
-            label2 = new Label();
+            PhraseLabel = new Label();
             pictureBox2 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
@@ -73,47 +73,50 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // plansButton
+            // PlansButton
             // 
-            plansButton.Anchor = AnchorStyles.None;
-            plansButton.BackColor = Color.ForestGreen;
-            plansButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            plansButton.ForeColor = Color.WhiteSmoke;
-            plansButton.Location = new Point(392, 254);
-            plansButton.Name = "plansButton";
-            plansButton.Size = new Size(116, 54);
-            plansButton.TabIndex = 11;
-            plansButton.Text = "plans";
-            plansButton.UseVisualStyleBackColor = false;
-            plansButton.Click += plansButton_Click;
+            PlansButton.Anchor = AnchorStyles.None;
+            PlansButton.BackColor = Color.ForestGreen;
+            PlansButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            PlansButton.ForeColor = Color.WhiteSmoke;
+            PlansButton.Location = new Point(588, 381);
+            PlansButton.Margin = new Padding(4);
+            PlansButton.Name = "PlansButton";
+            PlansButton.Size = new Size(174, 81);
+            PlansButton.TabIndex = 11;
+            PlansButton.Text = "Plans";
+            PlansButton.UseVisualStyleBackColor = false;
+            PlansButton.Click += PlansButton_Click_1;
             // 
-            // listsButton
+            // ListsButton
             // 
-            listsButton.Anchor = AnchorStyles.None;
-            listsButton.BackColor = Color.ForestGreen;
-            listsButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            listsButton.ForeColor = Color.WhiteSmoke;
-            listsButton.Location = new Point(154, 369);
-            listsButton.Name = "listsButton";
-            listsButton.Size = new Size(116, 54);
-            listsButton.TabIndex = 12;
-            listsButton.Text = "taskScreen";
-            listsButton.UseVisualStyleBackColor = false;
-            listsButton.Click += listsButton_Click;
+            ListsButton.Anchor = AnchorStyles.None;
+            ListsButton.BackColor = Color.ForestGreen;
+            ListsButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            ListsButton.ForeColor = Color.WhiteSmoke;
+            ListsButton.Location = new Point(231, 554);
+            ListsButton.Margin = new Padding(4);
+            ListsButton.Name = "ListsButton";
+            ListsButton.Size = new Size(174, 81);
+            ListsButton.TabIndex = 12;
+            ListsButton.Text = "TaskScreen";
+            ListsButton.UseVisualStyleBackColor = false;
+            ListsButton.Click += ListsButton_Click_1;
             // 
-            // infoButton
+            // InfoButton
             // 
-            infoButton.Anchor = AnchorStyles.None;
-            infoButton.BackColor = Color.ForestGreen;
-            infoButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            infoButton.ForeColor = Color.WhiteSmoke;
-            infoButton.Location = new Point(630, 425);
-            infoButton.Name = "infoButton";
-            infoButton.Size = new Size(116, 54);
-            infoButton.TabIndex = 14;
-            infoButton.Text = "for the app";
-            infoButton.UseVisualStyleBackColor = false;
-            infoButton.Click += infoButton_Click;
+            InfoButton.Anchor = AnchorStyles.None;
+            InfoButton.BackColor = Color.ForestGreen;
+            InfoButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            InfoButton.ForeColor = Color.WhiteSmoke;
+            InfoButton.Location = new Point(945, 638);
+            InfoButton.Margin = new Padding(4);
+            InfoButton.Name = "InfoButton";
+            InfoButton.Size = new Size(174, 81);
+            InfoButton.TabIndex = 14;
+            InfoButton.Text = "for the app";
+            InfoButton.UseVisualStyleBackColor = false;
+            InfoButton.Click += InfoButton_Click_1;
             // 
             // label1
             // 
@@ -122,25 +125,25 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.ForestGreen;
-            label1.Location = new Point(45, 39);
+            label1.Location = new Point(68, 58);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(170, 25);
+            label1.Size = new Size(234, 36);
             label1.TabIndex = 15;
             label1.Text = "Phrase of the day:";
             // 
-            // label2
+            // PhraseLabel
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(45, 64);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(446, 50);
-            label2.TabIndex = 17;
-            label2.Text = "label2";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.UseCompatibleTextRendering = true;
+            PhraseLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            PhraseLabel.BackColor = Color.Transparent;
+            PhraseLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            PhraseLabel.Location = new Point(68, 96);
+            PhraseLabel.Name = "PhraseLabel";
+            PhraseLabel.Size = new Size(669, 75);
+            PhraseLabel.TabIndex = 17;
+            PhraseLabel.Text = "label2";
+            PhraseLabel.TextAlign = ContentAlignment.MiddleCenter;
+            PhraseLabel.UseCompatibleTextRendering = true;
             // 
             // pictureBox2
             // 
@@ -148,9 +151,10 @@
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox2.Image = Properties.Resources.PlanMeLogo;
-            pictureBox2.Location = new Point(568, 27);
+            pictureBox2.Location = new Point(852, 40);
+            pictureBox2.Margin = new Padding(4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(304, 100);
+            pictureBox2.Size = new Size(456, 150);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 19;
             pictureBox2.TabStop = false;
@@ -162,9 +166,10 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.ForestGreen;
-            label3.Location = new Point(392, 199);
+            label3.Location = new Point(588, 298);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(17, 19);
+            label3.Size = new Size(23, 25);
             label3.TabIndex = 20;
             label3.Text = "2";
             // 
@@ -175,9 +180,10 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.ForestGreen;
-            label4.Location = new Point(510, 199);
+            label4.Location = new Point(765, 298);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(17, 19);
+            label4.Size = new Size(23, 25);
             label4.TabIndex = 21;
             label4.Text = "3";
             // 
@@ -188,9 +194,10 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.ForestGreen;
-            label5.Location = new Point(630, 199);
+            label5.Location = new Point(945, 298);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(17, 19);
+            label5.Size = new Size(23, 25);
             label5.TabIndex = 22;
             label5.Text = "4";
             // 
@@ -201,9 +208,10 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.ForestGreen;
-            label6.Location = new Point(273, 199);
+            label6.Location = new Point(410, 298);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(17, 19);
+            label6.Size = new Size(23, 25);
             label6.TabIndex = 23;
             label6.Text = "1";
             // 
@@ -214,9 +222,10 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.ForestGreen;
-            label7.Location = new Point(750, 199);
+            label7.Location = new Point(1125, 298);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(17, 19);
+            label7.Size = new Size(23, 25);
             label7.TabIndex = 24;
             label7.Text = "5";
             // 
@@ -227,9 +236,10 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.ForestGreen;
-            label8.Location = new Point(35, 256);
+            label8.Location = new Point(52, 384);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(17, 19);
+            label8.Size = new Size(23, 25);
             label8.TabIndex = 25;
             label8.Text = "6";
             // 
@@ -240,9 +250,10 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = Color.ForestGreen;
-            label9.Location = new Point(154, 256);
+            label9.Location = new Point(231, 384);
+            label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(17, 19);
+            label9.Size = new Size(23, 25);
             label9.TabIndex = 26;
             label9.Text = "7";
             // 
@@ -253,9 +264,10 @@
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label10.ForeColor = Color.ForestGreen;
-            label10.Location = new Point(273, 256);
+            label10.Location = new Point(410, 384);
+            label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
-            label10.Size = new Size(17, 19);
+            label10.Size = new Size(23, 25);
             label10.TabIndex = 27;
             label10.Text = "8";
             // 
@@ -266,9 +278,10 @@
             label11.BackColor = Color.Transparent;
             label11.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label11.ForeColor = Color.ForestGreen;
-            label11.Location = new Point(510, 256);
+            label11.Location = new Point(765, 384);
+            label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(25, 19);
+            label11.Size = new Size(34, 25);
             label11.TabIndex = 28;
             label11.Text = "10";
             // 
@@ -279,9 +292,10 @@
             label12.BackColor = Color.Transparent;
             label12.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label12.ForeColor = Color.ForestGreen;
-            label12.Location = new Point(630, 256);
+            label12.Location = new Point(945, 384);
+            label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(25, 19);
+            label12.Size = new Size(34, 25);
             label12.TabIndex = 29;
             label12.Text = "11";
             // 
@@ -292,9 +306,10 @@
             label13.BackColor = Color.Transparent;
             label13.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label13.ForeColor = Color.ForestGreen;
-            label13.Location = new Point(750, 256);
+            label13.Location = new Point(1125, 384);
+            label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(25, 19);
+            label13.Size = new Size(34, 25);
             label13.TabIndex = 30;
             label13.Text = "12";
             // 
@@ -305,9 +320,10 @@
             label14.BackColor = Color.Transparent;
             label14.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label14.ForeColor = Color.ForestGreen;
-            label14.Location = new Point(35, 313);
+            label14.Location = new Point(52, 470);
+            label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
-            label14.Size = new Size(25, 19);
+            label14.Size = new Size(34, 25);
             label14.TabIndex = 31;
             label14.Text = "13";
             // 
@@ -318,9 +334,10 @@
             label15.BackColor = Color.Transparent;
             label15.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label15.ForeColor = Color.ForestGreen;
-            label15.Location = new Point(154, 313);
+            label15.Location = new Point(231, 470);
+            label15.Margin = new Padding(4, 0, 4, 0);
             label15.Name = "label15";
-            label15.Size = new Size(25, 19);
+            label15.Size = new Size(34, 25);
             label15.TabIndex = 32;
             label15.Text = "14";
             // 
@@ -331,9 +348,10 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label16.ForeColor = Color.ForestGreen;
-            label16.Location = new Point(273, 313);
+            label16.Location = new Point(410, 470);
+            label16.Margin = new Padding(4, 0, 4, 0);
             label16.Name = "label16";
-            label16.Size = new Size(25, 19);
+            label16.Size = new Size(34, 25);
             label16.TabIndex = 33;
             label16.Text = "15";
             // 
@@ -344,9 +362,10 @@
             label17.BackColor = Color.Transparent;
             label17.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label17.ForeColor = Color.ForestGreen;
-            label17.Location = new Point(392, 313);
+            label17.Location = new Point(588, 470);
+            label17.Margin = new Padding(4, 0, 4, 0);
             label17.Name = "label17";
-            label17.Size = new Size(25, 19);
+            label17.Size = new Size(34, 25);
             label17.TabIndex = 34;
             label17.Text = "16";
             // 
@@ -357,9 +376,10 @@
             label18.BackColor = Color.Transparent;
             label18.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label18.ForeColor = Color.ForestGreen;
-            label18.Location = new Point(510, 313);
+            label18.Location = new Point(765, 470);
+            label18.Margin = new Padding(4, 0, 4, 0);
             label18.Name = "label18";
-            label18.Size = new Size(25, 19);
+            label18.Size = new Size(34, 25);
             label18.TabIndex = 35;
             label18.Text = "17";
             // 
@@ -370,9 +390,10 @@
             label19.BackColor = Color.Transparent;
             label19.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label19.ForeColor = Color.ForestGreen;
-            label19.Location = new Point(630, 313);
+            label19.Location = new Point(945, 470);
+            label19.Margin = new Padding(4, 0, 4, 0);
             label19.Name = "label19";
-            label19.Size = new Size(25, 19);
+            label19.Size = new Size(34, 25);
             label19.TabIndex = 36;
             label19.Text = "18";
             // 
@@ -383,9 +404,10 @@
             label20.BackColor = Color.Transparent;
             label20.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label20.ForeColor = Color.ForestGreen;
-            label20.Location = new Point(750, 313);
+            label20.Location = new Point(1125, 470);
+            label20.Margin = new Padding(4, 0, 4, 0);
             label20.Name = "label20";
-            label20.Size = new Size(25, 19);
+            label20.Size = new Size(34, 25);
             label20.TabIndex = 37;
             label20.Text = "19";
             // 
@@ -396,9 +418,10 @@
             label21.BackColor = Color.Transparent;
             label21.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label21.ForeColor = Color.ForestGreen;
-            label21.Location = new Point(35, 369);
+            label21.Location = new Point(52, 554);
+            label21.Margin = new Padding(4, 0, 4, 0);
             label21.Name = "label21";
-            label21.Size = new Size(25, 19);
+            label21.Size = new Size(34, 25);
             label21.TabIndex = 38;
             label21.Text = "20";
             // 
@@ -409,9 +432,10 @@
             label22.BackColor = Color.Transparent;
             label22.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label22.ForeColor = Color.ForestGreen;
-            label22.Location = new Point(273, 369);
+            label22.Location = new Point(410, 554);
+            label22.Margin = new Padding(4, 0, 4, 0);
             label22.Name = "label22";
-            label22.Size = new Size(25, 19);
+            label22.Size = new Size(34, 25);
             label22.TabIndex = 39;
             label22.Text = "22";
             // 
@@ -422,9 +446,10 @@
             label23.BackColor = Color.Transparent;
             label23.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label23.ForeColor = Color.ForestGreen;
-            label23.Location = new Point(392, 369);
+            label23.Location = new Point(588, 554);
+            label23.Margin = new Padding(4, 0, 4, 0);
             label23.Name = "label23";
-            label23.Size = new Size(25, 19);
+            label23.Size = new Size(34, 25);
             label23.TabIndex = 40;
             label23.Text = "23";
             // 
@@ -435,9 +460,10 @@
             label24.BackColor = Color.Transparent;
             label24.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label24.ForeColor = Color.ForestGreen;
-            label24.Location = new Point(510, 369);
+            label24.Location = new Point(765, 554);
+            label24.Margin = new Padding(4, 0, 4, 0);
             label24.Name = "label24";
-            label24.Size = new Size(25, 19);
+            label24.Size = new Size(34, 25);
             label24.TabIndex = 41;
             label24.Text = "24";
             // 
@@ -448,9 +474,10 @@
             label25.BackColor = Color.Transparent;
             label25.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label25.ForeColor = Color.ForestGreen;
-            label25.Location = new Point(630, 369);
+            label25.Location = new Point(945, 554);
+            label25.Margin = new Padding(4, 0, 4, 0);
             label25.Name = "label25";
-            label25.Size = new Size(25, 19);
+            label25.Size = new Size(34, 25);
             label25.TabIndex = 42;
             label25.Text = "25";
             // 
@@ -461,9 +488,10 @@
             label26.BackColor = Color.Transparent;
             label26.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label26.ForeColor = Color.ForestGreen;
-            label26.Location = new Point(750, 369);
+            label26.Location = new Point(1125, 554);
+            label26.Margin = new Padding(4, 0, 4, 0);
             label26.Name = "label26";
-            label26.Size = new Size(25, 19);
+            label26.Size = new Size(34, 25);
             label26.TabIndex = 43;
             label26.Text = "26";
             // 
@@ -474,9 +502,10 @@
             label27.BackColor = Color.Transparent;
             label27.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label27.ForeColor = Color.ForestGreen;
-            label27.Location = new Point(35, 426);
+            label27.Location = new Point(52, 639);
+            label27.Margin = new Padding(4, 0, 4, 0);
             label27.Name = "label27";
-            label27.Size = new Size(25, 19);
+            label27.Size = new Size(34, 25);
             label27.TabIndex = 44;
             label27.Text = "27";
             // 
@@ -487,9 +516,10 @@
             label28.BackColor = Color.Transparent;
             label28.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label28.ForeColor = Color.ForestGreen;
-            label28.Location = new Point(154, 426);
+            label28.Location = new Point(231, 639);
+            label28.Margin = new Padding(4, 0, 4, 0);
             label28.Name = "label28";
-            label28.Size = new Size(25, 19);
+            label28.Size = new Size(34, 25);
             label28.TabIndex = 45;
             label28.Text = "28";
             // 
@@ -500,9 +530,10 @@
             label29.BackColor = Color.Transparent;
             label29.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label29.ForeColor = Color.ForestGreen;
-            label29.Location = new Point(273, 426);
+            label29.Location = new Point(410, 639);
+            label29.Margin = new Padding(4, 0, 4, 0);
             label29.Name = "label29";
-            label29.Size = new Size(25, 19);
+            label29.Size = new Size(34, 25);
             label29.TabIndex = 46;
             label29.Text = "29";
             // 
@@ -513,9 +544,10 @@
             label30.BackColor = Color.Transparent;
             label30.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label30.ForeColor = Color.ForestGreen;
-            label30.Location = new Point(392, 426);
+            label30.Location = new Point(588, 639);
+            label30.Margin = new Padding(4, 0, 4, 0);
             label30.Name = "label30";
-            label30.Size = new Size(25, 19);
+            label30.Size = new Size(34, 25);
             label30.TabIndex = 47;
             label30.Text = "30";
             // 
@@ -526,9 +558,10 @@
             label31.BackColor = Color.Transparent;
             label31.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
             label31.ForeColor = Color.ForestGreen;
-            label31.Location = new Point(510, 426);
+            label31.Location = new Point(765, 639);
+            label31.Margin = new Padding(4, 0, 4, 0);
             label31.Name = "label31";
-            label31.Size = new Size(25, 19);
+            label31.Size = new Size(34, 25);
             label31.TabIndex = 48;
             label31.Text = "31";
             // 
@@ -539,9 +572,10 @@
             label32.BackColor = Color.Transparent;
             label32.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label32.ForeColor = Color.ForestGreen;
-            label32.Location = new Point(54, 165);
+            label32.Location = new Point(81, 248);
+            label32.Margin = new Padding(4, 0, 4, 0);
             label32.Name = "label32";
-            label32.Size = new Size(75, 23);
+            label32.Size = new Size(108, 32);
             label32.TabIndex = 49;
             label32.Text = "Monday";
             // 
@@ -552,9 +586,10 @@
             label33.BackColor = Color.Transparent;
             label33.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label33.ForeColor = Color.ForestGreen;
-            label33.Location = new Point(172, 165);
+            label33.Location = new Point(258, 248);
+            label33.Margin = new Padding(4, 0, 4, 0);
             label33.Name = "label33";
-            label33.Size = new Size(74, 23);
+            label33.Size = new Size(106, 32);
             label33.TabIndex = 50;
             label33.Text = "Tuesday";
             // 
@@ -565,9 +600,10 @@
             label34.BackColor = Color.Transparent;
             label34.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label34.ForeColor = Color.ForestGreen;
-            label34.Location = new Point(276, 165);
+            label34.Location = new Point(414, 248);
+            label34.Margin = new Padding(4, 0, 4, 0);
             label34.Name = "label34";
-            label34.Size = new Size(102, 23);
+            label34.Size = new Size(145, 32);
             label34.TabIndex = 51;
             label34.Text = "Wednesday";
             // 
@@ -578,9 +614,10 @@
             label35.BackColor = Color.Transparent;
             label35.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label35.ForeColor = Color.ForestGreen;
-            label35.Location = new Point(408, 165);
+            label35.Location = new Point(612, 248);
+            label35.Margin = new Padding(4, 0, 4, 0);
             label35.Name = "label35";
-            label35.Size = new Size(83, 23);
+            label35.Size = new Size(119, 32);
             label35.TabIndex = 52;
             label35.Text = "Thursday";
             // 
@@ -591,9 +628,10 @@
             label36.BackColor = Color.Transparent;
             label36.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label36.ForeColor = Color.ForestGreen;
-            label36.Location = new Point(537, 165);
+            label36.Location = new Point(806, 248);
+            label36.Margin = new Padding(4, 0, 4, 0);
             label36.Name = "label36";
-            label36.Size = new Size(60, 23);
+            label36.Size = new Size(84, 32);
             label36.TabIndex = 53;
             label36.Text = "Friday";
             // 
@@ -604,9 +642,10 @@
             label37.BackColor = Color.Transparent;
             label37.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label37.ForeColor = Color.ForestGreen;
-            label37.Location = new Point(648, 165);
+            label37.Location = new Point(972, 248);
+            label37.Margin = new Padding(4, 0, 4, 0);
             label37.Name = "label37";
-            label37.Size = new Size(82, 23);
+            label37.Size = new Size(115, 32);
             label37.TabIndex = 54;
             label37.Text = "Saturday";
             // 
@@ -617,15 +656,16 @@
             label38.BackColor = Color.Transparent;
             label38.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label38.ForeColor = Color.ForestGreen;
-            label38.Location = new Point(775, 165);
+            label38.Location = new Point(1162, 248);
+            label38.Margin = new Padding(4, 0, 4, 0);
             label38.Name = "label38";
-            label38.Size = new Size(69, 23);
+            label38.Size = new Size(98, 32);
             label38.TabIndex = 55;
             label38.Text = "Sunday";
             // 
             // MainScreen
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.MainScreenBG;
             BackgroundImageLayout = ImageLayout.Stretch;
@@ -667,24 +707,25 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(pictureBox2);
-            Controls.Add(label2);
-            Controls.Add(infoButton);
-            Controls.Add(listsButton);
-            Controls.Add(plansButton);
+            Controls.Add(PhraseLabel);
+            Controls.Add(InfoButton);
+            Controls.Add(ListsButton);
+            Controls.Add(PlansButton);
             DoubleBuffered = true;
+            Margin = new Padding(4);
             Name = "MainScreen";
-            Size = new Size(900, 500);
+            Size = new Size(1350, 750);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button plansButton;
-        private Button listsButton;
-        private Button infoButton;
+        private Button PlansButton;
+        private Button ListsButton;
+        private Button InfoButton;
         private Label label1;
-        private Label label2;
+        private Label PhraseLabel;
         private PictureBox pictureBox2;
         private Label label3;
         private Label label4;

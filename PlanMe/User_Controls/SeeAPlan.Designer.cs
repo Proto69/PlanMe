@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            NameBox = new TextBox();
+            DatePlanPicker = new DateTimePicker();
             label2 = new Label();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ShowButton = new Button();
+            PlansDataGridView = new DataGridView();
+            ClearDateButton = new Button();
+            DeletePlanButton = new Button();
+            BackButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)PlansDataGridView).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -45,121 +45,129 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(82, 42);
+            label1.Location = new Point(123, 63);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(173, 46);
+            label1.Size = new Size(242, 62);
             label1.TabIndex = 2;
             label1.Text = "See a plan";
             // 
-            // textBox1
+            // NameBox
             // 
-            textBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(47, 127);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Name";
-            textBox1.Size = new Size(243, 30);
-            textBox1.TabIndex = 3;
+            NameBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            NameBox.Location = new Point(70, 190);
+            NameBox.Margin = new Padding(4);
+            NameBox.Name = "NameBox";
+            NameBox.PlaceholderText = "Name";
+            NameBox.Size = new Size(362, 39);
+            NameBox.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // DatePlanPicker
             // 
-            dateTimePicker1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(47, 174);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(243, 30);
-            dateTimePicker1.TabIndex = 4;
-            dateTimePicker1.Value = new DateTime(2023, 3, 14, 16, 42, 27, 0);
+            DatePlanPicker.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            DatePlanPicker.Location = new Point(70, 261);
+            DatePlanPicker.Margin = new Padding(4);
+            DatePlanPicker.Name = "DatePlanPicker";
+            DatePlanPicker.Size = new Size(362, 39);
+            DatePlanPicker.TabIndex = 4;
+            DatePlanPicker.Value = new DateTime(2023, 3, 14, 16, 42, 27, 0);
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(78, 79);
+            label2.Location = new Point(117, 118);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(177, 20);
+            label2.Size = new Size(265, 30);
             label2.TabIndex = 5;
             label2.Text = "____________________________";
             // 
-            // button1
+            // ShowButton
             // 
-            button1.BackColor = Color.ForestGreen;
-            button1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(47, 378);
-            button1.Name = "button1";
-            button1.Size = new Size(243, 62);
-            button1.TabIndex = 6;
-            button1.Text = "Show";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += showButton_Click_Event;
+            ShowButton.BackColor = Color.ForestGreen;
+            ShowButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            ShowButton.ForeColor = SystemColors.ButtonHighlight;
+            ShowButton.Location = new Point(70, 567);
+            ShowButton.Margin = new Padding(4);
+            ShowButton.Name = "ShowButton";
+            ShowButton.Size = new Size(364, 93);
+            ShowButton.TabIndex = 6;
+            ShowButton.Text = "Show";
+            ShowButton.UseVisualStyleBackColor = false;
+            ShowButton.Click += ShowButton_Click;
             // 
-            // dataGridView1
+            // PlansDataGridView
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.BackgroundColor = SystemColors.Control;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(328, 16);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(554, 467);
-            dataGridView1.TabIndex = 7;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
+            PlansDataGridView.AllowUserToAddRows = false;
+            PlansDataGridView.BackgroundColor = SystemColors.Control;
+            PlansDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            PlansDataGridView.Location = new Point(492, 24);
+            PlansDataGridView.Margin = new Padding(4);
+            PlansDataGridView.Name = "PlansDataGridView";
+            PlansDataGridView.RowHeadersWidth = 51;
+            PlansDataGridView.Size = new Size(831, 700);
+            PlansDataGridView.TabIndex = 7;
             // 
-            // button2
+            // ClearDateButton
             // 
-            button2.BackColor = Color.Transparent;
-            button2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.ForestGreen;
-            button2.Location = new Point(47, 225);
-            button2.Name = "button2";
-            button2.Size = new Size(243, 39);
-            button2.TabIndex = 8;
-            button2.Text = "Select by name";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += onlyNameSearch_Click_Event;
+            ClearDateButton.BackColor = Color.Transparent;
+            ClearDateButton.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            ClearDateButton.ForeColor = Color.ForestGreen;
+            ClearDateButton.Location = new Point(70, 338);
+            ClearDateButton.Margin = new Padding(4);
+            ClearDateButton.Name = "ClearDateButton";
+            ClearDateButton.Size = new Size(364, 58);
+            ClearDateButton.TabIndex = 8;
+            ClearDateButton.Text = "Clear date";
+            ClearDateButton.UseVisualStyleBackColor = false;
+            ClearDateButton.Click += ClearDateButton_Click;
             // 
-            // button3
+            // DeletePlanButton
             // 
-            button3.BackColor = Color.Transparent;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.ForestGreen;
-            button3.Location = new Point(164, 281);
-            button3.Name = "button3";
-            button3.Size = new Size(126, 52);
-            button3.TabIndex = 9;
-            button3.Text = "Delete plan";
-            button3.UseVisualStyleBackColor = false;
+            DeletePlanButton.BackColor = Color.Transparent;
+            DeletePlanButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            DeletePlanButton.ForeColor = Color.ForestGreen;
+            DeletePlanButton.Location = new Point(246, 422);
+            DeletePlanButton.Margin = new Padding(4);
+            DeletePlanButton.Name = "DeletePlanButton";
+            DeletePlanButton.Size = new Size(189, 78);
+            DeletePlanButton.TabIndex = 9;
+            DeletePlanButton.Text = "Delete plan";
+            DeletePlanButton.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // BackButton
             // 
-            button4.BackColor = Color.Transparent;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.ForeColor = Color.ForestGreen;
-            button4.Location = new Point(47, 281);
-            button4.Name = "button4";
-            button4.Size = new Size(102, 52);
-            button4.TabIndex = 10;
-            button4.Text = "Back";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += back_Click;
+            BackButton.BackColor = Color.Transparent;
+            BackButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BackButton.ForeColor = Color.ForestGreen;
+            BackButton.Location = new Point(70, 422);
+            BackButton.Margin = new Padding(4);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(153, 78);
+            BackButton.TabIndex = 10;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = false;
+            BackButton.Click += BackButton_Click;
             // 
             // SeeAPlan
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.SeeAPlanBG;
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(dataGridView1);
-            Controls.Add(button1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox1);
+            Controls.Add(BackButton);
+            Controls.Add(DeletePlanButton);
+            Controls.Add(ClearDateButton);
+            Controls.Add(PlansDataGridView);
+            Controls.Add(ShowButton);
+            Controls.Add(DatePlanPicker);
+            Controls.Add(NameBox);
             Controls.Add(label1);
             Controls.Add(label2);
+            Margin = new Padding(4);
             Name = "SeeAPlan";
-            Size = new Size(900, 500);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Size = new Size(1350, 750);
+            ((System.ComponentModel.ISupportInitialize)PlansDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -167,13 +175,13 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private DateTimePicker dateTimePicker1;
+        private TextBox NameBox;
+        private DateTimePicker DatePlanPicker;
         private Label label2;
-        private Button button1;
-        private DataGridView dataGridView1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button ShowButton;
+        private DataGridView PlansDataGridView;
+        private Button ClearDateButton;
+        private Button DeletePlanButton;
+        private Button BackButton;
     }
 }
