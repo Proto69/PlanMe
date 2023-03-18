@@ -53,5 +53,10 @@
         {
 
         }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            PageControl.Plans();
+        }
     }
 }

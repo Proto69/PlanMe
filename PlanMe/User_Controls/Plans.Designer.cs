@@ -59,7 +59,7 @@
             button1.TabIndex = 1;
             button1.Text = "Add a plan";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
+            button1.Click += addPlan_Click;
             // 
             // button2
             // 
@@ -72,7 +72,7 @@
             button2.TabIndex = 2;
             button2.Text = "See a plan";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click_1;
+            button2.Click += seePlan_Click;
             // 
             // button3
             // 
@@ -85,7 +85,7 @@
             button3.TabIndex = 3;
             button3.Text = "Show all Plans";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click_1;
+            button3.Click += calendar_Click;
             // 
             // button4
             // 
@@ -98,6 +98,7 @@
             button4.TabIndex = 17;
             button4.Text = "Back";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += back_Click;
             // 
             // label2
             // 
@@ -108,7 +109,6 @@
             label2.Size = new Size(699, 20);
             label2.TabIndex = 18;
             label2.Text = "___________________________________________________________________________________________________________________";
-            label2.Click += label2_Click;
             // 
             // Plans
             // 

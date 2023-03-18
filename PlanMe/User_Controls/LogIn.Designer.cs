@@ -71,7 +71,6 @@
             passwordBox.PlaceholderText = "Enter password";
             passwordBox.Size = new Size(290, 30);
             passwordBox.TabIndex = 12;
-            passwordBox.TextChanged += passwordBox_TextChanged;
             // 
             // button1
             // 

@@ -28,10 +28,5 @@
                 ErrorView.ShowError(ex.Message);
             }
         }
-
-        private void passwordBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

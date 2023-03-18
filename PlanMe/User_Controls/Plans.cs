@@ -8,25 +8,24 @@
         }
 
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void addPlan_Click(object sender, EventArgs e)
         {
             PageControl.AddAPlan();
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void seePlan_Click(object sender, EventArgs e)
         {
             PageControl.SeeAPlan();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void calendar_Click(object sender, EventArgs e)
         {
             PageControl.Calendar();
-
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void back_Click(object sender, EventArgs e)
         {
-
+            PageControl.MainScreen();
         }
     }
 }

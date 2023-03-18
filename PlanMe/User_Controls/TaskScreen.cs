@@ -57,7 +57,6 @@
             {
 
                 TaskData.Delete(new UserTask(name), MainModels.tasks.Name);
-                //var toRemove = new UserTask(name, checkBoxChecker);
                 tasks.RemoveAt(rowIndex);
                 MainModels.tasks.Tasks = tasks;
 
@@ -83,20 +82,15 @@
             PageControl.AddATask();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void TaskScreen_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.MultiSelect = false;
         }
-
-        private void label2_Click(object sender, EventArgs e)
+        
+        private void back_Click(object sender, EventArgs e)
         {
-
+            PageControl.ListsMainScreen();
         }
     }
 }

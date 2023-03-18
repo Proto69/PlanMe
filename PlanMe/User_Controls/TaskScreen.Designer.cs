@@ -62,7 +62,6 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(369, 377);
             dataGridView1.TabIndex = 15;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
             // 
             // button1
@@ -113,6 +112,7 @@
             button2.TabIndex = 19;
             button2.Text = "Back";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += back_Click;
             // 
             // TaskScreen
             // 

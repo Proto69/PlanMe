@@ -141,6 +141,7 @@
             button4.TabIndex = 10;
             button4.Text = "Back";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += back_Click;
             // 
             // SeeAPlan
             // 

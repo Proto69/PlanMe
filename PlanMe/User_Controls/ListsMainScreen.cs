@@ -82,5 +82,10 @@
                 PageControl.TaskScreen();
             }
         }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            PageControl.MainScreen();
+        }
     }
 }

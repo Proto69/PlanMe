@@ -114,6 +114,7 @@
             button2.TabIndex = 20;
             button2.Text = "Back";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += back_Click;
             // 
             // ListsMainScreen
             // 

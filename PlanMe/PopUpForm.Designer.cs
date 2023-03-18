@@ -38,7 +38,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(482, 336);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
             // PopUpForm
             // 

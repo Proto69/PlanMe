@@ -113,6 +113,7 @@
             infoButton.TabIndex = 14;
             infoButton.Text = "for the app";
             infoButton.UseVisualStyleBackColor = false;
+            infoButton.Click += infoButton_Click;
             // 
             // label1
             // 
@@ -206,7 +207,6 @@
             label6.Size = new Size(17, 19);
             label6.TabIndex = 23;
             label6.Text = "1";
-            label6.Click += label6_Click;
             // 
             // label7
             // 
@@ -272,7 +272,6 @@
             label11.Size = new Size(25, 19);
             label11.TabIndex = 28;
             label11.Text = "10";
-            label11.Click += label11_Click;
             // 
             // label12
             // 
@@ -299,7 +298,6 @@
             label13.Size = new Size(25, 19);
             label13.TabIndex = 30;
             label13.Text = "12";
-            label13.Click += label13_Click;
             // 
             // label14
             // 
@@ -365,7 +363,6 @@
             label18.Size = new Size(25, 19);
             label18.TabIndex = 35;
             label18.Text = "17";
-            label18.Click += label18_Click;
             // 
             // label19
             // 
@@ -470,7 +467,6 @@
             label26.Size = new Size(25, 19);
             label26.TabIndex = 43;
             label26.Text = "26";
-            label26.Click += label26_Click;
             // 
             // label27
             // 
@@ -679,7 +675,6 @@
             DoubleBuffered = true;
             Name = "MainScreen";
             Size = new Size(900, 500);
-            Load += MainScreen_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
