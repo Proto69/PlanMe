@@ -22,10 +22,11 @@
 
                 //Displays the new task
                 MainModels.lists.DisplayAllTasks();
+                MessageView.ShowSuccess("You successfully added a task!");
             }
             catch (Exception ex)
             {
-                ErrorView.ShowError(ex.Message);
+                MessageView.ShowError(ex.Message);
             }
         }
     }

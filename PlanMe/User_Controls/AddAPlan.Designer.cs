@@ -73,7 +73,7 @@
             InfoBox.Name = "InfoBox";
             InfoBox.PlaceholderText = "About";
             InfoBox.Size = new Size(306, 32);
-            InfoBox.TabIndex = 4;
+            InfoBox.TabIndex = 5;
             // 
             // AddPlanButton
             // 
@@ -83,7 +83,7 @@
             AddPlanButton.Location = new Point(220, 334);
             AddPlanButton.Name = "AddPlanButton";
             AddPlanButton.Size = new Size(143, 47);
-            AddPlanButton.TabIndex = 5;
+            AddPlanButton.TabIndex = 7;
             AddPlanButton.Text = "Add";
             AddPlanButton.UseVisualStyleBackColor = false;
             AddPlanButton.Click += AddPlanButton_Click;
@@ -105,7 +105,7 @@
             timeBox.Name = "timeBox";
             timeBox.PlaceholderText = "Time (hh:mm:ss)";
             timeBox.Size = new Size(306, 32);
-            timeBox.TabIndex = 7;
+            timeBox.TabIndex = 4;
             // 
             // AddAPlan
             // 

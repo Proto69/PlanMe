@@ -1,6 +1,6 @@
 ﻿namespace PlanMe.User_Controls
 {
-    partial class AddList
+    partial class AddAList
     {
         /// <summary> 
         /// Required designer variable.
@@ -78,7 +78,7 @@
             ListNameBox.Size = new Size(320, 34);
             ListNameBox.TabIndex = 5;
             // 
-            // AddList
+            // AddAList
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -88,7 +88,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Margin = new Padding(4);
-            Name = "AddList";
+            Name = "AddAList";
             Size = new Size(482, 336);
             ResumeLayout(false);
             PerformLayout();
