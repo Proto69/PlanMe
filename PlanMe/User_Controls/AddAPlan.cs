@@ -30,6 +30,12 @@
                 MainModels.user.Events.Add(currEvent);
                 MessageView.ShowSuccess("You successfully added a plan!");
             }
+            // Catches when there is a duplicate in primary keys in database
+            catch (MySqlException)
+            {
+                MessageView.ShowError("You already have a plan with these parameters!");
+            }
+            // Catches any other error
             catch (Exception ex)
             {
                 MessageView.ShowError(ex.Message);

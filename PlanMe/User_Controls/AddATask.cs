@@ -24,6 +24,12 @@
                 MainModels.lists.DisplayAllTasks();
                 MessageView.ShowSuccess("You successfully added a task!");
             }
+            // Catches when there is a duplicate in primary keys in database
+            catch (MySqlException)
+            {
+                MessageView.ShowError("This name is in use, please choose another one!");
+            }
+            // Catches any other error
             catch (Exception ex)
             {
                 MessageView.ShowError(ex.Message);

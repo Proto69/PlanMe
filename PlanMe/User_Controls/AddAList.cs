@@ -17,15 +17,21 @@
 
                 // Uploads the new list into the database
                 ListOfTasksData.Upload(newList);
-                
+
                 // Puts the new list into the main model
                 MainModels.user.AllTasks.Add(newList);
-                
+
                 // Opens the ListMainScreen control
                 PageControl.ListsMainScreen();
 
                 MessageView.ShowSuccess("You successfully added a list for tasks!");
             }
+            // Catches when there is a duplicate in primary keys in database
+            catch (MySqlException)
+            {
+                MessageView.ShowError("This name is in use, choose another one!");
+            }
+            // Catches any other error
             catch (Exception ex)
             {
                 MessageView.ShowError(ex.Message);
