@@ -41,7 +41,7 @@
             StartButton.BackColor = Color.ForestGreen;
             StartButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             StartButton.ForeColor = SystemColors.ButtonHighlight;
-            StartButton.Location = new Point(1017, 628);
+            StartButton.Location = new Point(1017, 649);
             StartButton.Margin = new Padding(4);
             StartButton.Name = "StartButton";
             StartButton.Size = new Size(262, 88);
