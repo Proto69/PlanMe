@@ -15,7 +15,7 @@ namespace PlanMe
 
 
             //Change timer's seconds
-            System.Timers.Timer timer = new System.Timers.Timer(3000);
+            System.Timers.Timer timer = new System.Timers.Timer(4500);
 
             timer.Elapsed += OnTimerElapsed;
             timer.Start();
