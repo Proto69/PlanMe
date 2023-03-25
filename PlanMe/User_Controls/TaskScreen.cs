@@ -9,6 +9,7 @@
         {
             InitializeComponent();
             DisplayAllTasks();
+            label1.Text = MainModels.tasks.Name;
         }
 
 
