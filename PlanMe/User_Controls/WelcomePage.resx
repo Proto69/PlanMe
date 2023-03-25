@@ -57,4 +57,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="textBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Welcome to PlanMe! A place to keep all of your daily duties organized and easily accessible! 
+About Us
+PlanMe is a project developed by four students who saw the need of an app to help those,
+who like them, are constantly busy and in need of an assistant. 
+What is PlanMe? 
+PlanMe let’s you write down everything from your plans, to do lists, 
+shopping lists and your friend’s birthday to that due date which you won’t look at until the last minute
+(it’s ok, we do that too). PlanMe organizes your plans by date or by a key word so it’s easy for you to find just what you’re looking for!
+PlanMe is simple and easy to use. 
+Sign up now and never miss your brother’s birthday again (if PlanMe doesn’t remind you of it the present is on us)!
+Tell your friends about PlanMe and get planning NOW!</value>
+  </data>
 </root>

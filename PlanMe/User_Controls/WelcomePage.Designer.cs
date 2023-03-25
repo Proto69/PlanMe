@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomePage));
             StartButton = new Button();
             pictureBox1 = new PictureBox();
-            label1 = new Label();
             label2 = new Label();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -40,7 +41,7 @@
             StartButton.BackColor = Color.ForestGreen;
             StartButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             StartButton.ForeColor = SystemColors.ButtonHighlight;
-            StartButton.Location = new Point(1016, 626);
+            StartButton.Location = new Point(1017, 628);
             StartButton.Margin = new Padding(4);
             StartButton.Name = "StartButton";
             StartButton.Size = new Size(262, 88);
@@ -61,18 +62,6 @@
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(592, 230);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 38);
-            label1.TabIndex = 14;
-            label1.Text = "text";
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -84,12 +73,26 @@
             label2.TabIndex = 15;
             label2.Text = "______________________________________________________________________________________________________________________";
             // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.WhiteSmoke;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Calibri", 15.8571434F, FontStyle.Italic, GraphicsUnit.Point);
+            textBox1.Location = new Point(92, 216);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.ScrollBars = ScrollBars.Vertical;
+            textBox1.Size = new Size(1104, 405);
+            textBox1.TabIndex = 16;
+            textBox1.Text = resources.GetString("textBox1.Text");
+            // 
             // WelcomePage
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
-            Controls.Add(label1);
+            Controls.Add(textBox1);
             Controls.Add(pictureBox1);
             Controls.Add(StartButton);
             Controls.Add(label2);
@@ -104,7 +107,7 @@
         #endregion
         private Button StartButton;
         private PictureBox pictureBox1;
-        private Label label1;
         private Label label2;
+        private TextBox textBox1;
     }
 }
