@@ -94,7 +94,7 @@
             SignUpLinkedLabel.BackColor = Color.Transparent;
             SignUpLinkedLabel.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             SignUpLinkedLabel.LinkColor = Color.ForestGreen;
-            SignUpLinkedLabel.Location = new Point(498, 197);
+            SignUpLinkedLabel.Location = new Point(489, 197);
             SignUpLinkedLabel.Name = "SignUpLinkedLabel";
             SignUpLinkedLabel.Size = new Size(68, 23);
             SignUpLinkedLabel.TabIndex = 15;

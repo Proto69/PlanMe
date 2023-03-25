@@ -38,23 +38,23 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(197, 66);
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(188, 78);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(177, 46);
+            label1.Size = new Size(210, 54);
             label1.TabIndex = 0;
             label1.Text = "Add a task";
             // 
             // AddTaskButton
             // 
             AddTaskButton.BackColor = Color.ForestGreen;
-            AddTaskButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            AddTaskButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             AddTaskButton.ForeColor = Color.WhiteSmoke;
-            AddTaskButton.Location = new Point(213, 226);
+            AddTaskButton.Location = new Point(208, 292);
             AddTaskButton.Margin = new Padding(2);
             AddTaskButton.Name = "AddTaskButton";
-            AddTaskButton.Size = new Size(144, 69);
+            AddTaskButton.Size = new Size(166, 61);
             AddTaskButton.TabIndex = 1;
             AddTaskButton.Text = "Add";
             AddTaskButton.UseVisualStyleBackColor = false;
@@ -64,22 +64,22 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(197, 112);
+            label2.Location = new Point(142, 122);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(177, 20);
+            label2.Size = new Size(315, 20);
             label2.TabIndex = 2;
-            label2.Text = "____________________________";
+            label2.Text = "___________________________________________________";
             // 
             // NameOfTaskBox
             // 
             NameOfTaskBox.BackColor = Color.White;
-            NameOfTaskBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            NameOfTaskBox.Location = new Point(149, 166);
+            NameOfTaskBox.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            NameOfTaskBox.Location = new Point(157, 197);
             NameOfTaskBox.Margin = new Padding(2);
             NameOfTaskBox.Name = "NameOfTaskBox";
             NameOfTaskBox.PlaceholderText = "Write your task here...";
-            NameOfTaskBox.Size = new Size(283, 34);
+            NameOfTaskBox.Size = new Size(278, 36);
             NameOfTaskBox.TabIndex = 3;
             // 
             // AddATask
