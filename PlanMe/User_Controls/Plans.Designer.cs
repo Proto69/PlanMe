@@ -40,10 +40,9 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.MyPlans;
-            pictureBox1.Location = new Point(255, 108);
-            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Location = new Point(170, 72);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(814, 174);
+            pictureBox1.Size = new Size(543, 116);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -53,10 +52,9 @@
             AddPlanButton.BackColor = Color.ForestGreen;
             AddPlanButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             AddPlanButton.ForeColor = SystemColors.ButtonHighlight;
-            AddPlanButton.Location = new Point(255, 356);
-            AddPlanButton.Margin = new Padding(4);
+            AddPlanButton.Location = new Point(458, 327);
             AddPlanButton.Name = "AddPlanButton";
-            AddPlanButton.Size = new Size(382, 105);
+            AddPlanButton.Size = new Size(255, 70);
             AddPlanButton.TabIndex = 1;
             AddPlanButton.Text = "Add a plan";
             AddPlanButton.UseVisualStyleBackColor = false;
@@ -67,10 +65,9 @@
             SeePlanButton.BackColor = Color.ForestGreen;
             SeePlanButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             SeePlanButton.ForeColor = SystemColors.ButtonHighlight;
-            SeePlanButton.Location = new Point(687, 356);
-            SeePlanButton.Margin = new Padding(4);
+            SeePlanButton.Location = new Point(170, 236);
             SeePlanButton.Name = "SeePlanButton";
-            SeePlanButton.Size = new Size(382, 105);
+            SeePlanButton.Size = new Size(543, 70);
             SeePlanButton.TabIndex = 2;
             SeePlanButton.Text = "See a plan";
             SeePlanButton.UseVisualStyleBackColor = false;
@@ -81,10 +78,9 @@
             BackButton.BackColor = Color.ForestGreen;
             BackButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             BackButton.ForeColor = SystemColors.ButtonHighlight;
-            BackButton.Location = new Point(255, 500);
-            BackButton.Margin = new Padding(4);
+            BackButton.Location = new Point(170, 327);
             BackButton.Name = "BackButton";
-            BackButton.Size = new Size(814, 105);
+            BackButton.Size = new Size(255, 70);
             BackButton.TabIndex = 17;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = false;
@@ -94,16 +90,15 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(162, 270);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(108, 180);
             label2.Name = "label2";
-            label2.Size = new Size(1048, 30);
+            label2.Size = new Size(699, 20);
             label2.TabIndex = 18;
             label2.Text = "___________________________________________________________________________________________________________________";
             // 
             // Plans
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.PlansBG;
             BackgroundImageLayout = ImageLayout.Stretch;
@@ -113,9 +108,9 @@
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             DoubleBuffered = true;
-            Margin = new Padding(4);
             Name = "Plans";
-            Size = new Size(1350, 750);
+            Size = new Size(900, 500);
+            Load += Plans_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

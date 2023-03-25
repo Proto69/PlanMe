@@ -26,5 +26,10 @@
             //Opens SeeAPlan control
             PageControl.SeeAPlan();
         }
+
+        private void Plans_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

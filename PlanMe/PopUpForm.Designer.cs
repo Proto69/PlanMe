@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopUpForm));
             panel1 = new Panel();
             SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(600, 402);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "PopUpForm";
             ResumeLayout(false);
         }

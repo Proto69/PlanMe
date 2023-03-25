@@ -42,52 +42,47 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(304, 93);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(203, 62);
             label1.Name = "label1";
-            label1.Size = new Size(253, 62);
+            label1.Size = new Size(181, 46);
             label1.TabIndex = 1;
             label1.Text = "Add a plan";
             // 
             // NameBox
             // 
             NameBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            NameBox.Location = new Point(206, 222);
-            NameBox.Margin = new Padding(4, 4, 4, 4);
+            NameBox.Location = new Point(137, 148);
             NameBox.Name = "NameBox";
             NameBox.PlaceholderText = "Name ";
-            NameBox.Size = new Size(457, 42);
+            NameBox.Size = new Size(306, 32);
             NameBox.TabIndex = 2;
             // 
             // DateBox
             // 
             DateBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            DateBox.Location = new Point(210, 297);
-            DateBox.Margin = new Padding(4, 4, 4, 4);
+            DateBox.Location = new Point(140, 198);
             DateBox.Name = "DateBox";
-            DateBox.PlaceholderText = "Date (MM/dd/yyyy)";
-            DateBox.Size = new Size(457, 42);
+            DateBox.PlaceholderText = "Date (dd/MM/yyyy)";
+            DateBox.Size = new Size(306, 32);
             DateBox.TabIndex = 3;
             // 
             // InfoBox
             // 
             InfoBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            InfoBox.Location = new Point(210, 444);
-            InfoBox.Margin = new Padding(4, 4, 4, 4);
+            InfoBox.Location = new Point(140, 296);
             InfoBox.Name = "InfoBox";
             InfoBox.PlaceholderText = "About";
-            InfoBox.Size = new Size(457, 42);
+            InfoBox.Size = new Size(306, 32);
             InfoBox.TabIndex = 5;
             // 
             // AddPlanButton
             // 
             AddPlanButton.BackColor = Color.ForestGreen;
-            AddPlanButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            AddPlanButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             AddPlanButton.ForeColor = SystemColors.ButtonHighlight;
-            AddPlanButton.Location = new Point(330, 501);
-            AddPlanButton.Margin = new Padding(4, 4, 4, 4);
+            AddPlanButton.Location = new Point(220, 334);
             AddPlanButton.Name = "AddPlanButton";
-            AddPlanButton.Size = new Size(214, 70);
+            AddPlanButton.Size = new Size(143, 47);
             AddPlanButton.TabIndex = 7;
             AddPlanButton.Text = "Add";
             AddPlanButton.UseVisualStyleBackColor = false;
@@ -97,21 +92,19 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(206, 147);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(137, 98);
             label2.Name = "label2";
-            label2.Size = new Size(463, 30);
+            label2.Size = new Size(309, 20);
             label2.TabIndex = 6;
-            label2.Text = "__________________________________________________";
+            label2.Text = "_______________________________________________________________________________";
             // 
             // timeBox
             // 
             timeBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            timeBox.Location = new Point(210, 369);
-            timeBox.Margin = new Padding(4, 4, 4, 4);
+            timeBox.Location = new Point(140, 246);
             timeBox.Name = "timeBox";
             timeBox.PlaceholderText = "Time (hh:mm:ss)";
-            timeBox.Size = new Size(457, 42);
+            timeBox.Size = new Size(306, 32);
             timeBox.TabIndex = 4;
             // 
             // AddAPlan

@@ -38,11 +38,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(189, 65);
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(180, 68);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(195, 46);
+            label1.Size = new Size(231, 54);
             label1.TabIndex = 1;
             label1.Text = "Create a list";
             label1.UseMnemonic = false;
@@ -51,22 +51,22 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(189, 111);
+            label2.Location = new Point(108, 112);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(201, 20);
+            label2.Size = new Size(381, 20);
             label2.TabIndex = 3;
-            label2.Text = "________________________________";
+            label2.Text = "______________________________________________________________";
             // 
             // CreateListButton
             // 
             CreateListButton.BackColor = Color.ForestGreen;
-            CreateListButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            CreateListButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             CreateListButton.ForeColor = SystemColors.Control;
-            CreateListButton.Location = new Point(201, 252);
-            CreateListButton.Margin = new Padding(2, 2, 2, 2);
+            CreateListButton.Location = new Point(202, 282);
+            CreateListButton.Margin = new Padding(2);
             CreateListButton.Name = "CreateListButton";
-            CreateListButton.Size = new Size(183, 67);
+            CreateListButton.Size = new Size(183, 60);
             CreateListButton.TabIndex = 4;
             CreateListButton.Text = "Create";
             CreateListButton.UseVisualStyleBackColor = false;
@@ -74,12 +74,12 @@
             // 
             // ListNameBox
             // 
-            ListNameBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ListNameBox.Location = new Point(180, 170);
-            ListNameBox.Margin = new Padding(2, 2, 2, 2);
+            ListNameBox.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            ListNameBox.Location = new Point(149, 187);
+            ListNameBox.Margin = new Padding(2);
             ListNameBox.Name = "ListNameBox";
             ListNameBox.PlaceholderText = "Write list's name...";
-            ListNameBox.Size = new Size(224, 34);
+            ListNameBox.Size = new Size(290, 36);
             ListNameBox.TabIndex = 5;
             // 
             // AddAList
@@ -89,8 +89,8 @@
             BackgroundImage = Properties.Resources.background;
             Controls.Add(ListNameBox);
             Controls.Add(CreateListButton);
-            Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(label2);
             Name = "AddAList";
             Size = new Size(600, 400);
             ResumeLayout(false);
