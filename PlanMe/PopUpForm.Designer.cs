@@ -28,23 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopUpForm));
             panel1 = new Panel();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(600, 400);
+            panel1.Size = new Size(900, 600);
             panel1.TabIndex = 0;
             // 
             // PopUpForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(600, 402);
+            ClientSize = new Size(900, 603);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 4, 4, 4);
             Name = "PopUpForm";
             ResumeLayout(false);
         }
