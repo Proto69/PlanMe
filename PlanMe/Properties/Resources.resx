@@ -121,6 +121,9 @@
   <data name="LogInBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogInBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="WelcomePageBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WelcomePageBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MyPlans" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyPlans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,10 +160,13 @@
   <data name="ListsMainScreenBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ListsMainScreenBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SeeAPlanBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SeeAPlanBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LogIn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogIn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SeeAPlanBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SeeAPlanBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PlanMe Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlanMe Design.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

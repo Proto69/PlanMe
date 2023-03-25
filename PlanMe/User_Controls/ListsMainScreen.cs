@@ -45,7 +45,7 @@
 
             // Gets the whole row
             DataGridViewRow row = ListOfTasks.Rows[rowIndex];
-             
+
             // Gets the cell which is updated
             DataGridViewCell cell = ListOfTasks.Rows[e.RowIndex].Cells[e.ColumnIndex];
 

@@ -44,10 +44,9 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Image = Properties.Resources.LogIn;
-            pictureBox1.Location = new Point(530, 93);
-            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Location = new Point(353, 62);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(273, 147);
+            pictureBox1.Size = new Size(182, 98);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
@@ -56,23 +55,21 @@
             // 
             UsernameBox.Anchor = AnchorStyles.None;
             UsernameBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            UsernameBox.Location = new Point(452, 368);
-            UsernameBox.Margin = new Padding(4);
+            UsernameBox.Location = new Point(291, 245);
             UsernameBox.Name = "UsernameBox";
             UsernameBox.PlaceholderText = "Enter username";
-            UsernameBox.Size = new Size(433, 39);
+            UsernameBox.Size = new Size(300, 30);
             UsernameBox.TabIndex = 11;
             // 
             // PasswordBox
             // 
             PasswordBox.Anchor = AnchorStyles.None;
             PasswordBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            PasswordBox.Location = new Point(452, 442);
-            PasswordBox.Margin = new Padding(4);
+            PasswordBox.Location = new Point(291, 295);
             PasswordBox.Name = "PasswordBox";
             PasswordBox.PasswordChar = '*';
             PasswordBox.PlaceholderText = "Enter password";
-            PasswordBox.Size = new Size(433, 39);
+            PasswordBox.Size = new Size(300, 30);
             PasswordBox.TabIndex = 12;
             // 
             // LogInButton
@@ -80,14 +77,13 @@
             LogInButton.Anchor = AnchorStyles.None;
             LogInButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             LogInButton.BackColor = Color.ForestGreen;
-            LogInButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LogInButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LogInButton.ForeColor = SystemColors.ButtonHighlight;
-            LogInButton.Location = new Point(452, 548);
-            LogInButton.Margin = new Padding(4);
+            LogInButton.Location = new Point(291, 358);
             LogInButton.Name = "LogInButton";
-            LogInButton.Size = new Size(435, 75);
+            LogInButton.Size = new Size(300, 50);
             LogInButton.TabIndex = 13;
-            LogInButton.Text = "Log In";
+            LogInButton.Text = "Log in";
             LogInButton.UseVisualStyleBackColor = false;
             LogInButton.Click += LogInButton_Click;
             // 
@@ -98,10 +94,9 @@
             SignUpLinkedLabel.BackColor = Color.Transparent;
             SignUpLinkedLabel.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             SignUpLinkedLabel.LinkColor = Color.ForestGreen;
-            SignUpLinkedLabel.Location = new Point(747, 296);
-            SignUpLinkedLabel.Margin = new Padding(4, 0, 4, 0);
+            SignUpLinkedLabel.Location = new Point(498, 197);
             SignUpLinkedLabel.Name = "SignUpLinkedLabel";
-            SignUpLinkedLabel.Size = new Size(96, 32);
+            SignUpLinkedLabel.Size = new Size(68, 23);
             SignUpLinkedLabel.TabIndex = 15;
             SignUpLinkedLabel.TabStop = true;
             SignUpLinkedLabel.Text = "Sign up";
@@ -113,10 +108,9 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(452, 296);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(301, 197);
             label1.Name = "label1";
-            label1.Size = new Size(266, 32);
+            label1.Size = new Size(191, 23);
             label1.TabIndex = 16;
             label1.Text = "Don't have an account?";
             // 
@@ -125,16 +119,15 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Location = new Point(416, 230);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(277, 153);
             label3.Name = "label3";
-            label3.Size = new Size(508, 30);
+            label3.Size = new Size(339, 20);
             label3.TabIndex = 18;
             label3.Text = "_______________________________________________________";
             // 
             // LogIn
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.LogInBG;
             BackgroundImageLayout = ImageLayout.Stretch;
@@ -146,9 +139,8 @@
             Controls.Add(PasswordBox);
             Controls.Add(UsernameBox);
             DoubleBuffered = true;
-            Margin = new Padding(4);
             Name = "LogIn";
-            Size = new Size(1350, 750);
+            Size = new Size(900, 500);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
