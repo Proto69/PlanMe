@@ -20,13 +20,6 @@
             PageControl.MainScreen();
         }
 
-        //Activates after clicking on the ShowAllPlansButton
-        private void ShowAllPlansButton_Click(object sender, EventArgs e)
-        {
-            //Opens Calendar control
-            PageControl.Calendar();
-        }
-
         //Activates after clicking on the SeePlanButton
         private void SeePlanButton_Click(object sender, EventArgs e)
         {

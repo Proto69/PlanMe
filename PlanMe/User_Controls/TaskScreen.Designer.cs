@@ -125,12 +125,14 @@
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.TaskScreenBG2;
+            BackgroundImageLayout = ImageLayout.Stretch;
             Controls.Add(BackButton);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(AddTaskButton);
             Controls.Add(TaskDataGridView);
             Controls.Add(SaveButton);
+            DoubleBuffered = true;
             Margin = new Padding(4);
             Name = "TaskScreen";
             Size = new Size(1350, 750);

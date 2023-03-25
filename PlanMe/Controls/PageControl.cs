@@ -17,10 +17,6 @@
         {
             ChangeControlToForm(new AddAList());
         }
-        public static void Calendar()
-        {
-            ChangeControl(new Calendar(), panel1);
-        }
         public static void ListsMainScreen()
         {
             ChangeControl(new ListsMainScreen(), panel1);

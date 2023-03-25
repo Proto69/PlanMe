@@ -106,11 +106,13 @@
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.PlansBG;
+            BackgroundImageLayout = ImageLayout.Stretch;
             Controls.Add(BackButton);
             Controls.Add(SeePlanButton);
             Controls.Add(AddPlanButton);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
+            DoubleBuffered = true;
             Margin = new Padding(4);
             Name = "Plans";
             Size = new Size(1350, 750);

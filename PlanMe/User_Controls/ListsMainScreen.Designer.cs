@@ -43,9 +43,10 @@
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.MyLists;
-            pictureBox1.Location = new Point(312, 42);
+            pictureBox1.Location = new Point(468, 63);
+            pictureBox1.Margin = new Padding(4, 4, 4, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(290, 101);
+            pictureBox1.Size = new Size(435, 152);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -54,9 +55,10 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(98, 134);
+            label2.Location = new Point(147, 201);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(717, 20);
+            label2.Size = new Size(1075, 30);
             label2.TabIndex = 17;
             label2.Text = "______________________________________________________________________________________________________________________";
             // 
@@ -66,10 +68,9 @@
             CreateListButton.BackColor = Color.ForestGreen;
             CreateListButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             CreateListButton.ForeColor = SystemColors.ButtonHighlight;
-            CreateListButton.Location = new Point(472, 408);
-            CreateListButton.Margin = new Padding(2, 2, 2, 2);
+            CreateListButton.Location = new Point(708, 612);
             CreateListButton.Name = "CreateListButton";
-            CreateListButton.Size = new Size(204, 62);
+            CreateListButton.Size = new Size(306, 93);
             CreateListButton.TabIndex = 18;
             CreateListButton.Text = "Create a list";
             CreateListButton.UseVisualStyleBackColor = false;
@@ -82,12 +83,11 @@
             ListOfTasks.BackgroundColor = SystemColors.Control;
             ListOfTasks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             ListOfTasks.Columns.AddRange(new DataGridViewColumn[] { ShowTasks });
-            ListOfTasks.Location = new Point(243, 173);
-            ListOfTasks.Margin = new Padding(2, 2, 2, 2);
+            ListOfTasks.Location = new Point(364, 260);
             ListOfTasks.Name = "ListOfTasks";
             ListOfTasks.RowHeadersWidth = 72;
             ListOfTasks.RowTemplate.Height = 37;
-            ListOfTasks.Size = new Size(433, 218);
+            ListOfTasks.Size = new Size(650, 327);
             ListOfTasks.TabIndex = 19;
             ListOfTasks.CellContentClick += ListOfTasks_CellContentClick;
             ListOfTasks.CellEndEdit += ListOfTasks_CellEndEdit;
@@ -107,10 +107,9 @@
             BackButton.BackColor = Color.ForestGreen;
             BackButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             BackButton.ForeColor = SystemColors.ButtonHighlight;
-            BackButton.Location = new Point(243, 408);
-            BackButton.Margin = new Padding(2, 2, 2, 2);
+            BackButton.Location = new Point(364, 612);
             BackButton.Name = "BackButton";
-            BackButton.Size = new Size(204, 62);
+            BackButton.Size = new Size(306, 93);
             BackButton.TabIndex = 20;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = false;
@@ -118,16 +117,19 @@
             // 
             // ListsMainScreen
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.ListsMainScreenBG;
+            BackgroundImageLayout = ImageLayout.Stretch;
             Controls.Add(BackButton);
             Controls.Add(ListOfTasks);
             Controls.Add(CreateListButton);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
+            DoubleBuffered = true;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "ListsMainScreen";
-            Size = new Size(900, 500);
+            Size = new Size(1350, 750);
             Load += ListsMainScreen_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ListOfTasks).EndInit();
