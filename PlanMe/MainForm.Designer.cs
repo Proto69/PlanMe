@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             panel1 = new Panel();
             SuspendLayout();
             // 
@@ -37,20 +36,17 @@
             panel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             panel1.AutoSize = true;
             panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel1.Location = new Point(-6, 9);
-            panel1.Margin = new Padding(4, 4, 4, 4);
+            panel1.Location = new Point(-4, 6);
             panel1.Name = "panel1";
             panel1.Size = new Size(0, 0);
             panel1.TabIndex = 0;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1350, 748);
+            ClientSize = new Size(900, 499);
             Controls.Add(panel1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 4, 4, 4);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "PlanMe";
