@@ -7,6 +7,8 @@
         {
             //We will set a global variable to this user instance
             User user = new User(name, pass);
+            user.Events = new();
+            user.AllTasks = new();
             MainModels.user = user;
             UserData.Create(user);
         }

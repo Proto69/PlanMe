@@ -11,7 +11,7 @@ namespace PlanMe.Views
         // Shows a successful operation
         public static void ShowSuccess(string message)
         {
-            MessageBox.Show(message, "Successful operation!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           // MessageBox.Show(message, "Successful operation!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
