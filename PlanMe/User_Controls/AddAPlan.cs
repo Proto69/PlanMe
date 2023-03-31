@@ -15,7 +15,7 @@
             {
 
                 // Tries to parse the date from the DateBox to DateTime and throws exception if it is not possible
-                DateTime date = DateTime.Parse(DateBox.Text);
+                DateTime date = DateTime.ParseExact(DateBox.Text, "dd/MM/yyyy", null);
 
 
                 string time = timeBox.Text;
