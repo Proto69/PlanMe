@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanMe", "PlanMe.csproj", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanMe_Tests", "..\PlanMe_Tests\PlanMe_Tests.csproj", "{28B540F2-4513-46E6-8FAD-DA230DA204B6}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PlanMeSetup", "..\PlanMeSetup\PlanMeSetup.vdproj", "{B948C81B-89F9-4D9A-B19C-8B4FE9645E1D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,8 +21,6 @@ Global
 		{28B540F2-4513-46E6-8FAD-DA230DA204B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28B540F2-4513-46E6-8FAD-DA230DA204B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28B540F2-4513-46E6-8FAD-DA230DA204B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B948C81B-89F9-4D9A-B19C-8B4FE9645E1D}.Debug|Any CPU.ActiveCfg = Debug
-		{B948C81B-89F9-4D9A-B19C-8B4FE9645E1D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
