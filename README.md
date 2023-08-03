@@ -8,4 +8,4 @@ You can read more about it here: [PlanMe Wiki](https://github.com/Proto69/PlanMe
 + ** Soon ** Create groups with people and add group plans
 
 # How to use it?
-### You can download it from here: [Installer.msi]()
+### You can download it from here: [Installer.msi](https://github.com/Proto69/PlanMe/raw/main/Installer.msi)
