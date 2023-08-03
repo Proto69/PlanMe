@@ -1,5 +1,5 @@
 # What is PlanMe?
-This project aims to reduce your `workflow` and improve your life by **orginazing** it!
+This project aims to reduce your workflow and improve your life by `orginazing` it!
 You can read more about it here: [PlanMe Wiki](https://github.com/Proto69/PlanMe/wiki).
 
 # What does it do?
